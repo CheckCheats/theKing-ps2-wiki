@@ -348,6 +348,12 @@ code {
   font-size: 0.85rem;
 }
 .foot strong { display: block; color: var(--cream); margin-bottom: 0.15rem; }
+.foot .foot-owner {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--gold-deep);
+  font-size: 0.82rem;
+}
 
 @media (max-width: 900px) {
   .tags { grid-template-columns: repeat(2, 1fr); }

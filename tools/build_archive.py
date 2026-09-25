@@ -223,7 +223,7 @@ def page_shell(title: str, crumb: str, body: str, extra_style: str = "") -> str:
     {body}
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>档案</span></div>
+    <div><strong>Slayers 2 Wiki</strong><span>档案</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../../../">返回主页</a>
   </footer>
 </body>
@@ -292,7 +292,7 @@ def shallow_shell(title: str, crumb: str, body: str, depth: int = 1) -> str:
     {body}
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>档案</span></div>
+    <div><strong>Slayers 2 Wiki</strong><span>档案</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="{home}">返回主页</a>
   </footer>
 </body>
