@@ -1,0 +1,275 @@
+/* clans / customization page */
+
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+.crumb {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0.5rem 0 1.25rem;
+}
+.crumb a { color: var(--gold); }
+
+.sec {
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 1rem 1.1rem 1.15rem;
+}
+.sec h1 {
+  margin: 0 0 0.55rem;
+  font-size: 1.25rem;
+}
+.sec > p {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.sec code { color: var(--gold-deep); }
+
+.rate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+}
+.rate-card {
+  border: 1px solid var(--line);
+  background: var(--lift);
+  padding: 0.75rem 0.8rem;
+  border-top: 3px solid var(--rc, var(--gold));
+}
+.rate-card .r-name {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.rate-card .r-pct {
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.rate-card .r-en {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.rate-card .r-count {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.table-wrap { overflow-x: auto; }
+.sec table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.sec th, .sec td {
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+}
+.sec th {
+  color: var(--gold-deep);
+  background: rgba(255, 255, 255, 0.03);
+}
+.sec td { color: var(--muted); }
+.sec td strong { color: var(--cream); }
+.best-tag {
+  margin-left: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--gold);
+  border: 1px solid var(--line-strong);
+  padding: 0.05rem 0.3rem;
+}
+
+.skin-tabs {
+  display: flex;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+.skin-tab {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: var(--lift);
+  color: var(--muted);
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+}
+.skin-tab.is-on {
+  color: var(--gold);
+  border-color: var(--gold-deep);
+}
+.skin-preview {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 1rem;
+  align-items: start;
+}
+.skin-swatches {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.55rem;
+}
+.swatch {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  padding: 0;
+  background: #888;
+  transition: transform 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+.swatch:hover, .swatch.is-on {
+  transform: scale(1.08);
+  border-color: #fff;
+}
+.skin-detail {
+  border: 1px solid var(--line);
+  background: var(--lift);
+  padding: 0.85rem;
+  text-align: center;
+}
+.skin-big {
+  width: 100%;
+  aspect-ratio: 1.2;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #888;
+  margin-bottom: 0.65rem;
+}
+.skin-meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.clan-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+#clan-q {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--lift);
+  color: var(--cream);
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+}
+.clan-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.filter-chip {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  padding: 0.28rem 0.55rem;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.filter-chip.is-on {
+  color: var(--ink);
+  background: var(--fc, var(--gold));
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.clan-list { display: grid; gap: 0.45rem; }
+.clan-card {
+  border: 1px solid var(--line);
+  background: var(--lift);
+  overflow: hidden;
+}
+.clan-head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  text-align: left;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  cursor: pointer;
+}
+.clan-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: var(--rc, #fff);
+}
+.clan-title strong {
+  display: block;
+  font-size: 0.98rem;
+}
+.clan-title span {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.clan-badge {
+  font-size: 0.75rem;
+  color: var(--ink);
+  background: var(--rc, var(--gold));
+  padding: 0.15rem 0.4rem;
+  font-weight: 700;
+}
+.ability .en-name {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.clan-body {
+  display: none;
+  padding: 0 0.85rem 0.9rem;
+  border-top: 1px solid var(--line);
+}
+.clan-card.is-open .clan-body { display: block; }
+.clan-body h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--gold-deep);
+  letter-spacing: 0.04em;
+}
+.stat-row, .ability {
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin: 0.25rem 0;
+}
+.stat-row b, .ability b { color: var(--cream); font-weight: 600; }
+.ability .cd {
+  margin-left: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--gold);
+}
+.empty-note {
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 800px) {
+  .rate-grid { grid-template-columns: repeat(2, 1fr); }
+  .skin-preview { grid-template-columns: 1fr; }
+  .skin-swatches { grid-template-columns: repeat(7, 1fr); }
+}
+@media (max-width: 520px) {
+  .rate-grid { grid-template-columns: 1fr; }
+  .skin-swatches { grid-template-columns: repeat(4, 1fr); }
+}

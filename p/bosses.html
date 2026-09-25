@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Boss / 头目 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926q">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .icon{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a;border-radius:6px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.65rem}
+    .card{display:flex;gap:.65rem;align-items:center;border:1px solid var(--line);padding:.55rem .65rem;background:rgba(255,255,255,.02);color:inherit;text-decoration:none}
+    .card:hover{border-color:rgba(255,208,70,.4)}
+    .card strong{display:block;color:var(--cream);font-size:.9rem}
+    .card span{font-size:.78rem;color:var(--muted)}
+    .map-toolbar{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:.55rem 0 .35rem}
+    .map-toolbar button{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--cream);font:inherit;font-size:.82rem;padding:.35rem .7rem;cursor:pointer}
+    .map-zoom-label{font-size:.82rem;color:var(--muted);min-width:3.2rem}
+    .map-stage{position:relative;margin-top:.35rem;border:1px solid var(--line);overflow:hidden;background:#0a0a0a;touch-action:none;user-select:none;height:min(72vh,820px);min-height:320px}
+    .map-viewport{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(1);transform-origin:center center;will-change:transform}
+    .map-viewport img.map-img{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none;-webkit-user-drag:none}
+    .map-hint{margin:.55rem 0 0;font-size:.82rem;color:var(--muted)}
+    .rarity{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.78rem;font-weight:600;color:#111}
+    .head{display:flex;gap:1rem;align-items:flex-start}
+    .map-img.static{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <span class="top-ver">档案</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / Boss</p>
+    
+    <article class="sec">
+      <h1>Boss / 头目</h1>
+      <p>世界可追踪的 Boss 与试炼头目（WorldBosses），共 <strong>33</strong>。点击名称进入单独介绍与刷新地图。</p>
+    </article>
+    <article class="sec">
+      <h2>总览地图</h2>
+      <div class="map-toolbar">
+        <button type="button" id="map-zoom-out">−</button>
+        <button type="button" id="map-zoom-in">+</button>
+        <button type="button" id="map-zoom-reset">重置</button>
+        <span class="map-zoom-label" id="map-zoom-label">100%</span>
+      </div>
+      <div class="map-stage" id="map-stage">
+        <div class="map-viewport" id="map-viewport">
+          <img class="map-img" id="map-img" src="../assets/archive-maps/bosses-all.png" alt="全部 Boss" draggable="false">
+        </div>
+      </div>
+      <p class="map-hint">滚轮缩放 · 拖动 · <a href="../assets/archive-maps/bosses-all.png">下载</a></p>
+    </article>
+    <article class="sec">
+      <h2>一览</h2>
+      <table><tr><th>#</th><th>名称</th><th>生命</th><th>坐标</th></tr><tr><td>1</td><td><a class="quest-link" href="archive/bosses/Akazo.html">猗窝座</a></td><td><code>3000</code></td><td><code>-1132, 1381, -1747</code></td></tr><tr><td>2</td><td><a class="quest-link" href="archive/bosses/Datai.html">堕姬</a></td><td><code>3000</code></td><td><code>-166, 1043, -1138</code></td></tr><tr><td>3</td><td><a class="quest-link" href="archive/bosses/Domae.html">童磨</a></td><td><code>3000</code></td><td><code>-296, 1350, -3451</code></td></tr><tr><td>4</td><td><a class="quest-link" href="archive/bosses/Enru.html">魇梦</a></td><td><code>3000</code></td><td><code>822, 800, 544</code></td></tr><tr><td>5</td><td><a class="quest-link" href="archive/bosses/FlameTrainee.html">炎之见习</a></td><td><code>600</code></td><td><code>-1129, 1029, 994</code></td></tr><tr><td>6</td><td><a class="quest-link" href="archive/bosses/Fujiko.html">藤子</a></td><td><code>3200</code></td><td><code>-2460, 38, 1119</code></td></tr><tr><td>7</td><td><a class="quest-link" href="archive/bosses/Giyen.html">义勇</a></td><td><code>3000</code></td><td><code>389, 1018, -85</code></td></tr><tr><td>8</td><td><a class="quest-link" href="archive/bosses/Gyorei.html">悲鸣屿</a></td><td><code>3000</code></td><td><code>2575, 1089, -742</code></td></tr><tr><td>9</td><td><a class="quest-link" href="archive/bosses/Gyutai.html">妓夫太郎</a></td><td><code>3000</code></td><td><code>-266, 1043, -1140</code></td></tr><tr><td>10</td><td><a class="quest-link" href="archive/bosses/Hoyuzo.html">宝月</a></td><td><code>1445</code></td><td><code>747, 1001, -1413</code></td></tr><tr><td>11</td><td><a class="quest-link" href="archive/bosses/InsectTrainee.html">虫之见习</a></td><td><code>600</code></td><td><code>-1396, 262, 69</code></td></tr><tr><td>12</td><td><a class="quest-link" href="archive/bosses/Kaiden.html">凯登</a></td><td><code>825</code></td><td><code>586, 1147, -1315</code></td></tr><tr><td>13</td><td><a class="quest-link" href="archive/bosses/MotherBear.html">母熊</a></td><td><code>525</code></td><td><code>540, 1121, -1024</code></td></tr><tr><td>14</td><td><a class="quest-link" href="archive/bosses/Nezura.html">祢豆子</a></td><td><code>3000</code></td><td><code>-1460, 276, 936</code></td></tr><tr><td>15</td><td><a class="quest-link" href="archive/bosses/Obari.html">小芭内</a></td><td><code>3000</code></td><td><code>771, 1121, -1047</code></td></tr><tr><td>16</td><td><a class="quest-link" href="archive/bosses/Reaper.html">收割者</a></td><td><code>3000</code></td><td><code>98, 1043, -574</code></td></tr><tr><td>17</td><td><a class="quest-link" href="archive/bosses/ReaperTrainee.html">收割者见习·库赞</a></td><td><code>1530</code></td><td><code>-1219, 1374, -3034</code></td></tr><tr><td>18</td><td><a class="quest-link" href="archive/bosses/Rengu.html">炼狱</a></td><td><code>3000</code></td><td><code>-713, 965, 884</code></td></tr><tr><td>19</td><td><a class="quest-link" href="archive/bosses/Saneri.html">实弥</a></td><td><code>3000</code></td><td><code>-379, 1094, -422</code></td></tr><tr><td>20</td><td><a class="quest-link" href="archive/bosses/SerpentTrainee.html">蛇之见习</a></td><td><code>600</code></td><td><code>-271, 1292, -1536</code></td></tr><tr><td>21</td><td><a class="quest-link" href="archive/bosses/Shinora.html">胡蝶忍</a></td><td><code>3000</code></td><td><code>-453, 964, 2</code></td></tr><tr><td>22</td><td><a class="quest-link" href="archive/bosses/SoryuTrainee.html">苍龙见习·五希</a></td><td><code>1050</code></td><td><code>-427, 289, 543</code></td></tr><tr><td>23</td><td><a class="quest-link" href="archive/bosses/SoundTrainee.html">音之见习</a></td><td><code>600</code></td><td><code>192, 1349, -2581</code></td></tr><tr><td>24</td><td><a class="quest-link" href="archive/bosses/StoneTrainee.html">岩之见习</a></td><td><code>600</code></td><td><code>2685, 1074, -569</code></td></tr><tr><td>25</td><td><a class="quest-link" href="archive/bosses/Sumari.html">朱纱丸</a></td><td><code>3000</code></td><td><code>396, 1018, -620</code></td></tr><tr><td>26</td><td><a class="quest-link" href="archive/bosses/TaiChiTrainee.html">太极见习·铃女</a></td><td><code>1050</code></td><td><code>2360, 602, -642</code></td></tr><tr><td>27</td><td><a class="quest-link" href="archive/bosses/Tengai.html">宇髄</a></td><td><code>3000</code></td><td><code>-134, 1349, -2631</code></td></tr><tr><td>28</td><td><a class="quest-link" href="archive/bosses/ThunderTrainee.html">雷之见习</a></td><td><code>600</code></td><td><code>2426, 1074, -557</code></td></tr><tr><td>29</td><td><a class="quest-link" href="archive/bosses/WaterTrainee.html">水之见习·錆兔</a></td><td><code>600</code></td><td><code>815, 1019, 102</code></td></tr><tr><td>30</td><td><a class="quest-link" href="archive/bosses/WindTrainee.html">风之见习</a></td><td><code>600</code></td><td><code>-942, 1381, -2636</code></td></tr><tr><td>31</td><td><a class="quest-link" href="archive/bosses/Yahari.html">矢琶羽</a></td><td><code>3000</code></td><td><code>826, 1019, -641</code></td></tr><tr><td>32</td><td><a class="quest-link" href="archive/bosses/Zentaro.html">善太郎</a></td><td><code>3000</code></td><td><code>1332, 822, -1018</code></td></tr><tr><td>33</td><td><a class="quest-link" href="archive/bosses/Zuko.html">祖科</a></td><td><code>300</code></td><td><code>-297, 1224, -1022</code></td></tr></table>
+    </article>
+    <script src="../js/map-zoom.js?v=20260926q"></script>
+
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>档案</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

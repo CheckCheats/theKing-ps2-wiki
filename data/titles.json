@@ -1,0 +1,2817 @@
+[
+  {
+    "id": "slayer",
+    "name": "Slayer",
+    "name_cn": "猎杀者",
+    "category": "Race",
+    "category_cn": "种族",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Survive the Final Selection.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "final_selections",
+        "counter_cn": "通过最终选拔",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      },
+      {
+        "stat": "Stamina Regen Speed",
+        "stat_cn": "体力回复速度",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "demon",
+    "name": "Demon",
+    "name_cn": "鬼",
+    "category": "Race",
+    "category_cn": "种族",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Drink Muzan's blood and become a demon.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "demon_conversions",
+        "counter_cn": "转化为鬼",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      },
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.012,
+        "isRatio": true,
+        "text": "1.012x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "blooded",
+    "name": "Blooded",
+    "name_cn": "染血者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Slay 500 enemies.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "kills",
+        "counter_cn": "击杀敌人",
+        "threshold": 500
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage Factor",
+        "stat_cn": "额外伤害倍率",
+        "amount": 0.009,
+        "isRatio": true,
+        "text": "1.009x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "reaper",
+    "name": "Reaper",
+    "name_cn": "收割者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Slay 15,000 enemies.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "kills",
+        "counter_cn": "击杀敌人",
+        "threshold": 15000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage Factor",
+        "stat_cn": "额外伤害倍率",
+        "amount": 0.022,
+        "isRatio": true,
+        "text": "1.022x"
+      },
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 12.0,
+        "isRatio": false,
+        "text": "+12"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "challenger",
+    "name": "Challenger",
+    "name_cn": "挑战者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Defeat 10 bosses.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "boss_kills",
+        "counter_cn": "击杀 Boss",
+        "threshold": 10
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "monster_hunter",
+    "name": "Monster Hunter",
+    "name_cn": "怪物猎人",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Defeat 100 bosses.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "boss_kills",
+        "counter_cn": "击杀 Boss",
+        "threshold": 100
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage Factor",
+        "stat_cn": "额外伤害倍率",
+        "amount": 0.012,
+        "isRatio": true,
+        "text": "1.012x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#D94DD9"
+      },
+      {
+        "t": 1,
+        "hex": "#D94DD9"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)",
+    "pill_bg": "#4C1B4C"
+  },
+  {
+    "id": "nemesis",
+    "name": "Nemesis",
+    "name_cn": "宿敌",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Defeat 500 bosses.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "boss_kills",
+        "counter_cn": "击杀 Boss",
+        "threshold": 500
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Attack Speed Factor",
+        "stat_cn": "攻击速度倍率",
+        "amount": 0.03,
+        "isRatio": true,
+        "text": "1.03x"
+      },
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 12.0,
+        "isRatio": false,
+        "text": "+12"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "bruised",
+    "name": "Bruised",
+    "name_cn": "伤痕累累",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Die 50 times.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "deaths",
+        "counter_cn": "死亡次数",
+        "threshold": 50
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "scarred",
+    "name": "Scarred",
+    "name_cn": "满身疮痍",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Die 250 times.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "deaths",
+        "counter_cn": "死亡次数",
+        "threshold": 250
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Damage Reduction",
+        "stat_cn": "伤害减免",
+        "amount": 0.5,
+        "isRatio": false,
+        "text": "+0.5"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 7.0,
+        "isRatio": false,
+        "text": "+7"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "relentless",
+    "name": "Relentless",
+    "name_cn": "不屈者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Die 1,000 times.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "deaths",
+        "counter_cn": "死亡次数",
+        "threshold": 1000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Damage Reduction Factor",
+        "stat_cn": "伤害减免倍率",
+        "amount": 0.025,
+        "isRatio": true,
+        "text": "1.025x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "hard_hitter",
+    "name": "Hard Hitter",
+    "name_cn": "重击手",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Deal 50,000 total damage.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "damage_dealt",
+        "counter_cn": "累计造成伤害",
+        "threshold": 50000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 0.75,
+        "isRatio": false,
+        "text": "+0.75"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 0.1,
+        "isRatio": false,
+        "text": "+0.1"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "bonebreaker",
+    "name": "Bonebreaker",
+    "name_cn": "碎骨者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Deal 500,000 total damage.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "damage_dealt",
+        "counter_cn": "累计造成伤害",
+        "threshold": 500000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 1.0,
+        "isRatio": false,
+        "text": "+1"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 0.15,
+        "isRatio": false,
+        "text": "+0.15"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "devastator",
+    "name": "Devastator",
+    "name_cn": "毁灭者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Deal 2,500,000 total damage.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "damage_dealt",
+        "counter_cn": "累计造成伤害",
+        "threshold": 2500000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 1.5,
+        "isRatio": false,
+        "text": "+1.5"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 0.2,
+        "isRatio": false,
+        "text": "+0.2"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#D94DD9"
+      },
+      {
+        "t": 1,
+        "hex": "#D94DD9"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)",
+    "pill_bg": "#4C1B4C"
+  },
+  {
+    "id": "annihilator",
+    "name": "Annihilator",
+    "name_cn": "歼灭者",
+    "category": "Combat",
+    "category_cn": "战斗",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Deal 10,000,000 total damage.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "damage_dealt",
+        "counter_cn": "累计造成伤害",
+        "threshold": 10000000
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 2.0,
+        "isRatio": false,
+        "text": "+2"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Additional Damage",
+        "stat_cn": "额外伤害",
+        "amount": 0.25,
+        "isRatio": false,
+        "text": "+0.25"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "odd_jobber",
+    "name": "Odd-Jobber",
+    "name_cn": "杂役",
+    "category": "Progression",
+    "category_cn": "进度",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Complete 25 quests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "quests",
+        "counter_cn": "完成任务",
+        "threshold": 25
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Quest Exp Factor",
+        "stat_cn": "任务经验倍率",
+        "amount": 0.03,
+        "isRatio": true,
+        "text": "1.03x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "village_pillar",
+    "name": "Village Pillar",
+    "name_cn": "村之柱",
+    "category": "Progression",
+    "category_cn": "进度",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Complete 150 quests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "quests",
+        "counter_cn": "完成任务",
+        "threshold": 150
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Quest Exp Factor",
+        "stat_cn": "任务经验倍率",
+        "amount": 0.04,
+        "isRatio": true,
+        "text": "1.04x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 7.0,
+        "isRatio": false,
+        "text": "+7"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "oathkeeper",
+    "name": "Oathkeeper",
+    "name_cn": "守誓者",
+    "category": "Progression",
+    "category_cn": "进度",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Complete 500 quests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "quests",
+        "counter_cn": "完成任务",
+        "threshold": 500
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Quest Exp Factor",
+        "stat_cn": "任务经验倍率",
+        "amount": 0.08,
+        "isRatio": true,
+        "text": "1.08x"
+      },
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 12.0,
+        "isRatio": false,
+        "text": "+12"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "prospector",
+    "name": "Prospector",
+    "name_cn": "探宝者",
+    "category": "Exploration",
+    "category_cn": "探索",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Open 25 chests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "chests",
+        "counter_cn": "开启宝箱",
+        "threshold": 25
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Movement Speed Factor",
+        "stat_cn": "移动速度倍率",
+        "amount": 0.018,
+        "isRatio": true,
+        "text": "1.018x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Run Speed Factor",
+        "stat_cn": "跑步速度倍率",
+        "amount": 0.01,
+        "isRatio": true,
+        "text": "1.01x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "vaultbreaker",
+    "name": "Vaultbreaker",
+    "name_cn": "破库者",
+    "category": "Exploration",
+    "category_cn": "探索",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Open 500 chests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "chests",
+        "counter_cn": "开启宝箱",
+        "threshold": 500
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Movement Speed Factor",
+        "stat_cn": "移动速度倍率",
+        "amount": 0.032,
+        "isRatio": true,
+        "text": "1.032x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Movement Speed Factor",
+        "stat_cn": "移动速度倍率",
+        "amount": 0.012,
+        "isRatio": true,
+        "text": "1.012x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "seal_breaker",
+    "name": "Seal Breaker",
+    "name_cn": "破印者",
+    "category": "Exploration",
+    "category_cn": "探索",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Clear 10 sealed chests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "events",
+        "counter_cn": "封印宝箱 / 事件",
+        "threshold": 10
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Block Regen",
+        "stat_cn": "格挡回复",
+        "amount": 0.06,
+        "isRatio": true,
+        "text": "1.06x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "warden",
+    "name": "Warden",
+    "name_cn": "守护者",
+    "category": "Exploration",
+    "category_cn": "探索",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Clear 50 sealed chests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "events",
+        "counter_cn": "封印宝箱 / 事件",
+        "threshold": 50
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Block Regen",
+        "stat_cn": "格挡回复",
+        "amount": 0.1,
+        "isRatio": true,
+        "text": "1.1x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 7.0,
+        "isRatio": false,
+        "text": "+7"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "calamitys_end",
+    "name": "Calamity\\'s End",
+    "name_cn": "Calamity\\'s End",
+    "category": "Exploration",
+    "category_cn": "探索",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Clear 200 sealed chests.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "events",
+        "counter_cn": "封印宝箱 / 事件",
+        "threshold": 200
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Damage Reduction Factor",
+        "stat_cn": "伤害减免倍率",
+        "amount": 0.025,
+        "isRatio": true,
+        "text": "1.025x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "tower_runner",
+    "name": "Tower Runner",
+    "name_cn": "爬塔跑者",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Finish 10 tower runs.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_runs",
+        "counter_cn": "爬塔次数",
+        "threshold": 10
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "spire_regular",
+    "name": "Spire Regular",
+    "name_cn": "尖塔常客",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Finish 50 tower runs.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_runs",
+        "counter_cn": "爬塔次数",
+        "threshold": 50
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 15.0,
+        "isRatio": false,
+        "text": "+15"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 7.0,
+        "isRatio": false,
+        "text": "+7"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "endless",
+    "name": "Endless",
+    "name_cn": "无尽",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Finish 200 tower runs.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_runs",
+        "counter_cn": "爬塔次数",
+        "threshold": 200
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 24.0,
+        "isRatio": false,
+        "text": "+24"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 13.0,
+        "isRatio": false,
+        "text": "+13"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "climber",
+    "name": "Climber",
+    "name_cn": "攀登者",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Reach floor 25 of the tower.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_floor",
+        "counter_cn": "爬塔最高层",
+        "threshold": 25
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "highclimber",
+    "name": "Highclimber",
+    "name_cn": "高空攀登者",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach floor 50 of the tower.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_floor",
+        "counter_cn": "爬塔最高层",
+        "threshold": 50
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 20.0,
+        "isRatio": false,
+        "text": "+20"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#D94DD9"
+      },
+      {
+        "t": 1,
+        "hex": "#D94DD9"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)",
+    "pill_bg": "#4C1B4C"
+  },
+  {
+    "id": "roof_of_the_world",
+    "name": "Heaven\\'s Doorstep",
+    "name_cn": "Heaven\\'s Doorstep",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Mythic",
+    "rarity_hex": "#A10000",
+    "description": "Stand at the top of Ouwigahara.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_summits",
+        "counter_cn": "登顶次数",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 40.0,
+        "isRatio": false,
+        "text": "+40"
+      },
+      {
+        "stat": "Damage Reduction Factor",
+        "stat_cn": "伤害减免倍率",
+        "amount": 0.035,
+        "isRatio": true,
+        "text": "1.035x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 15.0,
+        "isRatio": false,
+        "text": "+15"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#A10000"
+      },
+      {
+        "t": 1,
+        "hex": "#A10000"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #A10000 0%, #A10000 100%)",
+    "pill_bg": "#4C0000"
+  },
+  {
+    "id": "stairwalker",
+    "name": "Stairwalker",
+    "name_cn": "阶行者",
+    "category": "Ouwigahara",
+    "category_cn": "奥乌兰爬塔",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Wear it in the tower: from the floor that earned it, the draft starts dealing a way around.",
+    "hidden": true,
+    "vanityOnly": true,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "tower_floor",
+        "counter_cn": "爬塔最高层",
+        "threshold": 90
+      }
+    ],
+    "buffs": [],
+    "collection": [],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "angler",
+    "name": "Angler",
+    "name_cn": "钓手",
+    "category": "Fishing",
+    "category_cn": "钓鱼",
+    "rarity": "Common",
+    "rarity_hex": "#DFE6CC",
+    "description": "Catch 100 common fish.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "fish_common",
+        "counter_cn": "钓到常见鱼",
+        "threshold": 100
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Bite Speed Factor",
+        "stat_cn": "咬钩速度倍率",
+        "amount": 0.03,
+        "isRatio": true,
+        "text": "1.03x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Stamina",
+        "stat_cn": "最大体力",
+        "amount": 5.0,
+        "isRatio": false,
+        "text": "+5"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#DFE6CC"
+      },
+      {
+        "t": 1,
+        "hex": "#DFE6CC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)",
+    "pill_bg": "#4A4C43"
+  },
+  {
+    "id": "deep_water_angler",
+    "name": "Deep Water Angler",
+    "name_cn": "深水钓手",
+    "category": "Fishing",
+    "category_cn": "钓鱼",
+    "rarity": "Rare",
+    "rarity_hex": "#4FB9FF",
+    "description": "Catch 250 rare fish.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "fish_rare",
+        "counter_cn": "钓到稀有鱼",
+        "threshold": 250
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Bite Speed Factor",
+        "stat_cn": "咬钩速度倍率",
+        "amount": 0.05,
+        "isRatio": true,
+        "text": "1.05x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breath Duration Factor",
+        "stat_cn": "气息持续时间倍率",
+        "amount": 0.05,
+        "isRatio": true,
+        "text": "1.05x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#4FB9FF"
+      },
+      {
+        "t": 1,
+        "hex": "#4FB9FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)",
+    "pill_bg": "#17374C"
+  },
+  {
+    "id": "leviathan_hunter",
+    "name": "Leviathan Hunter",
+    "name_cn": "巨兽猎手",
+    "category": "Fishing",
+    "category_cn": "钓鱼",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Catch 100 legendary fish.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "fish_legendary",
+        "counter_cn": "钓到传奇鱼",
+        "threshold": 100
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Fishing Luck Factor",
+        "stat_cn": "钓鱼幸运倍率",
+        "amount": 0.05,
+        "isRatio": true,
+        "text": "1.05x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Max Health",
+        "stat_cn": "最大生命",
+        "amount": 10.0,
+        "isRatio": false,
+        "text": "+10"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#D94DD9"
+      },
+      {
+        "t": 1,
+        "hex": "#D94DD9"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)",
+    "pill_bg": "#4C1B4C"
+  },
+  {
+    "id": "salvager",
+    "name": "Salvager",
+    "name_cn": "打捞者",
+    "category": "Fishing",
+    "category_cn": "钓鱼",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Pull 25 lost items out of the water.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "fish_items",
+        "counter_cn": "钓到物品",
+        "threshold": 25
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Fishing Luck Factor",
+        "stat_cn": "钓鱼幸运倍率",
+        "amount": 0.08,
+        "isRatio": true,
+        "text": "1.08x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breath Duration Factor",
+        "stat_cn": "气息持续时间倍率",
+        "amount": 0.1,
+        "isRatio": true,
+        "text": "1.1x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "legendary_fisherman",
+    "name": "Legendary Fisherman",
+    "name_cn": "传奇渔夫",
+    "category": "Fishing",
+    "category_cn": "钓鱼",
+    "rarity": "Legendary",
+    "rarity_hex": "#FFCA2C",
+    "description": "Inherit the drowned fisherman's line.",
+    "hidden": true,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "legendary_rods",
+        "counter_cn": "获得传奇鱼竿",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Fishing Luck Factor",
+        "stat_cn": "钓鱼幸运倍率",
+        "amount": 0.07,
+        "isRatio": true,
+        "text": "1.07x"
+      },
+      {
+        "stat": "Bite Speed Factor",
+        "stat_cn": "咬钩速度倍率",
+        "amount": 0.05,
+        "isRatio": true,
+        "text": "1.05x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breath Duration Factor",
+        "stat_cn": "气息持续时间倍率",
+        "amount": 0.06,
+        "isRatio": true,
+        "text": "1.06x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#FFCA2C"
+      },
+      {
+        "t": 1,
+        "hex": "#FFCA2C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)",
+    "pill_bg": "#4C3C0D"
+  },
+  {
+    "id": "mastered_flame",
+    "name": "Flame Perfected",
+    "name_cn": "炎之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Flame Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Flame",
+        "counter_cn": "精通 Flame",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#E62D1E"
+      },
+      {
+        "t": 0.2,
+        "hex": "#E62D1E"
+      },
+      {
+        "t": 0.5,
+        "hex": "#FFC82D"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFFAEB"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFFAEB"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #E62D1E 0%, #E62D1E 20%, #FFC82D 50%, #FFFAEB 75%, #FFFAEB 100%)",
+    "pill_bg": "#4C0E09"
+  },
+  {
+    "id": "mastered_insect",
+    "name": "Insect Perfected",
+    "name_cn": "虫之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Insect Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Insect",
+        "counter_cn": "精通 Insect",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#9655D2"
+      },
+      {
+        "t": 0.2,
+        "hex": "#9655D2"
+      },
+      {
+        "t": 0.5,
+        "hex": "#D782E1"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FAE8FA"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FAE8FA"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #9655D2 0%, #9655D2 20%, #D782E1 50%, #FAE8FA 75%, #FAE8FA 100%)",
+    "pill_bg": "#361E4C"
+  },
+  {
+    "id": "mastered_serpent",
+    "name": "Serpent Perfected",
+    "name_cn": "蛇之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Serpent Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Serpent",
+        "counter_cn": "精通 Serpent",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#147355"
+      },
+      {
+        "t": 0.2,
+        "hex": "#147355"
+      },
+      {
+        "t": 0.5,
+        "hex": "#4BC887"
+      },
+      {
+        "t": 0.75,
+        "hex": "#E4FAEC"
+      },
+      {
+        "t": 1.0,
+        "hex": "#E4FAEC"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #147355 0%, #147355 20%, #4BC887 50%, #E4FAEC 75%, #E4FAEC 100%)",
+    "pill_bg": "#0D4C38"
+  },
+  {
+    "id": "mastered_sound",
+    "name": "Sound Perfected",
+    "name_cn": "音之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Sound Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Sound",
+        "counter_cn": "精通 Sound",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#F07823"
+      },
+      {
+        "t": 0.2,
+        "hex": "#F07823"
+      },
+      {
+        "t": 0.5,
+        "hex": "#FFB950"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFF0D7"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFF0D7"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #F07823 0%, #F07823 20%, #FFB950 50%, #FFF0D7 75%, #FFF0D7 100%)",
+    "pill_bg": "#4C260B"
+  },
+  {
+    "id": "mastered_stone",
+    "name": "Stone Perfected",
+    "name_cn": "岩之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Stone Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Stone",
+        "counter_cn": "精通 Stone",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#967850"
+      },
+      {
+        "t": 0.2,
+        "hex": "#967850"
+      },
+      {
+        "t": 0.5,
+        "hex": "#C8B491"
+      },
+      {
+        "t": 0.75,
+        "hex": "#F2EEE4"
+      },
+      {
+        "t": 1.0,
+        "hex": "#F2EEE4"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #967850 0%, #967850 20%, #C8B491 50%, #F2EEE4 75%, #F2EEE4 100%)",
+    "pill_bg": "#4C3D28"
+  },
+  {
+    "id": "mastered_thunder",
+    "name": "Thunder Perfected",
+    "name_cn": "雷之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Thunder Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Thunder",
+        "counter_cn": "精通 Thunder",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#FACD23"
+      },
+      {
+        "t": 0.2,
+        "hex": "#FACD23"
+      },
+      {
+        "t": 0.5,
+        "hex": "#F9F381"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFFFFF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFFFFF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #FACD23 0%, #FACD23 20%, #F9F381 50%, #FFFFFF 75%, #FFFFFF 100%)",
+    "pill_bg": "#4C3E0A"
+  },
+  {
+    "id": "mastered_water",
+    "name": "Water Perfected",
+    "name_cn": "水之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Water Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Water",
+        "counter_cn": "精通 Water",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#0E5FBE"
+      },
+      {
+        "t": 0.2,
+        "hex": "#0E5FBE"
+      },
+      {
+        "t": 0.5,
+        "hex": "#55C3F0"
+      },
+      {
+        "t": 0.75,
+        "hex": "#ECFAFF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#ECFAFF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #0E5FBE 0%, #0E5FBE 20%, #55C3F0 50%, #ECFAFF 75%, #ECFAFF 100%)",
+    "pill_bg": "#05264C"
+  },
+  {
+    "id": "mastered_wind",
+    "name": "Wind Perfected",
+    "name_cn": "风之精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Wind Breathing.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Wind",
+        "counter_cn": "精通 Wind",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Breathing Damage Factor",
+        "stat_cn": "呼吸伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#78B4A5"
+      },
+      {
+        "t": 0.2,
+        "hex": "#78B4A5"
+      },
+      {
+        "t": 0.5,
+        "hex": "#C3E6DC"
+      },
+      {
+        "t": 0.75,
+        "hex": "#F8FFFD"
+      },
+      {
+        "t": 1.0,
+        "hex": "#F8FFFD"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #78B4A5 0%, #78B4A5 20%, #C3E6DC 50%, #F8FFFD 75%, #F8FFFD 100%)",
+    "pill_bg": "#324C46"
+  },
+  {
+    "id": "mastered_arrow",
+    "name": "Arrow Perfected",
+    "name_cn": "箭矢精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Arrow.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Arrow",
+        "counter_cn": "精通 Arrow",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#4650CD"
+      },
+      {
+        "t": 0.2,
+        "hex": "#4650CD"
+      },
+      {
+        "t": 0.5,
+        "hex": "#8C96F5"
+      },
+      {
+        "t": 0.75,
+        "hex": "#E6EBFF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#E6EBFF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #4650CD 0%, #4650CD 20%, #8C96F5 50%, #E6EBFF 75%, #E6EBFF 100%)",
+    "pill_bg": "#1A1D4C"
+  },
+  {
+    "id": "mastered_blood_manipulation",
+    "name": "Blood Manipulation Perfected",
+    "name_cn": "血操精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Blood Manipulation.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Blood Manipulation",
+        "counter_cn": "精通 Blood Manipulation",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#7D0F20"
+      },
+      {
+        "t": 0.2,
+        "hex": "#7D0F20"
+      },
+      {
+        "t": 0.5,
+        "hex": "#CD2334"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FAC8CA"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FAC8CA"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #7D0F20 0%, #7D0F20 20%, #CD2334 50%, #FAC8CA 75%, #FAC8CA 100%)",
+    "pill_bg": "#4C0913"
+  },
+  {
+    "id": "mastered_cryokinesis",
+    "name": "Cryokinesis Perfected",
+    "name_cn": "冰结精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Cryokinesis.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Cryokinesis",
+        "counter_cn": "精通 Cryokinesis",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#3C96CD"
+      },
+      {
+        "t": 0.2,
+        "hex": "#3C96CD"
+      },
+      {
+        "t": 0.5,
+        "hex": "#96E1F8"
+      },
+      {
+        "t": 0.75,
+        "hex": "#F6FDFF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#F6FDFF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #3C96CD 0%, #3C96CD 20%, #96E1F8 50%, #F6FDFF 75%, #F6FDFF 100%)",
+    "pill_bg": "#16374C"
+  },
+  {
+    "id": "mastered_dream",
+    "name": "Dream Perfected",
+    "name_cn": "梦境精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Dream.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Dream",
+        "counter_cn": "精通 Dream",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#A52882"
+      },
+      {
+        "t": 0.2,
+        "hex": "#A52882"
+      },
+      {
+        "t": 0.5,
+        "hex": "#E673B4"
+      },
+      {
+        "t": 0.75,
+        "hex": "#E2F0FF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#E2F0FF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #A52882 0%, #A52882 20%, #E673B4 50%, #E2F0FF 75%, #E2F0FF 100%)",
+    "pill_bg": "#4C123C"
+  },
+  {
+    "id": "mastered_obi_manipulation",
+    "name": "Obi Manipulation Perfected",
+    "name_cn": "带操精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Obi Manipulation.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Obi Manipulation",
+        "counter_cn": "精通 Obi Manipulation",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#E15F55"
+      },
+      {
+        "t": 0.2,
+        "hex": "#E15F55"
+      },
+      {
+        "t": 0.5,
+        "hex": "#FAA082"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFEADA"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFEADA"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #E15F55 0%, #E15F55 20%, #FAA082 50%, #FFEADA 75%, #FFEADA 100%)",
+    "pill_bg": "#4C201C"
+  },
+  {
+    "id": "mastered_pyrokenesis",
+    "name": "Pyrokenesis Perfected",
+    "name_cn": "炎操精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Pyrokenesis.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Pyrokenesis",
+        "counter_cn": "精通 Pyrokenesis",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#9B1414"
+      },
+      {
+        "t": 0.2,
+        "hex": "#9B1414"
+      },
+      {
+        "t": 0.5,
+        "hex": "#F5731E"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFD78C"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFD78C"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #9B1414 0%, #9B1414 20%, #F5731E 50%, #FFD78C 75%, #FFD78C 100%)",
+    "pill_bg": "#4C0909"
+  },
+  {
+    "id": "mastered_reaper",
+    "name": "Reaper Perfected",
+    "name_cn": "收割精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Reaper.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Reaper",
+        "counter_cn": "精通 Reaper",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#5F466E"
+      },
+      {
+        "t": 0.2,
+        "hex": "#5F466E"
+      },
+      {
+        "t": 0.5,
+        "hex": "#A08CB4"
+      },
+      {
+        "t": 0.75,
+        "hex": "#F6F2FA"
+      },
+      {
+        "t": 1.0,
+        "hex": "#F6F2FA"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #5F466E 0%, #5F466E 20%, #A08CB4 50%, #F6F2FA 75%, #F6F2FA 100%)",
+    "pill_bg": "#42304C"
+  },
+  {
+    "id": "mastered_shockwave",
+    "name": "Shockwave Perfected",
+    "name_cn": "冲击波精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Shockwave.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Shockwave",
+        "counter_cn": "精通 Shockwave",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#788CA5"
+      },
+      {
+        "t": 0.2,
+        "hex": "#788CA5"
+      },
+      {
+        "t": 0.5,
+        "hex": "#C3D7EB"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FCFEFF"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FCFEFF"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #788CA5 0%, #788CA5 20%, #C3D7EB 50%, #FCFEFF 75%, #FCFEFF 100%)",
+    "pill_bg": "#37404C"
+  },
+  {
+    "id": "mastered_tamari",
+    "name": "Tamari Perfected",
+    "name_cn": "玉响精通",
+    "category": "Powers",
+    "category_cn": "力量精通",
+    "rarity": "Epic",
+    "rarity_hex": "#D94DD9",
+    "description": "Reach max mastery with Tamari.",
+    "hidden": false,
+    "vanityOnly": false,
+    "disabled": false,
+    "requirements": [
+      {
+        "counter": "mastered_Tamari",
+        "counter_cn": "精通 Tamari",
+        "threshold": 1
+      }
+    ],
+    "buffs": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.02,
+        "isRatio": true,
+        "text": "1.02x"
+      }
+    ],
+    "collection": [
+      {
+        "stat": "Evil Art Damage Factor",
+        "stat_cn": "邪恶艺术伤害倍率",
+        "amount": 0.005,
+        "isRatio": true,
+        "text": "1.005x"
+      }
+    ],
+    "color_stops": [
+      {
+        "t": 0.0,
+        "hex": "#6E32A5"
+      },
+      {
+        "t": 0.2,
+        "hex": "#6E32A5"
+      },
+      {
+        "t": 0.5,
+        "hex": "#CD6EA5"
+      },
+      {
+        "t": 0.75,
+        "hex": "#FFE4A5"
+      },
+      {
+        "t": 1.0,
+        "hex": "#FFE4A5"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #6E32A5 0%, #6E32A5 20%, #CD6EA5 50%, #FFE4A5 75%, #FFE4A5 100%)",
+    "pill_bg": "#32174C"
+  },
+  {
+    "id": "son_of_ilio",
+    "name": "Son of Ilio",
+    "name_cn": "伊利奥之子",
+    "category": "Legacy",
+    "category_cn": "传奇纪念",
+    "rarity": "Mythic",
+    "rarity_hex": "#A10000",
+    "description": "For the ones who waited on a sun that never rose.",
+    "hidden": true,
+    "vanityOnly": true,
+    "disabled": false,
+    "requirements": [],
+    "buffs": [],
+    "collection": [],
+    "color_stops": [
+      {
+        "t": 0,
+        "hex": "#A10000"
+      },
+      {
+        "t": 1,
+        "hex": "#A10000"
+      }
+    ],
+    "gradient_css": "linear-gradient(180deg, #A10000 0%, #A10000 100%)",
+    "pill_bg": "#4C0000"
+  }
+]

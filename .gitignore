@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.tmp
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+ps2_archive_dump/
+.cursor/

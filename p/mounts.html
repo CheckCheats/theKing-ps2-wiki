@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>坐骑 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926m">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ol{margin:.35rem 0 0;padding-left:1.35rem}
+    .sec ol li{margin:.25rem 0}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0 .7rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .num{display:inline-flex;align-items:center;justify-content:center;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--gold);color:#111;font-weight:700;font-size:.78rem;margin-right:.35rem}
+    .map-toolbar{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:.55rem 0 .35rem}
+    .map-toolbar button{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--cream);font:inherit;font-size:.82rem;padding:.35rem .7rem;cursor:pointer}
+    .map-toolbar button:hover{border-color:rgba(255,208,70,.45);color:var(--gold)}
+    .map-zoom-label{margin-left:.15rem;font-size:.82rem;color:var(--muted);min-width:3.2rem}
+    .map-stage{position:relative;margin-top:.35rem;border:1px solid var(--line);overflow:hidden;background:#0a0a0a;touch-action:none;user-select:none;height:min(72vh,820px);min-height:320px}
+    .map-stage.is-zoomed{cursor:grab}
+    .map-viewport{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(1);transform-origin:center center;will-change:transform}
+    .map-viewport img.map-img{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none;-webkit-user-drag:none}
+    .map-hint{margin:.55rem 0 0;font-size:.82rem;color:var(--muted)}
+    .step{border-left:3px solid var(--gold);padding-left:.75rem;margin:.55rem 0}
+    .step strong{display:block;margin-bottom:.2rem}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav">
+      <a href="#horse">马</a>
+      <a href="#get">获取</a>
+      <a href="#tame">驯服</a>
+      <a href="#minigame">小游戏</a>
+      <a href="#spawns">刷新点</a>
+      <a href="#ride">骑乘</a>
+    </nav>
+    <span class="top-ver">坐骑</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 坐骑</p>
+
+    <article class="sec" id="horse">
+      <h1>坐骑</h1>
+      <p>当前版本可永久拥有的坐骑<strong>只有一种：马（Horse）</strong>。驯服世界里的野马并支付文后，会进入快捷栏；装备即可召唤骑乘。</p>
+      <table>
+        <tr><th>项目</th><th>内容</th></tr>
+        <tr><td>物品</td><td><strong>马</strong> / Horse</td></tr>
+        <tr><td>稀有度</td><td>5（传奇级档）</td></tr>
+        <tr><td>购买价</td><td><strong>15,000</strong> 文（驯服成功后弹窗确认）</td></tr>
+        <tr><td>获取方式</td><td>野外驯服野马 → 确认购买（不可商店直接买）</td></tr>
+        <tr><td>持有上限</td><td>每人 <strong>1</strong> 匹（已拥有则无法再买）</td></tr>
+        <tr><td>前置等级 / 任务</td><td><strong>无</strong></td></tr>
+      </table>
+    </article>
+
+    <article class="sec" id="get">
+      <h2>如何获取</h2>
+      <h3>条件</h3>
+      <ul>
+        <li>背包 / 仓库里<strong>还没有</strong>马。</li>
+        <li>身上至少 <strong>15,000 文</strong>（驯服成功后付款；钱不够会提示还差多少）。</li>
+        <li>世界里出现了野马（同时全图只刷 <strong>1</strong> 匹）。</li>
+      </ul>
+      <h3>流程总览</h3>
+      <ol>
+        <li>留意全服提示：「MoldySugar 的一匹马跑丢了……先把它驯服。」</li>
+        <li>赶到下方 6 个刷新点之一（或使用<strong>马定位器</strong>通行证在地图上追踪）。</li>
+        <li>落地靠近野马，按住交互 <strong>Tame</strong>（飞着 / 离太远点不出）。</li>
+        <li>进入驯服姿势，完成<strong>对圈小游戏</strong>（见下）。</li>
+        <li>成功后弹窗：是否以 15,000 文购买马？选 <strong>Yes</strong>（约 15 秒限时）。</li>
+        <li>马进入快捷栏，装备即可召唤。</li>
+      </ol>
+      <h3>可选：马定位器（Horse Locator）</h3>
+      <p>游戏通行证。持有后小地图可追踪当前野马位置（与夜市定位器同类）。没有通行证也能靠刷新点硬找。</p>
+      <p>野马只在玩家附近约 <strong>250</strong> 距离内加载模型；路过刷新点多停一会儿再换下一处。</p>
+    </article>
+
+    <article class="sec" id="tame">
+      <h2>驯服操作流程</h2>
+      <div class="step">
+        <strong>1. 找到野马</strong>
+        野马慢速游荡（闲逛半径约 60）。走到身边会出现 <strong>Tame</strong> 提示。
+      </div>
+      <div class="step">
+        <strong>2. 启动驯服</strong>
+        按住提示完成交互。角色会被焊到马背上并短暂锁定操作（站定 / 暂停游玩状态），镜头跟头部。
+      </div>
+      <div class="step">
+        <strong>3. 对圈小游戏</strong>
+        屏幕中央出现收缩圆环；见下方「驯服小游戏」。进度条到 100% 成功，掉到 0% 失败。
+      </div>
+      <div class="step">
+        <strong>4a. 失败</strong>
+        被马甩下，短暂硬直 / 击飞。野马仍在，可再试。
+      </div>
+      <div class="step">
+        <strong>4b. 成功</strong>
+        下马动画后野马消失，弹出购买确认。点 Yes 扣 15,000 文获得马道具；点 No / 超时则<strong>不扣钱也不给马</strong>（需重新驯服）。
+      </div>
+    </article>
+
+    <article class="sec" id="minigame">
+      <h2>驯服小游戏怎么玩（对圈）</h2>
+      <p>与训练场「收缩圆环」同类：屏幕上随机位置出现 <strong>Pod</strong>（外圈 + 内圈），外圈不断收缩，在两圈大小接近时点击。</p>
+      <h3>进度条</h3>
+      <ul>
+        <li>起始 <strong>50%</strong>；到 <strong>100%</strong> 驯服成功；到 <strong>0%</strong> 失败被甩下。</li>
+        <li>每约 <strong>0.1 秒</strong>自然掉 <strong>1%</strong>（不点也会掉）。</li>
+        <li>点中（两圈尺寸差很小）：约 <strong>+25%</strong>。</li>
+        <li>点空 / 超时未点：约 <strong>−10%</strong>。</li>
+        <li>可点底部 <strong>Exit</strong> 主动放弃（等同失败）。</li>
+      </ul>
+      <h3>圆环节奏</h3>
+      <ul>
+        <li>外圈从大缩到小，再胀回，循环约 <strong>1 秒</strong>一轮。</li>
+        <li>每个圆环存活约 <strong>3 秒</strong>；不点会自动判失败并刷下一个。</li>
+        <li>圆环间隔约 <strong>1.5 秒</strong>出现；低进度时圆环会抖动，更难点。</li>
+        <li>目标：在外圈与内圈<strong>几乎重合</strong>时点击（容差约 12.5% 缩放差）。</li>
+      </ul>
+      <p>经验：保持连续点中，抵消掉血；大约连续成功几次即可到 100%。点早 / 点晚都会扣进度。</p>
+    </article>
+
+    <article class="sec" id="spawns">
+      <h2>野马刷新位置</h2>
+      <p>全图 <strong>6</strong> 个候选点，任意时刻只存在 <strong>1</strong> 匹。刷新时会有全服字幕提示。</p>
+      <table>
+        <tr><th>#</th><th>大致区域</th><th>坐标 (X, Y, Z)</th></tr>
+        <tr>
+          <td><span class="num">1</span></td>
+          <td>蝴蝶庄园南</td>
+          <td><code>-1740.47, 311.5, 881.24</code></td>
+        </tr>
+        <tr>
+          <td><span class="num">2</span></td>
+          <td>迷雾港湾南</td>
+          <td><code>128.307, 827.359, 987.86</code></td>
+        </tr>
+        <tr>
+          <td><span class="num">3</span></td>
+          <td>中央东侧</td>
+          <td><code>607.25, 1017.5, -224.46</code></td>
+        </tr>
+        <tr>
+          <td><span class="num">4</span></td>
+          <td>风之峰西麓</td>
+          <td><code>-1035.752, 1130.074, -718.828</code></td>
+        </tr>
+        <tr>
+          <td><span class="num">5</span></td>
+          <td>风之峰北</td>
+          <td><code>-299.885, 1307.598, -1775.326</code></td>
+        </tr>
+        <tr>
+          <td><span class="num">6</span></td>
+          <td>隐雾村西</td>
+          <td><code>1165.37, 1102.5, -963.35</code></td>
+        </tr>
+      </table>
+      <h3>纯净大地图 · 刷新点标注</h3>
+      <p>在纯净大地图上标出 6 处刷新点。可缩放拖动。</p>
+      <div class="map-toolbar">
+        <button type="button" id="map-zoom-out" aria-label="缩小">−</button>
+        <button type="button" id="map-zoom-in" aria-label="放大">+</button>
+        <button type="button" id="map-zoom-reset">重置</button>
+        <span class="map-zoom-label" id="map-zoom-label">100%</span>
+      </div>
+      <div class="map-stage" id="map-stage">
+        <div class="map-viewport" id="map-viewport">
+          <img class="map-img" id="map-img" src="../assets/ouwland-horse-spawns-map.png" alt="Ouwland 野马刷新点" draggable="false">
+        </div>
+      </div>
+      <p class="map-hint">滚轮缩放 · 拖动平移 · 双击放大/复位 · <a href="../assets/ouwland-horse-spawns-map.png">下载标注图</a> · <a href="../assets/ouwland-map-clean.png">下载纯净底图</a></p>
+    </article>
+
+    <article class="sec" id="ride">
+      <h2>拥有后怎么骑</h2>
+      <ul>
+        <li>快捷栏装备<strong>马</strong>即可召唤；卸下 / 取消召唤有约 <strong>5 秒</strong>冷却。</li>
+        <li>移动中可切换步态：<strong>走</strong>（速 10）→ <strong>小跑</strong>（36，耗体力）→ <strong>疾驰</strong>（54，耗体力更快）。</li>
+        <li>在实心地面可跳跃；按指令下马。</li>
+        <li>战斗中等限制以游戏内提示为准；坐骑为工具栏物品，不会掉耐久。</li>
+      </ul>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>坐骑 · 马</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+  <script src="../js/map-zoom.js?v=20260926m"></script>
+</body>
+</html>

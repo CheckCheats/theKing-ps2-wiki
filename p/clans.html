@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>公会 · 肤色 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926e">
+  <link rel="stylesheet" href="../css/clans.css?v=20260926e">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav" aria-label="本页">
+      <a href="#rates">滚动率</a>
+      <a href="#spins">直购</a>
+      <a href="#skins">肤色</a>
+      <a href="#clans">公会一览</a>
+    </nav>
+    <span class="top-ver">自定义</span>
+  </header>
+
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 公会与自定义</p>
+
+    <article class="sec" id="rates">
+      <h1>公会滚动率</h1>
+      <p>自定义界面右侧「公会滚动率」预览表。各稀有度<strong>独立概率</strong>如下（合计 100%）。</p>
+      <div class="rate-grid" id="rate-grid"></div>
+    </article>
+
+    <article class="sec" id="spins">
+      <h1>旋转次数直购</h1>
+      <p>可用<strong>罗宝</strong>或<strong>矿石</strong>购买。矿石价按标价折算：<code>ceil(罗宝 / 15)</code>。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>礼包</th><th>次数</th><th>罗宝</th><th>单价</th><th>矿石</th></tr>
+          </thead>
+          <tbody id="spin-body"></tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="sec" id="skins">
+      <h1>肤色（各 14 种）</h1>
+      <p>自定义页左侧「肤色」圆点共 14 个。可选颜色随角色种族切换：人类 / 猎杀队为一套，鬼 / 混血为另一套。</p>
+      <div class="skin-tabs" role="tablist">
+        <button type="button" class="skin-tab is-on" data-race="Demon">鬼 / 混血</button>
+        <button type="button" class="skin-tab" data-race="Human">人类 / 猎杀队</button>
+      </div>
+      <div class="skin-preview">
+        <div class="skin-swatches" id="skin-swatches"></div>
+        <div class="skin-detail" id="skin-detail">
+          <div class="skin-big" id="skin-big"></div>
+          <p class="skin-meta" id="skin-meta">点击色块预览</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="sec" id="clans">
+      <h1>全部公会</h1>
+      <p>可按稀有度筛选或搜索名称。展开条目可查看属性、技能与被动。</p>
+      <div class="clan-toolbar">
+        <input type="search" id="clan-q" placeholder="搜索公会名称…" autocomplete="off">
+        <div class="clan-filters" id="clan-filters"></div>
+      </div>
+      <div class="clan-list" id="clan-list"></div>
+    </article>
+  </main>
+
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>公会滚动 · 直购 · 肤色</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+
+  <script src="../data/clans-data.js?v=20260926e"></script>
+  <script src="../js/clans.js?v=20260926e"></script>
+</body>
+</html>

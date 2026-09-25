@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>商店 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926g">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0 .7rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .vip{color:#f0be50}
+    .toc{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem}
+    .toc a{border:1px solid var(--line);padding:.3rem .55rem;color:var(--gold);font-size:.82rem;text-decoration:none}
+    .top-nav{display:flex;gap:.75rem;align-items:center;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav" aria-label="本页">
+      <a href="#menu-shop">菜单商店</a>
+      <a href="#boosts">加成</a>
+      <a href="#resets">重置</a>
+      <a href="#spins">旋转</a>
+      <a href="#vip">VIP</a>
+      <a href="#npc">NPC 价目</a>
+    </nav>
+    <span class="top-ver">商店</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 商店</p>
+
+    <article class="sec" id="menu-shop">
+      <h1>菜单商店（罗宝 / 矿石）</h1>
+      <p>打开菜单 <strong>M → 商店</strong>。顶部可切换 <strong>罗宝</strong> 与 <strong>矿石</strong> 付款；也可填「赠送给……」给他人购买。</p>
+      <ul>
+        <li><strong>矿石价公式</strong>：<code>ceil(罗宝标价 ÷ 15)</code>，最少 1。</li>
+        <li>下表同时列出两种货币；与游戏界面一致。</li>
+        <li>部分商品购买前会二次确认（重置类）。</li>
+      </ul>
+      <nav class="toc">
+        <a href="#boosts">加成</a>
+        <a href="#resets">重置</a>
+        <a href="#spins">旋转次数</a>
+        <a href="#vip">VIP 专区</a>
+        <a href="#hidden">隐藏 / 仅罗宝</a>
+      </nav>
+    </article>
+
+    <article class="sec" id="boosts">
+      <h2>加成 Boosts</h2>
+      <p>限时倍率。生效期间对应资源获取翻倍（同类增益一般取最高档）。</p>
+      <table>
+        <tr><th>商品</th><th>作用</th><th>时长</th><th>罗宝</th><th>矿石</th></tr>
+        <tr><td><strong>2x EXP</strong></td><td>经验 ×2</td><td>30 分钟</td><td>200</td><td>14</td></tr>
+        <tr><td><strong>2x Wen</strong></td><td>文（金币）×2</td><td>15 分钟</td><td>240</td><td>16</td></tr>
+        <tr><td><strong>2x Luck</strong></td><td>幸运 ×2（影响掉落等）</td><td>15 分钟</td><td>300</td><td>20</td></tr>
+        <tr><td><strong>2x Mastery</strong></td><td>精通经验 ×2</td><td>30 分钟</td><td>150</td><td>10</td></tr>
+        <tr><td><strong>2x Souls</strong></td><td>灵魂 ×2</td><td>30 分钟</td><td>100</td><td>7</td></tr>
+      </table>
+    </article>
+
+    <article class="sec" id="resets">
+      <h2>重置 Resets</h2>
+      <p>清空对应养成并允许重选。购买后通常需确认。</p>
+      <table>
+        <tr><th>商品</th><th>作用</th><th>罗宝</th><th>矿石</th></tr>
+        <tr><td><strong>重置呼吸</strong></td><td>清除已学呼吸，可改学其他呼吸</td><td>100</td><td>7</td></tr>
+        <tr><td><strong>重置战斗风格</strong></td><td>清除体术（苍龙 / 太极 / 收割之刃等）</td><td>100</td><td>7</td></tr>
+        <tr><td><strong>重置邪恶艺术</strong></td><td>清除血鬼技 / 邪恶艺术</td><td>25</td><td>2</td></tr>
+        <tr><td><strong>重置技能点</strong></td><td>退回已花技能点，可重点技能树（精通进度不退）</td><td>150</td><td>10</td></tr>
+        <tr><td><strong>重置比赛</strong>（种族）</td><td>重置种族（人类 / 鬼 / 混血等），需重开养成路径</td><td>150</td><td>10</td></tr>
+        <tr><td><strong>重置声望</strong></td><td>清空阵营声望进度</td><td>50</td><td>4</td></tr>
+      </table>
+      <p>说明：界面若曾显示「重置邪恶艺术」为 100 罗宝，以当前价目 <strong>25 罗宝 / 2 矿石</strong> 为准。</p>
+    </article>
+
+    <article class="sec" id="spins">
+      <h2>旋转次数 Spins</h2>
+      <p>用于公会滚动、邪恶艺术滚动等抽卡。买的是次数，不是直接出货。</p>
+      <table>
+        <tr><th>商品</th><th>次数</th><th>罗宝</th><th>矿石</th><th>单次罗宝</th></tr>
+        <tr><td>1 次旋转</td><td>1</td><td>5</td><td>1</td><td>5.0</td></tr>
+        <tr><td>15 次旋转</td><td>15</td><td>60</td><td>4</td><td>4.0</td></tr>
+        <tr><td>25 次旋转</td><td>25</td><td>90</td><td>6</td><td>3.6</td></tr>
+        <tr><td>50 次旋转</td><td>50</td><td>150</td><td>10</td><td>3.0</td></tr>
+        <tr><td>100 次旋转</td><td>100</td><td>270</td><td>18</td><td>2.7</td></tr>
+        <tr><td>250 次旋转 <strong>超值</strong></td><td>250</td><td>600</td><td>40</td><td>2.4</td></tr>
+      </table>
+      <p>公会概率与技能见 <a href="clans.html">公会 / 肤色</a>。</p>
+    </article>
+
+    <article class="sec" id="vip">
+      <h2 class="vip">VIP 专区</h2>
+      <p>商店列表<strong>下方</strong>有 VIP 分区。未开通 VIP 时整区被遮罩，点击会引导购买 VIP。</p>
+      <h3>VIP 专区商品</h3>
+      <table>
+        <tr><th>商品</th><th>作用</th><th>时长</th><th>罗宝</th><th>矿石</th></tr>
+        <tr><td><strong>4x Luck</strong></td><td>幸运 ×4（高于普通 2x Luck）</td><td>30 分钟</td><td>850</td><td>57</td></tr>
+      </table>
+      <h3>VIP（1 个月）本身</h3>
+      <ul>
+        <li>时长约 <strong>30 天</strong>（2 592 000 秒），<strong>仅罗宝</strong>购买（不出现在矿石网格）。</li>
+        <li>解锁 VIP 专区购买（如 4x Luck）。</li>
+        <li>邪恶艺术 / 公会抽卡的<strong>结果槽保存与加载</strong>需要 VIP；无 VIP 时可抽，但无法用保存槽功能。</li>
+      </ul>
+    </article>
+
+    <article class="sec" id="hidden">
+      <h2>隐藏 / 仅罗宝商品</h2>
+      <p>不在商店主网格里直接陈列，通过其他入口或提示购买：</p>
+      <table>
+        <tr><th>商品</th><th>说明</th></tr>
+        <tr><td>VIP (1 Month)</td><td>开通 VIP；仅罗宝</td></tr>
+        <tr><td>Extra Loadout</td><td>额外配装栏；仅罗宝</td></tr>
+        <tr><td>Extra Slot</td><td>额外角色槽；仅罗宝，且需 Gamepass「Extra Slots」</td></tr>
+      </table>
+    </article>
+
+    <article class="sec" id="npc">
+      <h2>世界 NPC 商店（文）</h2>
+      <p>与菜单罗宝商店不同，下列用游戏内货币<strong>文</strong>（及材料）交易。点击物品名进档案；地图编号与下表一致。</p>
+      <p><img class="map-img" src="../assets/archive-maps/shops-all.png" alt="NPC 商店位置" style="display:block;width:100%;height:auto;border:1px solid var(--line);margin:.6rem 0"></p>
+      <table>
+        <tr><th>#</th><th>NPC</th><th>区域</th><th>坐标</th><th>主要商品</th></tr>
+        <tr><td>1</td><td><strong>黑商</strong><br><code>Black Marketer</code></td><td>多区域 / 活动</td><td><code>-133, 804, 101 · 11 点</code></td><td></td></tr><tr><td>2</td><td><strong>冬店代表·林克斯</strong><br><code>Winter Store Rep Lynx</code></td><td>冰纱谷</td><td><code>-92, 1353, -2706</code></td><td><a class="quest-link" href="archive/items/Shovel.html">铲子</a></td></tr><tr><td>3</td><td><strong>银造</strong><br><code>Ginzo</code></td><td>迷雾港湾</td><td><code>274, 942, 528</code></td><td><a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a>、<a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a></td></tr><tr><td>4</td><td><strong>炼金术师·梅库</strong><br><code>Alchemist Meku</code></td><td>迷雾港湾</td><td><code>-138, 801, 519</code></td><td><a class="quest-link" href="archive/items/Health-Elixir.html">生命药剂</a>、<a class="quest-link" href="archive/items/Health-Regen-Elixir.html">生命回复药剂</a>、<a class="quest-link" href="archive/items/Stamina-Regen-Elixir.html">体力回复药剂</a>、<a class="quest-link" href="archive/items/Underwater-Breathing-Potion.html">水下呼吸药水</a></td></tr><tr><td>5</td><td><strong>渔夫·杰索</strong><br><code>Fisherman Jeso</code></td><td>迷雾港湾</td><td><code>-192, 807, 603</code></td><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a>、<a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a>、<a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td></tr><tr><td>6</td><td><strong>黑</strong><br><code>Kuro</code></td><td>竹林</td><td><code>667, 1121, -1101</code></td><td><a class="quest-link" href="archive/items/Black-Dragon-Horns.html">黑龙角</a>、<a class="quest-link" href="archive/items/Black-Cord-Necklace.html">黑绳项链</a>、<a class="quest-link" href="archive/items/Cherry-Blossom-Lantern.html">樱花灯笼</a>、<a class="quest-link" href="archive/items/Crown-of-the-Brave.html">勇者冠冕</a>、<a class="quest-link" href="archive/items/Health-Regen-Potion.html">生命回复药水</a>、<a class="quest-link" href="archive/items/Heart-of-Night-Necklace.html">夜之心项链</a>、<a class="quest-link" href="archive/items/Ivory-edge-Cloak.html">象牙边披风</a>、<a class="quest-link" href="archive/items/Peppermint-Scarf.html">薄荷围巾</a>、<a class="quest-link" href="archive/items/Solstice-Necklace.html">至日项链</a>、<a class="quest-link" href="archive/items/Stamina-Regen-Potion.html">体力回复药水</a> 等 14 种</td></tr><tr><td>7</td><td><strong>莲</strong><br><code>Ren</code></td><td>蝴蝶庄园</td><td><code>-1795, 312, -85 · 10 点</code></td><td><a class="quest-link" href="archive/items/Large-Gourd.html">大葫芦</a>、<a class="quest-link" href="archive/items/Medium-Gourd.html">中葫芦</a>、<a class="quest-link" href="archive/items/Small-Gourd.html">小葫芦</a></td></tr><tr><td>8</td><td><strong>雷兹</strong><br><code>Raze</code></td><td>风之峰</td><td><code>-594, 1242, -1095</code></td><td><a class="quest-link" href="archive/items/Fancy-Katana.html">华美刀</a>、<a class="quest-link" href="archive/items/Regular-Katana.html">普通日轮刀</a></td></tr><tr><td>9</td><td><strong>理香</strong><br><code>Rika</code></td><td>风之峰</td><td><code>-496, 1249, -1177</code></td><td><a class="quest-link" href="archive/items/Health-Regen-Potion.html">生命回复药水</a>、<a class="quest-link" href="archive/items/Stamina-Regen-Potion.html">体力回复药水</a></td></tr><tr><td>10</td><td><strong>饵贩·海苔</strong><br><code>Baitmonger Nori</code></td><td>隐雾村</td><td><code>1643, 670, -190</code></td><td><a class="quest-link" href="archive/items/Fish-Head.html">鱼头</a>、Golden Tentacle x10、Golden Tentacle x75</td></tr>
+      </table>
+      <p>黑商为限时活动多点轮换；莲（Ren）在蝴蝶庄园一带多点巡逻。详细单价见各物品档案页。</p>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>菜单商店 · NPC 价目</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

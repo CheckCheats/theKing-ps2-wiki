@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>标题 · 称号 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Source+Sans+3:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926h">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h2 .count{font-size:.8rem;color:var(--muted);font-weight:500;margin-left:.35rem}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong,.sec b{color:var(--cream)}
+    .sec code{color:var(--gold-deep)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;font-size:.8rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .title-text{
+      font-family:"Source Sans 3","Source Sans Pro","Noto Sans SC",sans-serif;
+      font-weight:700;font-size:1.15rem;line-height:1.1;
+      background-image:var(--grad);
+      -webkit-background-clip:text;background-clip:text;
+      color:transparent;-webkit-text-fill-color:transparent;
+      filter:drop-shadow(0 0 1px rgba(0,0,0,.55)) drop-shadow(0 1px 0 rgba(0,0,0,.35));
+      white-space:nowrap;
+    }
+    .pill{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:.55rem 1.1rem;border-radius:999px;background:var(--pill);
+      box-shadow:0 4px 14px rgba(0,0,0,.35);margin-bottom:.65rem;min-height:2.4rem;
+    }
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.85rem}
+    .title-card{border:1px solid var(--line);background:rgba(0,0,0,.22);padding:.85rem .9rem 1rem}
+    .title-card h3{margin:0 0 .35rem;font-size:.98rem;color:var(--cream)}
+    .title-card .en{font-size:.78rem;color:var(--muted);font-weight:400}
+    .row{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin-bottom:.35rem}
+    .rarity{font-size:.72rem;font-weight:700;padding:.12rem .4rem;color:#111;background:var(--rc)}
+    .cat{font-size:.72rem;color:var(--muted)}
+    .tag{font-size:.68rem;padding:.1rem .35rem;border:1px solid var(--line);color:var(--gold)}
+    .tag-hide{border-color:#a10000;color:#ff8a8a}
+    .tag-vanity{border-color:#4fb9ff;color:#9fd4ff}
+    .desc{font-size:.84rem!important;margin:.2rem 0 .45rem!important;min-height:2.4em}
+    .req{font-size:.84rem!important;margin:0 0 .55rem!important}
+    .fx{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
+    .fx > div{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.4rem}
+    .fx b{display:block;margin-bottom:.2rem;font-size:.75rem;color:var(--gold-deep)}
+    .fx-body{color:var(--cream);font-size:.8rem;line-height:1.45}
+    .legend-swatch{display:inline-block;width:1.1rem;height:1.1rem;vertical-align:middle;margin-right:.35rem;border:1px solid rgba(255,255,255,.2)}
+    @media (max-width:620px){.fx{grid-template-columns:1fr}.title-text{font-size:1rem}}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav" aria-label="分类">
+      <a href="#rules">规则</a>
+      <a href="#cat-Race">种族</a>
+      <a href="#cat-Combat">战斗</a>
+      <a href="#cat-Progression">进度</a>
+      <a href="#cat-Exploration">探索</a>
+      <a href="#cat-Ouwigahara">爬塔</a>
+      <a href="#cat-Fishing">钓鱼</a>
+      <a href="#cat-Powers">精通</a>
+      <a href="#cat-Legacy">纪念</a>
+    </nav>
+    <span class="top-ver">标题</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 标题（称号）</p>
+    <article class="sec" id="rules">
+      <h1>标题（称号）系统</h1>
+      <p>菜单 <strong>M → 标题</strong>。共 <strong>52</strong> 个称号（含隐藏）。达成计数条件后解锁；可分别设置<strong>外观</strong>与<strong>加成</strong>。</p>
+      <ul>
+        <li><strong>外观槽 Vanity ×1</strong>：头顶名牌显示的称号文字（下图胶囊样式）。</li>
+        <li><strong>加成槽 Boost ×3</strong>：只有放进这 3 格的称号才会提供 Buffs。</li>
+        <li><strong>被动 Passives</strong>：只要解锁就永久生效（不占加成槽）。</li>
+        <li><strong>仅外观</strong>称号无 Buffs / Passives；<strong>隐藏</strong>称号解锁前不显示。</li>
+      </ul>
+      <h2>颜色复刻</h2>
+      <ul>
+        <li>文字：Source Sans Bold + 垂直渐变（对应游戏 UIGradient 旋转 −90°）。</li>
+        <li>描边：约 1.5px、透明度约 0.75。</li>
+        <li>稀有度纯色：Common <span class="legend-swatch" style="background:#DFE6CC"></span> Rare <span class="legend-swatch" style="background:#4FB9FF"></span> Epic <span class="legend-swatch" style="background:#D94DD9"></span> Legendary <span class="legend-swatch" style="background:#FFCA2C"></span> Mythic <span class="legend-swatch" style="background:#A10000"></span></li>
+        <li>Perfected 系列：五段自定义渐变；胶囊底色为首色压暗（V≈0.3）。</li>
+      </ul>
+    </article>
+<article class="sec" id="cat-Race"><h2>种族 <span class="count">2</span></h2><div class="grid">
+<article class="title-card" data-cat="Race" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Slayer</span>
+  </div>
+  <div class="meta">
+    <h3>猎杀者 <span class="en">(Slayer)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">种族</span>
+      
+    </div>
+    <p class="desc">Survive the Final Selection.</p>
+    <p class="req"><b>获取</b> · 通过最终选拔 ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大体力<br><strong>1.02x</strong> 体力回复速度</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Race" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Demon</span>
+  </div>
+  <div class="meta">
+    <h3>鬼 <span class="en">(Demon)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">种族</span>
+      
+    </div>
+    <p class="desc">Drink Muzan's blood and become a demon.</p>
+    <p class="req"><b>获取</b> · 转化为鬼 ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大生命<br><strong>1.012x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Combat"><h2>战斗 <span class="count">12</span></h2><div class="grid">
+<article class="title-card" data-cat="Combat" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Blooded</span>
+  </div>
+  <div class="meta">
+    <h3>染血者 <span class="en">(Blooded)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Slay 500 enemies.</p>
+    <p class="req"><b>获取</b> · 击杀敌人 ≥ <strong>500</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.009x</strong> 额外伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Reaper</span>
+  </div>
+  <div class="meta">
+    <h3>收割者 <span class="en">(Reaper)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Slay 15,000 enemies.</p>
+    <p class="req"><b>获取</b> · 击杀敌人 ≥ <strong>15,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.022x</strong> 额外伤害倍率<br><strong>+12</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Challenger</span>
+  </div>
+  <div class="meta">
+    <h3>挑战者 <span class="en">(Challenger)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Defeat 10 bosses.</p>
+    <p class="req"><b>获取</b> · 击杀 Boss ≥ <strong>10</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Epic" style="--pill:#4C1B4C;--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)">Monster Hunter</span>
+  </div>
+  <div class="meta">
+    <h3>怪物猎人 <span class="en">(Monster Hunter)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Defeat 100 bosses.</p>
+    <p class="req"><b>获取</b> · 击杀 Boss ≥ <strong>100</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.012x</strong> 额外伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Nemesis</span>
+  </div>
+  <div class="meta">
+    <h3>宿敌 <span class="en">(Nemesis)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Defeat 500 bosses.</p>
+    <p class="req"><b>获取</b> · 击杀 Boss ≥ <strong>500</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.03x</strong> 攻击速度倍率<br><strong>+12</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Bruised</span>
+  </div>
+  <div class="meta">
+    <h3>伤痕累累 <span class="en">(Bruised)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Die 50 times.</p>
+    <p class="req"><b>获取</b> · 死亡次数 ≥ <strong>50</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Scarred</span>
+  </div>
+  <div class="meta">
+    <h3>满身疮痍 <span class="en">(Scarred)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Die 250 times.</p>
+    <p class="req"><b>获取</b> · 死亡次数 ≥ <strong>250</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+0.5</strong> 伤害减免</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+7</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Relentless</span>
+  </div>
+  <div class="meta">
+    <h3>不屈者 <span class="en">(Relentless)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Die 1,000 times.</p>
+    <p class="req"><b>获取</b> · 死亡次数 ≥ <strong>1,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.025x</strong> 伤害减免倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Hard Hitter</span>
+  </div>
+  <div class="meta">
+    <h3>重击手 <span class="en">(Hard Hitter)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Deal 50,000 total damage.</p>
+    <p class="req"><b>获取</b> · 累计造成伤害 ≥ <strong>50,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+0.75</strong> 额外伤害</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+0.1</strong> 额外伤害</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Bonebreaker</span>
+  </div>
+  <div class="meta">
+    <h3>碎骨者 <span class="en">(Bonebreaker)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Deal 500,000 total damage.</p>
+    <p class="req"><b>获取</b> · 累计造成伤害 ≥ <strong>500,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+1</strong> 额外伤害</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+0.15</strong> 额外伤害</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Epic" style="--pill:#4C1B4C;--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)">Devastator</span>
+  </div>
+  <div class="meta">
+    <h3>毁灭者 <span class="en">(Devastator)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Deal 2,500,000 total damage.</p>
+    <p class="req"><b>获取</b> · 累计造成伤害 ≥ <strong>2,500,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+1.5</strong> 额外伤害</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+0.2</strong> 额外伤害</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Combat" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Annihilator</span>
+  </div>
+  <div class="meta">
+    <h3>歼灭者 <span class="en">(Annihilator)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">战斗</span>
+      
+    </div>
+    <p class="desc">Deal 10,000,000 total damage.</p>
+    <p class="req"><b>获取</b> · 累计造成伤害 ≥ <strong>10,000,000</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+2</strong> 额外伤害</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+0.25</strong> 额外伤害</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Progression"><h2>进度 <span class="count">3</span></h2><div class="grid">
+<article class="title-card" data-cat="Progression" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Odd-Jobber</span>
+  </div>
+  <div class="meta">
+    <h3>杂役 <span class="en">(Odd-Jobber)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">进度</span>
+      
+    </div>
+    <p class="desc">Complete 25 quests.</p>
+    <p class="req"><b>获取</b> · 完成任务 ≥ <strong>25</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.03x</strong> 任务经验倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Progression" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Village Pillar</span>
+  </div>
+  <div class="meta">
+    <h3>村之柱 <span class="en">(Village Pillar)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">进度</span>
+      
+    </div>
+    <p class="desc">Complete 150 quests.</p>
+    <p class="req"><b>获取</b> · 完成任务 ≥ <strong>150</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.04x</strong> 任务经验倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+7</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Progression" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Oathkeeper</span>
+  </div>
+  <div class="meta">
+    <h3>守誓者 <span class="en">(Oathkeeper)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">进度</span>
+      
+    </div>
+    <p class="desc">Complete 500 quests.</p>
+    <p class="req"><b>获取</b> · 完成任务 ≥ <strong>500</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.08x</strong> 任务经验倍率<br><strong>+12</strong> 最大体力</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Exploration"><h2>探索 <span class="count">5</span></h2><div class="grid">
+<article class="title-card" data-cat="Exploration" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Prospector</span>
+  </div>
+  <div class="meta">
+    <h3>探宝者 <span class="en">(Prospector)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">探索</span>
+      
+    </div>
+    <p class="desc">Open 25 chests.</p>
+    <p class="req"><b>获取</b> · 开启宝箱 ≥ <strong>25</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.018x</strong> 移动速度倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.01x</strong> 跑步速度倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Exploration" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Vaultbreaker</span>
+  </div>
+  <div class="meta">
+    <h3>破库者 <span class="en">(Vaultbreaker)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">探索</span>
+      
+    </div>
+    <p class="desc">Open 500 chests.</p>
+    <p class="req"><b>获取</b> · 开启宝箱 ≥ <strong>500</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.032x</strong> 移动速度倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.012x</strong> 移动速度倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Exploration" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Seal Breaker</span>
+  </div>
+  <div class="meta">
+    <h3>破印者 <span class="en">(Seal Breaker)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">探索</span>
+      
+    </div>
+    <p class="desc">Clear 10 sealed chests.</p>
+    <p class="req"><b>获取</b> · 封印宝箱 / 事件 ≥ <strong>10</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.06x</strong> 格挡回复</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Exploration" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Warden</span>
+  </div>
+  <div class="meta">
+    <h3>守护者 <span class="en">(Warden)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">探索</span>
+      
+    </div>
+    <p class="desc">Clear 50 sealed chests.</p>
+    <p class="req"><b>获取</b> · 封印宝箱 / 事件 ≥ <strong>50</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.1x</strong> 格挡回复</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+7</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Exploration" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Calamity\'s End</span>
+  </div>
+  <div class="meta">
+    <h3>Calamity\'s End <span class="en">(Calamity\'s End)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">探索</span>
+      
+    </div>
+    <p class="desc">Clear 200 sealed chests.</p>
+    <p class="req"><b>获取</b> · 封印宝箱 / 事件 ≥ <strong>200</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.025x</strong> 伤害减免倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Ouwigahara"><h2>奥乌兰爬塔 <span class="count">7</span></h2><div class="grid">
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Tower Runner</span>
+  </div>
+  <div class="meta">
+    <h3>爬塔跑者 <span class="en">(Tower Runner)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Finish 10 tower runs.</p>
+    <p class="req"><b>获取</b> · 爬塔次数 ≥ <strong>10</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Spire Regular</span>
+  </div>
+  <div class="meta">
+    <h3>尖塔常客 <span class="en">(Spire Regular)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Finish 50 tower runs.</p>
+    <p class="req"><b>获取</b> · 爬塔次数 ≥ <strong>50</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+15</strong> 最大体力</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+7</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Endless</span>
+  </div>
+  <div class="meta">
+    <h3>无尽 <span class="en">(Endless)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Finish 200 tower runs.</p>
+    <p class="req"><b>获取</b> · 爬塔次数 ≥ <strong>200</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+24</strong> 最大体力</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+13</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Climber</span>
+  </div>
+  <div class="meta">
+    <h3>攀登者 <span class="en">(Climber)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Reach floor 25 of the tower.</p>
+    <p class="req"><b>获取</b> · 爬塔最高层 ≥ <strong>25</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+10</strong> 最大体力</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Epic" style="--pill:#4C1B4C;--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)">Highclimber</span>
+  </div>
+  <div class="meta">
+    <h3>高空攀登者 <span class="en">(Highclimber)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Reach floor 50 of the tower.</p>
+    <p class="req"><b>获取</b> · 爬塔最高层 ≥ <strong>50</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+20</strong> 最大生命</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Mythic" style="--pill:#4C0000;--grad:linear-gradient(180deg, #A10000 0%, #A10000 100%);--rarity:#A10000">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #A10000 0%, #A10000 100%)">Heaven\'s Doorstep</span>
+  </div>
+  <div class="meta">
+    <h3>Heaven\'s Doorstep <span class="en">(Heaven\'s Doorstep)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#A10000">Mythic</span>
+      <span class="cat">奥乌兰爬塔</span>
+      
+    </div>
+    <p class="desc">Stand at the top of Ouwigahara.</p>
+    <p class="req"><b>获取</b> · 登顶次数 ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>+40</strong> 最大生命<br><strong>1.035x</strong> 伤害减免倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+15</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Ouwigahara" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Stairwalker</span>
+  </div>
+  <div class="meta">
+    <h3>阶行者 <span class="en">(Stairwalker)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">奥乌兰爬塔</span>
+      <span class="tag tag-hide">隐藏</span> <span class="tag tag-vanity">仅外观</span>
+    </div>
+    <p class="desc">Wear it in the tower: from the floor that earned it, the draft starts dealing a way around.</p>
+    <p class="req"><b>获取</b> · 爬塔最高层 ≥ <strong>90</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body">无（仅外观）</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body">无</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Fishing"><h2>钓鱼 <span class="count">5</span></h2><div class="grid">
+<article class="title-card" data-cat="Fishing" data-rarity="Common" style="--pill:#4A4C43;--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%);--rarity:#DFE6CC">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #DFE6CC 0%, #DFE6CC 100%)">Angler</span>
+  </div>
+  <div class="meta">
+    <h3>钓手 <span class="en">(Angler)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#DFE6CC">Common</span>
+      <span class="cat">钓鱼</span>
+      
+    </div>
+    <p class="desc">Catch 100 common fish.</p>
+    <p class="req"><b>获取</b> · 钓到常见鱼 ≥ <strong>100</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.03x</strong> 咬钩速度倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+5</strong> 最大体力</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Fishing" data-rarity="Rare" style="--pill:#17374C;--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%);--rarity:#4FB9FF">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4FB9FF 0%, #4FB9FF 100%)">Deep Water Angler</span>
+  </div>
+  <div class="meta">
+    <h3>深水钓手 <span class="en">(Deep Water Angler)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#4FB9FF">Rare</span>
+      <span class="cat">钓鱼</span>
+      
+    </div>
+    <p class="desc">Catch 250 rare fish.</p>
+    <p class="req"><b>获取</b> · 钓到稀有鱼 ≥ <strong>250</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.05x</strong> 咬钩速度倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.05x</strong> 气息持续时间倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Fishing" data-rarity="Epic" style="--pill:#4C1B4C;--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #D94DD9 0%, #D94DD9 100%)">Leviathan Hunter</span>
+  </div>
+  <div class="meta">
+    <h3>巨兽猎手 <span class="en">(Leviathan Hunter)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">钓鱼</span>
+      
+    </div>
+    <p class="desc">Catch 100 legendary fish.</p>
+    <p class="req"><b>获取</b> · 钓到传奇鱼 ≥ <strong>100</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.05x</strong> 钓鱼幸运倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>+10</strong> 最大生命</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Fishing" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Salvager</span>
+  </div>
+  <div class="meta">
+    <h3>打捞者 <span class="en">(Salvager)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">钓鱼</span>
+      
+    </div>
+    <p class="desc">Pull 25 lost items out of the water.</p>
+    <p class="req"><b>获取</b> · 钓到物品 ≥ <strong>25</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.08x</strong> 钓鱼幸运倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.1x</strong> 气息持续时间倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Fishing" data-rarity="Legendary" style="--pill:#4C3C0D;--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%);--rarity:#FFCA2C">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FFCA2C 0%, #FFCA2C 100%)">Legendary Fisherman</span>
+  </div>
+  <div class="meta">
+    <h3>传奇渔夫 <span class="en">(Legendary Fisherman)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#FFCA2C">Legendary</span>
+      <span class="cat">钓鱼</span>
+      <span class="tag tag-hide">隐藏</span>
+    </div>
+    <p class="desc">Inherit the drowned fisherman's line.</p>
+    <p class="req"><b>获取</b> · 获得传奇鱼竿 ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.07x</strong> 钓鱼幸运倍率<br><strong>1.05x</strong> 咬钩速度倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.06x</strong> 气息持续时间倍率</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Powers"><h2>力量精通 <span class="count">17</span></h2><div class="grid">
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C0E09;--grad:linear-gradient(180deg, #E62D1E 0%, #E62D1E 20%, #FFC82D 50%, #FFFAEB 75%, #FFFAEB 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #E62D1E 0%, #E62D1E 20%, #FFC82D 50%, #FFFAEB 75%, #FFFAEB 100%)">Flame Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>炎之精通 <span class="en">(Flame Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Flame Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Flame ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#361E4C;--grad:linear-gradient(180deg, #9655D2 0%, #9655D2 20%, #D782E1 50%, #FAE8FA 75%, #FAE8FA 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #9655D2 0%, #9655D2 20%, #D782E1 50%, #FAE8FA 75%, #FAE8FA 100%)">Insect Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>虫之精通 <span class="en">(Insect Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Insect Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Insect ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#0D4C38;--grad:linear-gradient(180deg, #147355 0%, #147355 20%, #4BC887 50%, #E4FAEC 75%, #E4FAEC 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #147355 0%, #147355 20%, #4BC887 50%, #E4FAEC 75%, #E4FAEC 100%)">Serpent Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>蛇之精通 <span class="en">(Serpent Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Serpent Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Serpent ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C260B;--grad:linear-gradient(180deg, #F07823 0%, #F07823 20%, #FFB950 50%, #FFF0D7 75%, #FFF0D7 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #F07823 0%, #F07823 20%, #FFB950 50%, #FFF0D7 75%, #FFF0D7 100%)">Sound Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>音之精通 <span class="en">(Sound Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Sound Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Sound ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C3D28;--grad:linear-gradient(180deg, #967850 0%, #967850 20%, #C8B491 50%, #F2EEE4 75%, #F2EEE4 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #967850 0%, #967850 20%, #C8B491 50%, #F2EEE4 75%, #F2EEE4 100%)">Stone Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>岩之精通 <span class="en">(Stone Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Stone Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Stone ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C3E0A;--grad:linear-gradient(180deg, #FACD23 0%, #FACD23 20%, #F9F381 50%, #FFFFFF 75%, #FFFFFF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #FACD23 0%, #FACD23 20%, #F9F381 50%, #FFFFFF 75%, #FFFFFF 100%)">Thunder Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>雷之精通 <span class="en">(Thunder Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Thunder Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Thunder ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#05264C;--grad:linear-gradient(180deg, #0E5FBE 0%, #0E5FBE 20%, #55C3F0 50%, #ECFAFF 75%, #ECFAFF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #0E5FBE 0%, #0E5FBE 20%, #55C3F0 50%, #ECFAFF 75%, #ECFAFF 100%)">Water Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>水之精通 <span class="en">(Water Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Water Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Water ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#324C46;--grad:linear-gradient(180deg, #78B4A5 0%, #78B4A5 20%, #C3E6DC 50%, #F8FFFD 75%, #F8FFFD 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #78B4A5 0%, #78B4A5 20%, #C3E6DC 50%, #F8FFFD 75%, #F8FFFD 100%)">Wind Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>风之精通 <span class="en">(Wind Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Wind Breathing.</p>
+    <p class="req"><b>获取</b> · 精通 Wind ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 呼吸伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 呼吸伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#1A1D4C;--grad:linear-gradient(180deg, #4650CD 0%, #4650CD 20%, #8C96F5 50%, #E6EBFF 75%, #E6EBFF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #4650CD 0%, #4650CD 20%, #8C96F5 50%, #E6EBFF 75%, #E6EBFF 100%)">Arrow Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>箭矢精通 <span class="en">(Arrow Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Arrow.</p>
+    <p class="req"><b>获取</b> · 精通 Arrow ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C0913;--grad:linear-gradient(180deg, #7D0F20 0%, #7D0F20 20%, #CD2334 50%, #FAC8CA 75%, #FAC8CA 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #7D0F20 0%, #7D0F20 20%, #CD2334 50%, #FAC8CA 75%, #FAC8CA 100%)">Blood Manipulation Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>血操精通 <span class="en">(Blood Manipulation Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Blood Manipulation.</p>
+    <p class="req"><b>获取</b> · 精通 Blood Manipulation ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#16374C;--grad:linear-gradient(180deg, #3C96CD 0%, #3C96CD 20%, #96E1F8 50%, #F6FDFF 75%, #F6FDFF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #3C96CD 0%, #3C96CD 20%, #96E1F8 50%, #F6FDFF 75%, #F6FDFF 100%)">Cryokinesis Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>冰结精通 <span class="en">(Cryokinesis Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Cryokinesis.</p>
+    <p class="req"><b>获取</b> · 精通 Cryokinesis ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C123C;--grad:linear-gradient(180deg, #A52882 0%, #A52882 20%, #E673B4 50%, #E2F0FF 75%, #E2F0FF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #A52882 0%, #A52882 20%, #E673B4 50%, #E2F0FF 75%, #E2F0FF 100%)">Dream Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>梦境精通 <span class="en">(Dream Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Dream.</p>
+    <p class="req"><b>获取</b> · 精通 Dream ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C201C;--grad:linear-gradient(180deg, #E15F55 0%, #E15F55 20%, #FAA082 50%, #FFEADA 75%, #FFEADA 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #E15F55 0%, #E15F55 20%, #FAA082 50%, #FFEADA 75%, #FFEADA 100%)">Obi Manipulation Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>带操精通 <span class="en">(Obi Manipulation Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Obi Manipulation.</p>
+    <p class="req"><b>获取</b> · 精通 Obi Manipulation ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#4C0909;--grad:linear-gradient(180deg, #9B1414 0%, #9B1414 20%, #F5731E 50%, #FFD78C 75%, #FFD78C 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #9B1414 0%, #9B1414 20%, #F5731E 50%, #FFD78C 75%, #FFD78C 100%)">Pyrokenesis Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>炎操精通 <span class="en">(Pyrokenesis Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Pyrokenesis.</p>
+    <p class="req"><b>获取</b> · 精通 Pyrokenesis ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#42304C;--grad:linear-gradient(180deg, #5F466E 0%, #5F466E 20%, #A08CB4 50%, #F6F2FA 75%, #F6F2FA 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #5F466E 0%, #5F466E 20%, #A08CB4 50%, #F6F2FA 75%, #F6F2FA 100%)">Reaper Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>收割精通 <span class="en">(Reaper Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Reaper.</p>
+    <p class="req"><b>获取</b> · 精通 Reaper ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#37404C;--grad:linear-gradient(180deg, #788CA5 0%, #788CA5 20%, #C3D7EB 50%, #FCFEFF 75%, #FCFEFF 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #788CA5 0%, #788CA5 20%, #C3D7EB 50%, #FCFEFF 75%, #FCFEFF 100%)">Shockwave Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>冲击波精通 <span class="en">(Shockwave Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Shockwave.</p>
+    <p class="req"><b>获取</b> · 精通 Shockwave ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article>
+
+<article class="title-card" data-cat="Powers" data-rarity="Epic" style="--pill:#32174C;--grad:linear-gradient(180deg, #6E32A5 0%, #6E32A5 20%, #CD6EA5 50%, #FFE4A5 75%, #FFE4A5 100%);--rarity:#D94DD9">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #6E32A5 0%, #6E32A5 20%, #CD6EA5 50%, #FFE4A5 75%, #FFE4A5 100%)">Tamari Perfected</span>
+  </div>
+  <div class="meta">
+    <h3>玉响精通 <span class="en">(Tamari Perfected)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#D94DD9">Epic</span>
+      <span class="cat">力量精通</span>
+      
+    </div>
+    <p class="desc">Reach max mastery with Tamari.</p>
+    <p class="req"><b>获取</b> · 精通 Tamari ≥ <strong>1</strong></p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body"><strong>1.02x</strong> 邪恶艺术伤害倍率</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body"><strong>1.005x</strong> 邪恶艺术伤害倍率</div></div>
+    </div>
+  </div>
+</article></div></article><article class="sec" id="cat-Legacy"><h2>传奇纪念 <span class="count">1</span></h2><div class="grid">
+<article class="title-card" data-cat="Legacy" data-rarity="Mythic" style="--pill:#4C0000;--grad:linear-gradient(180deg, #A10000 0%, #A10000 100%);--rarity:#A10000">
+  <div class="pill">
+    <span class="title-text" style="--grad:linear-gradient(180deg, #A10000 0%, #A10000 100%)">Son of Ilio</span>
+  </div>
+  <div class="meta">
+    <h3>伊利奥之子 <span class="en">(Son of Ilio)</span></h3>
+    <div class="row">
+      <span class="rarity" style="--rc:#A10000">Mythic</span>
+      <span class="cat">传奇纪念</span>
+      <span class="tag tag-hide">隐藏</span> <span class="tag tag-vanity">仅外观</span>
+    </div>
+    <p class="desc">For the ones who waited on a sun that never rose.</p>
+    <p class="req"><b>获取</b> · 徽章奖励（Early Badge）自动授予 · 纯外观</p>
+    <div class="fx">
+      <div><b>增益 Buffs</b>（装备到加成槽）<div class="fx-body">无（仅外观）</div></div>
+      <div><b>被动 Passives</b>（解锁即生效）<div class="fx-body">无</div></div>
+    </div>
+  </div>
+</article></div></article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>标题 · 全部 52 个</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>等级与精通 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926i">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0 .7rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav">
+      <a href="#account">账号等级</a>
+      <a href="#curve">经验曲线</a>
+      <a href="#mastery">装备精通</a>
+      <a href="#gain">如何获得</a>
+    </nav>
+    <span class="top-ver">等级</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 等级与精通</p>
+
+    <article class="sec" id="account">
+      <h1>账号等级（左下圆环）</h1>
+      <p>左下角圆环显示当前等级与经验进度，例如 <code>54836 / 64000</code>、<strong>等级 225</strong>。</p>
+      <ul>
+        <li>默认<strong>满级 225</strong>；每级固定给 <strong>3 技能点</strong>（满级约 675 点）。</li>
+        <li>内部：每升 1 级需要 <code>expPerLevel = 60</code> 点原始经验。<br>
+          <code>等级 = floor(Goal ÷ 60)</code>，Goal 为累计经验门槛。</li>
+        <li>界面数字 = 原始值 ÷ <strong>等级花费系数 LevelCostFactor</strong>（见下表），再四舍五入——所以高等级看起来「分母很大」。</li>
+      </ul>
+      <p>公式：</p>
+      <p><code>显示当前 = round(Current / LevelCostFactor(等级))</code><br>
+         <code>显示目标 = round(Goal / LevelCostFactor(等级))</code></p>
+    </article>
+
+    <article class="sec" id="curve">
+      <h2>每级经验（显示值参考）</h2>
+      <p>LevelCostFactor 按等级段线性插值：</p>
+      <table>
+        <tr><th>等级段</th><th>除数 Divisor</th><th>含义</th></tr>
+        <tr><td>1 → 45</td><td>3</td><td>显示经验 ≈ 原始 ÷ 3</td></tr>
+        <tr><td>45 → 55</td><td>3 → 2.2</td><td>逐渐变「贵」</td></tr>
+        <tr><td>55 → 125</td><td>2.2</td><td>平稳</td></tr>
+        <tr><td>125 → 150</td><td>2.2 → 1.25</td><td></td></tr>
+        <tr><td>150 → 175</td><td>1.25 → 0.75</td><td>除数 &lt; 1，显示分母开始放大</td></tr>
+        <tr><td>175 → 200</td><td>0.75 → 0.45</td><td></td></tr>
+        <tr><td>200 → 225</td><td>0.45 → 0.25</td><td>满级附近显示约 5 万级</td></tr>
+      </table>
+      <h3>抽样（默认配置）</h3>
+      <table>
+        <tr><th>等级</th><th>原始 Goal（累计）</th><th>显示 Goal（约）</th><th>本级原始经验</th></tr>
+        <tr><td>1</td><td>60</td><td>20</td><td>60</td></tr>
+        <tr><td>45</td><td>2700</td><td>900</td><td>60</td></tr>
+        <tr><td>55</td><td>3300</td><td>1500</td><td>60</td></tr>
+        <tr><td>125</td><td>7500</td><td>3409</td><td>60</td></tr>
+        <tr><td>150</td><td>9000</td><td>7200</td><td>60</td></tr>
+        <tr><td>175</td><td>10500</td><td>14000</td><td>60</td></tr>
+        <tr><td>200</td><td>12000</td><td>26667</td><td>60</td></tr>
+        <tr><td>225</td><td>13500</td><td>54000</td><td>60</td></tr>
+      </table>
+      <p>截图若出现 <code>54836 / 64000</code> 一类数字：同一套换算；线上可能有 <strong>CapUnlocks</strong> 提高等级上限或微调曲线，以游戏内为准。</p>
+      <p>升级奖励：每级 <strong>+3 技能点</strong>。文与经验掉落另有 <code>wenPerExp = 0.45</code>（部分奖励按经验折算文）。</p>
+    </article>
+
+    <article class="sec" id="mastery">
+      <h2>装备 / 力量精通</h2>
+      <p>每种武器类别、呼吸、邪恶艺术、战斗风格都有<strong>独立精通轨道</strong>（不是账号等级）。快捷栏选中对应装备时可看到精通条。</p>
+      <ul>
+        <li>默认：每精通级需要 <strong>30</strong> 精通经验；上限 <strong>400</strong> 级。</li>
+        <li><code>精通等级 = floor(Goal ÷ 30)</code>（若该轨道自定义 IncrementAmount 则用自定义值）。</li>
+        <li>技能树里呼吸 / 邪恶艺术 / 武器节点从第 2 个起要查精通门槛（约 14 / 27 / 40 / 53…），见 <a href="skill-tree.html">技能树</a>。</li>
+      </ul>
+      <h3>常见精通轨道</h3>
+      <table>
+        <tr><th>类型</th><th>轨道名示例</th></tr>
+        <tr><td>武器</td><td>Gauntlet、Sickles、Cutlass、Claws、Scythe、Shotgun、Spear、Tanto、War Fans、Bladed Wagasa、Sword（刀系）等；升阶武器通常共享同一 Mastery / SkillCategory</td></tr>
+        <tr><td>呼吸</td><td>Water、Flame、Thunder、Wind、Insect、Serpent、Sound、Stone</td></tr>
+        <tr><td>邪恶艺术</td><td>Cryokinesis、Blood Manipulation、Arrow、Dream、Obi Manipulation、Pyrokenesis、Tamari、Reaper、Shockwave</td></tr>
+        <tr><td>战斗风格</td><td>Soryu、Tai Chi、Reaping Blades</td></tr>
+      </table>
+      <h3>满级后 Boss 猎杀奖励转换</h3>
+      <p>账号已满级时，Boss 猎杀任务的经验奖励会换成<strong>固定精通</strong>：</p>
+      <p><code>FlatMastery ≈ round(原 Exp × 30 ÷ 60) = round(Exp ÷ 2)</code></p>
+      <p>截图里 Obari 猎杀显示「精通 +1350 · 文 +1215」即满级转换后的预览（会随队伍人数、私人服等再乘系数）。</p>
+    </article>
+
+    <article class="sec" id="gain">
+      <h2>经验 / 精通怎么涨</h2>
+      <table>
+        <tr><th>来源</th><th>说明</th></tr>
+        <tr><td>NPC 任务</td><td>每个任务有固定 Exp / Wen；商店 2x EXP 可翻倍</td></tr>
+        <tr><td>Boss 猎杀</td><td>按猎杀等级与稀有度算 Exp；满级改发精通；见 <a href="party.html">组队与猎杀</a></td></tr>
+        <tr><td>击杀 NPC / Boss</td><td>掉落表含 Exp / Wen / Mastery（受倍率影响）</td></tr>
+        <tr><td>2x Mastery</td><td>商店限时，精通获取 ×2</td></tr>
+        <tr><td>称号 / 装备</td><td>Exp Factor、Quest Exp Factor 等提高经验获取</td></tr>
+      </table>
+      <p>账号等级与精通是两套进度；技能点只跟账号等级走。</p>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>等级 · 精通</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

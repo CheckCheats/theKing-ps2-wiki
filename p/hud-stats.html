@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>界面加成 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926j">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.84rem;margin:.4rem 0 .7rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .ic{width:28px;height:28px;object-fit:contain;vertical-align:middle;margin-right:.35rem;background:rgba(0,0,0,.35);border-radius:4px}
+    .chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .5rem;border:1px solid var(--line);background:rgba(0,0,0,.25);margin:.15rem;font-size:.82rem;color:var(--cream)}
+    .demo{display:flex;flex-wrap:wrap;gap:.35rem;margin:.5rem 0;padding:.6rem;background:rgba(0,0,0,.35);border:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav">
+      <a href="#how">怎么读</a>
+      <a href="#catalog">全部加成</a>
+      <a href="#sources">如何提升</a>
+      <a href="#boosts">限时倍率</a>
+    </nav>
+    <span class="top-ver">HUD</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 界面加成面板</p>
+
+    <article class="sec" id="how">
+      <h1>左下角加成面板</h1>
+      <p>位于血条 / 体力条旁。每个芯片 = <strong>1 个图标 + 1 个数值</strong>；横向排列、自动换行，所以看起来像「上下两排、多列」——<strong>同列上下不是同一个属性</strong>，只是排版碰巧对齐。</p>
+      <div class="demo">
+        <span class="chip"><img class="ic" src="../assets/stat-icons/82894077323962.png" alt="">1.31x</span>
+        <span class="chip"><img class="ic" src="../assets/stat-icons/123835775088197.png" alt="">+1250</span>
+        <span class="chip"><img class="ic" src="../assets/stat-icons/84635437632627.png" alt="">1.04x</span>
+        <span class="chip"><img class="ic" src="../assets/stat-icons/116840229639938.png" alt="">1.85x</span>
+        <span class="chip"><img class="ic" src="../assets/stat-icons/87593090108104.png" alt="">+0.35</span>
+        <span class="chip"><img class="ic" src="../assets/stat-icons/75203816752093.png" alt="">1.2x</span>
+      </div>
+      <h3>读数规则</h3>
+      <ul>
+        <li>属性名含 <strong>Factor</strong> 或 <strong>Regen</strong>：内部存「加成量」，界面显示 <code>(1 + 加成)x</code>（例：0.31 → <strong>1.31x</strong>）。</li>
+        <li>其它数值：正数显示 <code>+N</code>，负数原样。</li>
+        <li><strong>只有非 0</strong> 才出现；鼠标悬停可看英文属性名。</li>
+        <li>设置 <strong>界面 → Health Stats</strong> 可开关整块面板。</li>
+      </ul>
+      <p>相关：<a href="levels.html">等级与精通</a> · <a href="skill-tree.html">技能树</a> · <a href="titles.html">称号</a> · <a href="clans.html">公会</a></p>
+    </article>
+
+    <article class="sec" id="catalog">
+      <h2>全部加成类型</h2>
+      <p>按游戏 <code>StatKeys</code> 顺序，共 38 项。图标优先取 <code>BunchaIcons.StatsAndDebuffs</code>，技能树专属属性取 <code>SkillTreeConfig</code>。</p>
+      <table>
+        <tr><th>图标</th><th>属性</th><th>显示</th><th>作用</th></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/110875674970103.png" alt=""></td><td>最大生命 Max Health</td><td>+N</td><td>生命上限平坦值</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/84635437632627.png" alt=""></td><td>生命回复速度 Health Regen Speed</td><td>Nx</td><td>自然回血倍率</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/107011396783956.png" alt=""></td><td>最大体力 Max Stamina</td><td>+N</td><td>体力上限</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/115769583119321.png" alt=""></td><td>体力回复速度 Stamina Regen Speed</td><td>Nx</td><td>体力回复倍率</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/117509108068754.png" alt=""></td><td>移动速度倍率 Movement Speed Factor</td><td>Nx</td><td>移速</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/123835775088197.png" alt=""></td><td>额外伤害 Additional Damage</td><td>+N</td><td>平坦伤害（武器精炼常带来上千）</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/82894077323962.png" alt=""></td><td>额外伤害倍率 Additional Damage Factor</td><td>Nx</td><td>伤害乘区</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/133370837276950.png" alt=""></td><td>伤害减免 Damage Reduction</td><td>+N</td><td>平坦减伤</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/76456594098646.png" alt=""></td><td>伤害减免倍率 Damage Reduction Factor</td><td>Nx</td><td>减伤乘区</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/123207804589469.png" alt=""></td><td>格挡值 Block Points</td><td>+N</td><td>格挡条容量</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/103261465419662.png" alt=""></td><td>格挡回复 Block Regen</td><td>Nx</td><td>格挡回复速度</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/87593090108104.png" alt=""></td><td>光照 Illumination</td><td>+N</td><td>鬼侧进度等提供；取最高不叠加</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/131530288779864.png" alt=""></td><td>体力消耗速率 Stamina Drain Rate</td><td>+N</td><td>特殊消耗速率</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/108639366671136.png" alt=""></td><td>燃烧伤害倍率 Burn Damage Factor</td><td>Nx</td><td>火伤</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/116840229639938.png" alt=""></td><td>毒素伤害倍率 Poison Damage Factor</td><td>Nx</td><td>毒伤（虫之呼吸等）</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/96579857910714.png" alt=""></td><td>攻击速度倍率 Attack Speed Factor</td><td>Nx</td><td>攻速</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/97825228179184.png" alt=""></td><td>冷却缩减倍率 Cooldown Reduction Factor</td><td>Nx</td><td>技能 CD</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/136607922296795.png" alt=""></td><td>体力消耗倍率 Stamina Cost Factor</td><td>Nx</td><td>技能耗体</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/126067773702641.png" alt=""></td><td>最大生命倍率 Max Health Factor</td><td>Nx</td><td>生命乘区</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/76546190702801.png" alt=""></td><td>风伤害倍率 Wind Damage Factor</td><td>Nx</td><td>风之呼吸 / 风元素</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/75203816752093.png" alt=""></td><td>雷伤害倍率 Thunder Damage Factor</td><td>Nx</td><td>雷伤</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/70984795167011.png" alt=""></td><td>蛇伤害倍率 Serpent Damage Factor</td><td>Nx</td><td>蛇之呼吸向</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/70838764032003.png" alt=""></td><td>水伤害倍率 Water Damage Factor</td><td>Nx</td><td>水之呼吸向</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/70668593321268.png" alt=""></td><td>刀伤害倍率 Sword Damage Factor</td><td>Nx</td><td>刀系伤害</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/127705459947339.png" alt=""></td><td>呼吸伤害倍率 Breathing Damage Factor</td><td>Nx</td><td>呼吸技能</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/105036886181504.png" alt=""></td><td>跑步速度倍率 Run Speed Factor</td><td>Nx</td><td>跑步</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/77128220981201.png" alt=""></td><td>冲刺速度倍率 Dash Speed Factor</td><td>Nx</td><td>闪避冲刺</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/78942541868759.png" alt=""></td><td>跳跃倍率 Jump Power Factor</td><td>Nx</td><td>跳跃高度</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/135024113425416.png" alt=""></td><td>邪恶艺术伤害倍率 Evil Art Damage Factor</td><td>Nx</td><td>血鬼技</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/96418234321641.png" alt=""></td><td>水系体力消耗倍率 Water Stamina Cost Factor</td><td>Nx</td><td>水系技能耗体修正</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/117360260074971.png" alt=""></td><td>掉落幸运倍率 Drop Luck Factor</td><td>Nx</td><td>掉落</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/97519417885585.png" alt=""></td><td>经验倍率 Exp Factor</td><td>Nx</td><td>经验获取</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/77244119485056.png" alt=""></td><td>任务经验倍率 Quest Exp Factor</td><td>Nx</td><td>任务经验</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/137652665385467.png" alt=""></td><td>气息持续倍率 Breath Duration Factor</td><td>Nx</td><td>水下 / 气息相关</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/112990055895770.png" alt=""></td><td>钓鱼幸运倍率 Fishing Luck Factor</td><td>Nx</td><td>钓鱼</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/90409275801604.png" alt=""></td><td>咬钩速度倍率 Bite Speed Factor</td><td>Nx</td><td>钓鱼咬钩</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/112858481211170.png" alt=""></td><td>阳光免疫 Sun Immunity</td><td>图标</td><td>布尔被动；有则显示图标</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/80327961047183.png" alt=""></td><td>寒冷免疫 Cold Immunity</td><td>图标</td><td>布尔被动；有则显示图标</td></tr>
+      </table>
+    </article>
+
+    <article class="sec" id="sources">
+      <h2>如何提升这些加成</h2>
+      <table>
+        <tr><th>来源</th><th>说明</th></tr>
+        <tr><td><strong>手持武器</strong></td><td>武器基础 ActiveToolStats + 精炼 / 升阶系列倍率 → 最常见大额 <strong>额外伤害</strong></td></tr>
+        <tr><td><strong>饰品</strong></td><td>已装备饰品的 Stats</td></tr>
+        <tr><td><strong>工具栏物品</strong></td><td>快捷栏装备的 ToolbarStats</td></tr>
+        <tr><td><strong>技能树</strong></td><td>角色属性链（生命 / 体力 / 格挡 / 额外伤害等），见 <a href="skill-tree.html">技能树</a></td></tr>
+        <tr><td><strong>血脉公会</strong></td><td>当前公会的 stats，见 <a href="clans.html">公会</a></td></tr>
+        <tr><td><strong>呼吸 / 邪恶艺术</strong></td><td>力量模块自带 Stats（如收割者冲刺速度）</td></tr>
+        <tr><td><strong>称号</strong></td><td>加成槽 Buffs + 已解锁 Passives，见 <a href="titles.html">标题</a></td></tr>
+        <tr><td><strong>阵营进度</strong></td><td>鬼杀队 / 鬼等级属性，见 <a href="factions.html">派系</a></td></tr>
+        <tr><td><strong>临时 Buff</strong></td><td>技能、区域、状态效果写入运行时 Values</td></tr>
+      </table>
+      <p>数值由多来源<strong>相加</strong>（Illumination 取最高）。面板只显示合计结果。</p>
+    </article>
+
+    <article class="sec" id="boosts">
+      <h2>限时倍率（商店加成）</h2>
+      <p>购买后同样出现在此面板，显示剩余时间。</p>
+      <table>
+        <tr><th>图标</th><th>名称</th><th>效果</th></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/106230627625124.png" alt=""></td><td>2x EXP</td><td>经验 ×2 · 30 分钟</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/86430341475700.png" alt=""></td><td>2x Wen</td><td>文 ×2 · 15 分钟</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/107860221756868.png" alt=""></td><td>2x Mastery</td><td>精通 ×2 · 30 分钟</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/132828661962697.png" alt=""></td><td>2x Luck</td><td>幸运 ×2 · 15 分钟</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/127128671902630.png" alt=""></td><td>4x Luck</td><td>幸运 ×4 · 30 分钟 · VIP</td></tr>
+        <tr><td><img class="ic" src="../assets/stat-icons/85783020948929.png" alt=""></td><td>2x Souls</td><td>灵魂 ×2 · 30 分钟</td></tr>
+      </table>
+      <p>价目见 <a href="shops.html">商店</a>。</p>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>左下加成面板</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

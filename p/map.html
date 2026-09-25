@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>全息地图 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926e">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.4rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+
+    .map-toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.45rem;
+      align-items:center;
+      margin:.55rem 0 .35rem;
+    }
+    .map-toolbar button{
+      appearance:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--cream);
+      font:inherit;
+      font-size:.82rem;
+      padding:.35rem .7rem;
+      cursor:pointer;
+    }
+    .map-toolbar button:hover{border-color:rgba(255,208,70,.45);color:var(--gold)}
+    .map-zoom-label{
+      margin-left:.15rem;
+      font-size:.82rem;
+      color:var(--muted);
+      min-width:3.2rem;
+    }
+
+    .map-stage{
+      position:relative;
+      margin-top:.35rem;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#0a0a0a;
+      touch-action:none;
+      user-select:none;
+      height:min(72vh, 820px);
+      min-height:320px;
+    }
+    .map-stage.is-zoomed{cursor:grab}
+    .map-viewport{
+      position:absolute;
+      left:50%;
+      top:50%;
+      width:100%;
+      height:auto;
+      transform:translate(-50%, -50%) scale(1);
+      transform-origin:center center;
+      will-change:transform;
+    }
+    .map-viewport img.map-img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:fill;
+      pointer-events:none;
+      -webkit-user-drag:none;
+    }
+    .map-hint{margin:.55rem 0 0;font-size:.82rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <span class="top-ver">资料</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 全息地图</p>
+
+    <article class="sec">
+      <h1>Ouwland 全息地图</h1>
+      <p>纯净大地图（小地图全景）可缩放拖动；也可下载带旧标注的参考图。</p>
+      <div class="map-toolbar">
+        <button type="button" id="map-zoom-out" aria-label="缩小">−</button>
+        <button type="button" id="map-zoom-in" aria-label="放大">+</button>
+        <button type="button" id="map-zoom-reset">重置</button>
+        <span class="map-zoom-label" id="map-zoom-label">100%</span>
+      </div>
+      <div class="map-stage" id="map-stage">
+        <div class="map-viewport" id="map-viewport">
+          <img class="map-img" id="map-img" src="../assets/ouwland-map-clean.png" alt="Ouwland 纯净大地图" draggable="false">
+        </div>
+      </div>
+      <p class="map-hint">滚轮缩放 · 拖动平移 · 双击放大/复位</p>
+      <p style="margin-top:.75rem"><a href="../assets/ouwland-map-clean.png">下载纯净大地图</a>
+        · <a href="../assets/ouwland-temples-map.png">神庙标注图</a>
+        · <a href="../assets/ouwland-horse-spawns-map.png">野马刷新点</a>
+        · <a href="../assets/ouwland-training-map.png">锻炼器械</a>
+        · <a href="../assets/ouwland-map.png">旧标注参考图</a></p>
+    </article>
+
+    <article class="sec">
+      <h2>关键坐标</h2>
+      <table>
+        <tr><th>名称</th><th>坐标</th></tr>
+        <tr><td>锻造 Togane</td><td>1732.07, 694, -764.55</td></tr>
+        <tr><td>精炼 Hagane</td><td>1865.27, 694, -434.26</td></tr>
+        <tr><td>积分爬塔入口</td><td>-1607.11, 1015.47, 1142.36</td></tr>
+        <tr><td>出售 Ginzo</td><td>274, 942, 528</td></tr>
+      </table>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>玩家资料维基</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+  <script src="../js/map-zoom.js?v=20260926f"></script>
+</body>
+</html>

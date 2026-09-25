@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>派系 · Slayers 2 Wiki</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926h">
+  <style>
+    .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
+    .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
+    .crumb a{color:var(--gold)}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
+    .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec p,.sec li{color:var(--muted);font-size:.92rem}
+    .sec ul,.sec ol{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec strong{color:var(--cream)}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0 .7rem}
+    .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
+    .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
+    .sec td{color:var(--muted)}
+    .sec code{color:var(--gold-deep)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;align-items:center;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .toc{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+    .toc a{border:1px solid var(--line);padding:.28rem .5rem;color:var(--gold);font-size:.8rem;text-decoration:none}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
+  <header class="top">
+    <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
+    <nav class="top-nav" aria-label="本页">
+      <a href="#overview">对照</a>
+      <a href="#faction">玩家派系</a>
+      <a href="#progression">阵营进度</a>
+      <a href="#reputation">声望</a>
+    </nav>
+    <span class="top-ver">派系</span>
+  </header>
+  <main class="page">
+    <p class="crumb"><a href="../">主页</a> / 派系</p>
+
+    <article class="sec" id="overview">
+      <h1>派系相关系统对照</h1>
+      <p>游戏菜单里有好几个容易混在一起的概念，先分清：</p>
+      <table>
+        <tr><th>菜单入口</th><th>系统</th><th>是什么</th></tr>
+        <tr><td><strong>派系</strong></td><td>玩家派系 / 公会</td><td>玩家自建组织：创建、邀请、成员列表、派系声望合计</td></tr>
+        <tr><td><strong>玩家信息 / 进度</strong></td><td>阵营进度</td><td>鬼杀队 / 鬼 的 4 级进度条与属性加成</td></tr>
+        <tr><td>头顶 / 排行相关</td><td>声望 Reputation</td><td>善恶数值（越低越「恶」），影响无惨相关内容</td></tr>
+        <tr><td>自定义 · 公会滚动</td><td>血脉公会 Clan</td><td>与本页无关，见 <a href="clans.html">公会图鉴</a></td></tr>
+      </table>
+      <nav class="toc">
+        <a href="#faction">玩家派系</a>
+        <a href="#progression">阵营进度</a>
+        <a href="#reputation">声望</a>
+      </nav>
+    </article>
+
+    <article class="sec" id="faction">
+      <h2>玩家派系（菜单「派系」）</h2>
+      <p>这是玩家之间的<strong>公会组织</strong>，不是鬼杀队/鬼进度，也不是血脉公会。</p>
+      <h3>规则</h3>
+      <ul>
+        <li>可<strong>创建</strong>派系、邀请成员、管理、解散。</li>
+        <li>派系名长度约 <strong>5～20</strong> 字符；人数上限约 <strong>50</strong>。</li>
+        <li>成员列表会显示各自的<strong>声望 Reputation</strong>，并汇总为<strong>派系声望</strong>。</li>
+        <li>头顶可显示派系相关标识（与声望数字一起）。</li>
+      </ul>
+      <div class="callout">未加入派系时，菜单「派系」页主要是创建/加入入口；已加入则显示成员与管理。</div>
+    </article>
+
+    <article class="sec" id="progression">
+      <h2>阵营进度（菜单「玩家信息 / 进度」）</h2>
+      <p>按种族显示进度条：</p>
+      <ul>
+        <li><strong>人类 / 猎杀队</strong>：仅<strong>鬼杀队进度</strong></li>
+        <li><strong>鬼</strong>：仅<strong>鬼进度</strong></li>
+        <li><strong>混血</strong>：两条都有，各自独立升级</li>
+      </ul>
+      <p>填满当前条后升级：当前值归零，下一级需求变成新的 Max；属性<strong>按级累加保留</strong>。最高 <strong>4 级</strong>（第 4 级 Max=1，视为封顶）。</p>
+
+      <h3>升级需求与即时奖励</h3>
+      <table>
+        <tr><th>到达等级</th><th>该级进度条容量</th><th>经验</th><th>文</th></tr>
+        <tr><td>1（起始）</td><td>2000</td><td>—</td><td>—</td></tr>
+        <tr><td>2</td><td>3000</td><td>2000</td><td>1800</td></tr>
+        <tr><td>3</td><td>7000</td><td>5000</td><td>4000</td></tr>
+        <tr><td>4（封顶）</td><td>1</td><td>12000</td><td>10000</td></tr>
+      </table>
+      <p>两侧（鬼杀队 / 鬼）的 Exp·文奖励数值相同。</p>
+
+      <h3>鬼杀队 · 每级属性（累加）</h3>
+      <table>
+        <tr><th>等级</th><th>本级新增</th></tr>
+        <tr><td>1</td><td>—</td></tr>
+        <tr><td>2</td><td>最大生命 +50 · 最大生命倍率 +0.05 · 最大体力 +15</td></tr>
+        <tr><td>3</td><td>最大生命 +75 · 最大生命倍率 +0.07 · 最大体力 +25</td></tr>
+        <tr><td>4</td><td>最大生命 +100 · 最大生命倍率 +0.08 · 解锁技能 <strong>Breathing Boost</strong>（冷却 30 秒）</td></tr>
+      </table>
+      <p>满级合计：最大生命 <strong>+225</strong>，最大生命倍率 <strong>+0.20</strong>，最大体力 <strong>+40</strong>，以及 Breathing Boost。</p>
+
+      <h3>鬼 · 每级属性（累加）</h3>
+      <table>
+        <tr><th>等级</th><th>本级新增</th></tr>
+        <tr><td>1</td><td>—</td></tr>
+        <tr><td>2</td><td>最大生命 +50 · 最大生命倍率 +0.05 · 光照 Illumination +0.2</td></tr>
+        <tr><td>3</td><td>最大生命 +75 · 最大生命倍率 +0.07 · 生命回复速度 +0.1</td></tr>
+        <tr><td>4</td><td>最大生命 +100 · 最大生命倍率 +0.08 · Illumination +0.15 · 邪恶艺术伤害倍率 +0.04 · 额外伤害 +2</td></tr>
+      </table>
+      <p>满级合计：最大生命 <strong>+225</strong>，最大生命倍率 <strong>+0.20</strong>，Illumination <strong>+0.35</strong>，生命回复 +0.1，邪恶艺术伤害倍率 +0.04，额外伤害 +2。</p>
+
+      <h3>如何涨进度</h3>
+      <table>
+        <tr><th>阵营</th><th>道具</th><th>进度</th><th>获取</th></tr>
+        <tr><td rowspan="3">鬼杀队</td><td>小葫芦 Small Gourd</td><td>+25</td><td rowspan="3">蝴蝶屋 Ren 出售（需猎杀队侧、等级等条件；小 800 / 中 3000 / 大 8800 文）</td></tr>
+        <tr><td>中葫芦 Medium Gourd</td><td>+100</td></tr>
+        <tr><td>大葫芦 Large Gourd</td><td>+300</td></tr>
+        <tr><td rowspan="3">鬼</td><td>弱灵魂 Weak Soul</td><td>+5</td><td rowspan="3">世界掉落拾取；商店 <strong>2x Souls</strong> 可翻倍灵魂收益</td></tr>
+        <tr><td>强灵魂 Strong Soul</td><td>+10</td></tr>
+        <tr><td>勇灵魂 Brave Soul</td><td>+25</td></tr>
+      </table>
+      <p>没有面向玩家的「重置阵营进度」商品；商店「重置声望」<strong>不会</strong>清空这两条进度条。</p>
+    </article>
+
+    <article class="sec" id="reputation">
+      <h2>声望 Reputation（善恶值）</h2>
+      <p>独立于阵营进度的整数。规则要点：<strong>数值越低越「恶」</strong>；越高越「善 / 干净」。</p>
+      <ul>
+        <li>显示在头顶与相关统计中。</li>
+        <li>玩家派系会汇总成员声望。</li>
+        <li>商店可买 <strong>重置声望</strong>：50 罗宝 / 4 矿石，将声望设为 <strong>0</strong>（二次确认）。</li>
+      </ul>
+      <h3>与无惨 / 琵琶铃相关的阈值</h3>
+      <table>
+        <tr><th>条件</th><th>效果</th></tr>
+        <tr><td>声望 ≤ −10 / −20 / −30 / −40</td><td>无惨低语等阶段提示</td></tr>
+        <tr><td>声望 ≤ −40</td><td>人类侧可从无惨相关流程获得琵琶铃（Biwa Bell）资格</td></tr>
+        <tr><td>声望 &lt; −20</td><td>可进入无惨巢穴；≥ −20 会被挡</td></tr>
+        <tr><td>进入巢穴</td><td>声望 <strong>+5</strong>（消耗一层「恶」，数值回升）</td></tr>
+      </table>
+      <p>通过击杀等行为变「更恶」的具体加减，由服务器声望服务处理；玩家侧以阈值与重置商品为准即可。</p>
+    </article>
+  </main>
+  <footer class="foot">
+    <div><strong>Slayers 2 Wiki</strong><span>派系 · 阵营进度 · 声望</span></div>
+    <a href="../">返回主页</a>
+  </footer>
+</body>
+</html>

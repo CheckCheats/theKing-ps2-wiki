@@ -1,0 +1,246 @@
+{
+  "chest_to_bosses": {
+    "Common Chest": [
+      {
+        "Code": "WaterTrainee",
+        "Name": "Water Trainee Sabito"
+      },
+      {
+        "Code": "InsectTrainee",
+        "Name": "Insect Trainee"
+      },
+      {
+        "Code": "SerpentTrainee",
+        "Name": "Serpent Trainee"
+      },
+      {
+        "Code": "FlameTrainee",
+        "Name": "Flame Trainee"
+      },
+      {
+        "Code": "WindTrainee",
+        "Name": "Wind Trainee"
+      },
+      {
+        "Code": "Kaiden",
+        "Name": "Kaiden"
+      },
+      {
+        "Code": "ThunderTrainee",
+        "Name": "Thunder Trainee"
+      },
+      {
+        "Code": "Zuko",
+        "Name": "Zuko"
+      },
+      {
+        "Code": "SoundTrainee",
+        "Name": "Sound Trainee"
+      },
+      {
+        "Code": "MotherBear",
+        "Name": "Mother Bear"
+      },
+      {
+        "Code": "StoneTrainee",
+        "Name": "Stone Trainee"
+      }
+    ],
+    "Rare Chest": [
+      {
+        "Code": "SoryuTrainee",
+        "Name": "Soryu Trainee Goki"
+      },
+      {
+        "Code": "TaiChiTrainee",
+        "Name": "Tai Chi Trainee Suzume"
+      },
+      {
+        "Code": "Hoyuzo",
+        "Name": "Hoyuzo"
+      }
+    ],
+    "World Events Chest": [
+      {
+        "Code": "Sumari",
+        "Name": "Sumari"
+      },
+      {
+        "Code": "Rengu",
+        "Name": "Rengu"
+      },
+      {
+        "Code": "YetiDemon",
+        "Name": "Yeti Demon"
+      },
+      {
+        "Code": "Gyutai",
+        "Name": "Gyutai"
+      },
+      {
+        "Code": "Reaper",
+        "Name": "Reaper"
+      },
+      {
+        "Code": "Domae",
+        "Name": "Domae"
+      },
+      {
+        "Code": "Obari",
+        "Name": "Obari"
+      },
+      {
+        "Code": "Enru",
+        "Name": "Enru"
+      },
+      {
+        "Code": "Nezura",
+        "Name": "Nezura"
+      },
+      {
+        "Code": "Giyen",
+        "Name": "Giyen"
+      },
+      {
+        "Code": "Tengai",
+        "Name": "Tengai"
+      },
+      {
+        "Code": "Shinora",
+        "Name": "Shinora"
+      },
+      {
+        "Code": "Gyorei",
+        "Name": "Gyorei"
+      },
+      {
+        "Code": "Akazo",
+        "Name": "Akazo"
+      },
+      {
+        "Code": "Datai",
+        "Name": "Datai"
+      },
+      {
+        "Code": "Saneri",
+        "Name": "Saneri"
+      },
+      {
+        "Code": "Yahari",
+        "Name": "Yahari"
+      },
+      {
+        "Code": "Zentaro",
+        "Name": "Zentaro"
+      }
+    ],
+    "Lost Chest": [
+      {
+        "Code": "Lost",
+        "Name": "Lost"
+      }
+    ],
+    "Ice Chest": [
+      {
+        "Code": "ReaperTrainee",
+        "Name": "Reaper Trainee Kuzan"
+      },
+      {
+        "Code": "Fujiko",
+        "Name": "Fujiko"
+      }
+    ]
+  },
+  "chest_cn": {
+    "Common Chest": "常见宝箱",
+    "Rare Chest": "稀有宝箱",
+    "Ice Chest": "冰霜宝箱",
+    "Snow Chest": "积雪宝箱",
+    "Lost Chest": "遗失宝箱",
+    "World Events Chest": "世界事件宝箱",
+    "Sealed Cache T1": "密封箱 T1",
+    "Sealed Cache T2": "密封箱 T2",
+    "Sealed Cache T3": "密封箱 T3",
+    "Ouwigahara Chest": "奥乌兰宝箱",
+    "Ouwigahara Cache": "奥乌兰储藏箱",
+    "Ouwigahara Deep Cache": "奥乌兰深层储藏箱"
+  },
+  "boss_cn": {
+    "Akazo": "猗窝座",
+    "Datai": "堕姬",
+    "Domae": "童磨",
+    "Enru": "魇梦",
+    "Flame Trainee": "炎之见习",
+    "Fujiko": "藤子",
+    "Giyen": "义勇",
+    "Gyorei": "悲鸣屿",
+    "Gyutai": "妓夫太郎",
+    "Hoyuzo": "宝月",
+    "Insect Trainee": "虫之见习",
+    "Kaiden": "凯登",
+    "Mother Bear": "母熊",
+    "Nezura": "祢豆子",
+    "Obari": "小芭内",
+    "Reaper": "收割者",
+    "Reaper Trainee Kuzan": "收割者见习·库赞",
+    "Rengu": "炼狱",
+    "Saneri": "实弥",
+    "Serpent Trainee": "蛇之见习",
+    "Shinora": "胡蝶忍",
+    "Soryu Trainee Goki": "苍龙见习·五希",
+    "Sound Trainee": "音之见习",
+    "Stone Trainee": "岩之见习",
+    "Sumari": "朱纱丸",
+    "Tai Chi Trainee Suzume": "太极见习·铃女",
+    "Tengai": "宇髄",
+    "Thunder Trainee": "雷之见习",
+    "Water Trainee Sabito": "水之见习·錆兔",
+    "Wind Trainee": "风之见习",
+    "Yahari": "矢琶羽",
+    "Zentaro": "善太郎",
+    "Zuko": "祖科",
+    "World Events": "世界事件",
+    "Lost": "遗失",
+    "Yeti Demon": "雪人鬼",
+    "YetiDemon": "雪人鬼",
+    "FlameTrainee": "炎之见习",
+    "WindTrainee": "风之见习",
+    "ThunderTrainee": "雷之见习",
+    "SoundTrainee": "音之见习",
+    "StoneTrainee": "岩之见习",
+    "InsectTrainee": "虫之见习",
+    "SerpentTrainee": "蛇之见习",
+    "MotherBear": "母熊"
+  },
+  "stat_cn": {
+    "Additional Damage": "额外伤害",
+    "Additional Damage Factor": "额外伤害倍率",
+    "Block Points": "格挡值",
+    "Block Regen": "格挡回复",
+    "Cold Immunity": "寒冷免疫",
+    "Damage Reduction": "伤害减免",
+    "Damage Reduction Factor": "伤害减免倍率",
+    "Health Regen Speed": "生命回复速度",
+    "Illumination": "照明",
+    "Max Health": "最大生命",
+    "Max Health Factor": "最大生命倍率",
+    "Max Stamina": "最大体力",
+    "Movement Speed Factor": "移速倍率",
+    "Stamina Regen Speed": "体力回复速度",
+    "Sun Immunity": "日轮免疫"
+  },
+  "sealed_note": {
+    "Sealed Cache T1": "封印箱 T1：由丛林袭击者 / 袭击队长等守卫解锁",
+    "Sealed Cache T2": "封印箱 T2：由库藏枪兵 / 枪兵队长等解锁",
+    "Sealed Cache T3": "封印箱 T3：由库藏潜行者 / 潜行队长等解锁",
+    "Snow Chest": "雪原世界宝箱（无对应 Boss 箱字段）",
+    "Common Chest": "常见 Boss / 试炼头目击杀后掉落的宝箱",
+    "Rare Chest": "稀有 Boss / 试炼头目击杀后掉落的宝箱",
+    "Ice Chest": "冰霜类 Boss / 试炼头目击杀后掉落的宝箱",
+    "Lost Chest": "击败终选 Boss「遗失 Lost」后掉落",
+    "World Events Chest": "世界头目击杀后掉落的事件宝箱",
+    "Ouwigahara Chest": "奥乌兰爬塔宝箱",
+    "Ouwigahara Cache": "奥乌兰缓存箱",
+    "Ouwigahara Deep Cache": "奥乌兰深层缓存箱"
+  }
+}

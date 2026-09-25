@@ -1,0 +1,370 @@
+[
+  {
+    "Items": [],
+    "Name": "Black Marketer",
+    "Region": "Misc",
+    "Positions": [
+      [
+        -132.676,
+        804,
+        101.24
+      ],
+      [
+        2161.963,
+        823.459,
+        -900.676
+      ],
+      [
+        1795.511,
+        659.399,
+        -523.103
+      ],
+      [
+        -464.862,
+        1356.974,
+        -3497.761
+      ],
+      [
+        -2089.845,
+        62.241,
+        -408.465
+      ],
+      [
+        -864.695,
+        1389,
+        -1639.538
+      ],
+      [
+        -118.712,
+        1379.275,
+        -1861.278
+      ],
+      [
+        -1045.371,
+        1282,
+        -1312.49
+      ],
+      [
+        -1775.234,
+        141.75,
+        1297.076
+      ],
+      [
+        -2736.262,
+        143.75,
+        833.486
+      ],
+      [
+        -1946.007,
+        311.5,
+        -282.891
+      ]
+    ],
+    "Position": [
+      -132.676,
+      804,
+      101.24
+    ],
+    "Note": "限时活动 BlackMarketArrival 刷新，多点轮换"
+  },
+  {
+    "Items": [
+      "Shovel"
+    ],
+    "Shop": {
+      "Shovel": {
+        "Wen": 1000
+      }
+    },
+    "Name": "Winter Store Rep Lynx",
+    "Region": "Iceveil Valley",
+    "Position": [
+      -91.65,
+      1353.38,
+      -2705.573
+    ]
+  },
+  {
+    "Items": [],
+    "Name": "Elara",
+    "Region": "Mistfall Harbor",
+    "Position": [
+      427.816,
+      941.003,
+      507.446
+    ]
+  },
+  {
+    "Items": [
+      "Metal Scraps",
+      "Silk Thread"
+    ],
+    "Shop": {
+      "Metal Scraps": {
+        "Wen": 500
+      },
+      "Silk Thread": {
+        "Wen": 350
+      }
+    },
+    "Name": "Ginzo",
+    "Region": "Mistfall Harbor",
+    "Position": [
+      273.7995,
+      941.5,
+      528.189
+    ]
+  },
+  {
+    "Items": [
+      "Underwater Breathing Potion",
+      "Health Regen Elixir",
+      "Health Elixir",
+      "Stamina Regen Elixir"
+    ],
+    "Shop": {
+      "Stamina Regen Elixir": {
+        "Demon Horns": 2,
+        "Wen": 750
+      },
+      "Health Elixir": {
+        "Demon Horns": 2,
+        "Wen": 350
+      },
+      "Health Regen Elixir": {
+        "Demon Horns": 2,
+        "Wen": 500
+      },
+      "Underwater Breathing Potion": {
+        "Demon Horns": 6,
+        "Wen": 600
+      }
+    },
+    "Name": "Alchemist Meku",
+    "Region": "Mistfall Harbor",
+    "Position": [
+      -138.148,
+      801.157,
+      518.745
+    ]
+  },
+  {
+    "Items": [
+      "Rare Fishing Rod",
+      "Basic Fishing Rod",
+      "Worm"
+    ],
+    "Shop": {
+      "Rare Fishing Rod": {
+        "SuccessDialogue": "Jeso_RarePurchaseSuccess",
+        "FailDialogue": "Jeso_RarePurchaseFail",
+        "Model": null
+      },
+      "Basic Fishing Rod": {
+        "SuccessDialogue": "Jeso_PurchaseSuccess",
+        "FailDialogue": "Jeso_PurchaseFail",
+        "Model": null
+      },
+      "Worm": []
+    },
+    "Name": "Fisherman Jeso",
+    "Region": "Mistfall Harbor",
+    "Position": [
+      -192.001,
+      806.932,
+      602.667
+    ]
+  },
+  {
+    "Items": [
+      "Urokodaki's Mask",
+      "Stamina Regen Potion",
+      "Ivory edge Cloak",
+      "Sun Eve Drape",
+      "Crown of the Brave",
+      "Cherry Blossom Lantern",
+      "Heart of Night Necklace",
+      "Peppermint Scarf",
+      "Black-Cord Necklace",
+      "Solstice Necklace",
+      "Tidal Earrings",
+      "Black Dragon Horns",
+      "Health Regen Potion",
+      "Stylish Boa"
+    ],
+    "Shop": {
+      "Urokodaki's Mask": [],
+      "Stamina Regen Potion": {
+        "Wen": 900
+      },
+      "Stylish Boa": [],
+      "Sun Eve Drape": [],
+      "Cherry Blossom Lantern": [],
+      "Ivory edge Cloak": [],
+      "Heart of Night Necklace": [],
+      "Tidal Earrings": [],
+      "Black-Cord Necklace": [],
+      "Solstice Necklace": [],
+      "Peppermint Scarf": [],
+      "Black Dragon Horns": [],
+      "Health Regen Potion": {
+        "Wen": 600
+      },
+      "Crown of the Brave": []
+    },
+    "Name": "Kuro",
+    "Region": "Bamboo Grove",
+    "Position": [
+      667.271,
+      1121.199,
+      -1100.757
+    ]
+  },
+  {
+    "Items": [
+      "Small Gourd",
+      "Medium Gourd",
+      "Large Gourd"
+    ],
+    "Shop": {
+      "Small Gourd": {
+        "RequiresSide": "Slayer",
+        "FailDialogue": "Ren_GourdFail",
+        "SuccessDialogue": "Ren_GourdSuccess",
+        "Model": null
+      },
+      "Medium Gourd": {
+        "RequiresSide": "Slayer",
+        "FailDialogue": "Ren_GourdFail",
+        "SuccessDialogue": "Ren_GourdSuccess",
+        "Model": null
+      },
+      "Large Gourd": {
+        "RequiresSide": "Slayer",
+        "FailDialogue": "Ren_GourdFail",
+        "SuccessDialogue": "Ren_GourdSuccess",
+        "Model": null
+      }
+    },
+    "Name": "Ren",
+    "Region": "Butterfly Estate",
+    "Position": [
+      -1795,
+      311.8,
+      -85
+    ],
+    "Positions": [
+      [
+        -1795,
+        311.8,
+        -85
+      ],
+      [
+        -1849.1,
+        311.8,
+        -91.3
+      ],
+      [
+        -1887.3,
+        311.8,
+        -82.7
+      ],
+      [
+        -1834.9,
+        311.8,
+        -23.7
+      ],
+      [
+        -1834.9,
+        311.8,
+        75.4
+      ],
+      [
+        -1688.3,
+        286.8,
+        75.4
+      ],
+      [
+        -1609.3,
+        286.8,
+        10.2
+      ],
+      [
+        -1609.3,
+        311.8,
+        -80.9
+      ],
+      [
+        -1643.2,
+        311.8,
+        -125.1
+      ],
+      [
+        -1707.6,
+        311.8,
+        -125.1
+      ]
+    ]
+  },
+  {
+    "Items": [
+      "Fancy Katana",
+      "Regular Katana"
+    ],
+    "Shop": {
+      "Fancy Katana": {
+        "Wen": 1500
+      },
+      "Regular Katana": {
+        "Wen": 500
+      }
+    },
+    "Name": "Raze",
+    "Region": "Windy Peak",
+    "Position": [
+      -594,
+      1242.5,
+      -1095
+    ]
+  },
+  {
+    "Items": [
+      "Health Regen Potion",
+      "Stamina Regen Potion"
+    ],
+    "Shop": {
+      "Health Regen Potion": {
+        "Wen": 600
+      },
+      "Stamina Regen Potion": {
+        "Wen": 900
+      }
+    },
+    "Name": "Rika",
+    "Region": "Windy Peak",
+    "Position": [
+      -496.45,
+      1248.907,
+      -1177.206
+    ]
+  },
+  {
+    "Items": [
+      "Fish Head",
+      "Golden Tentacle x75",
+      "Golden Tentacle x10"
+    ],
+    "Shop": {
+      "Fish Head": [],
+      "Golden Tentacle x10": [],
+      "Golden Tentacle x75": []
+    },
+    "Name": "Baitmonger Nori",
+    "Region": "Hidden Mist Village",
+    "Position": [
+      1643.237,
+      669.865,
+      -190.126
+    ]
+  }
+]
