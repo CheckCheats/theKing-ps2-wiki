@@ -9,7 +9,19 @@ python -m http.server 8080
 # 打开 http://127.0.0.1:8080/
 ```
 
-## 部署到 GitHub Pages
+## 部署
+
+### Cloudflare Workers（静态资源）
+
+仓库根目录已含 `wrangler.jsonc`。Workers 构建命令保持：
+
+```bash
+npx wrangler deploy
+```
+
+无需交互；`assets.directory` 指向站点根目录。`.assetsignore` 会排除 `.git` / `tools` / 源数据等。
+
+### GitHub Pages
 
 1. 将本目录推送到仓库 `main` 根目录。
 2. Settings → Pages → Deploy from branch → `main` / `/ (root)`。
