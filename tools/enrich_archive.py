@@ -284,8 +284,19 @@ def main():
     def sort_key(s):
         return (kind_rank.get(s.get("Kind"), 9), -(s.get("Chance") or -1), s.get("Where") or "")
 
+    combat_path = LIVE / "wiki-item-combat.json"
+    combat = {}
+    if combat_path.exists():
+        combat = json.loads(combat_path.read_text(encoding="utf-8"))
+    potion_path = LIVE / "wiki-potion-effects.json"
+    potions = {}
+    if potion_path.exists():
+        potions = json.loads(potion_path.read_text(encoding="utf-8"))
+    notes_zh = potions.get("notes_zh") or {}
+
     enriched = {}
     empty = 0
+    merged_ats = 0
     for name, it in items.items():
         src = sorted(sources[name], key=sort_key)
         if not src:
@@ -294,8 +305,61 @@ def main():
         out["Sources"] = src
         out["NameCN"] = NAME_CN.get(name, name)
         out["DescriptionCN"] = DESC_CN.get(name) or it.get("Description") or ""
+        # merge live combat dump
+        c = combat.get(name) or {}
+        for k in (
+            "ActiveToolStats",
+            "Skills",
+            "RefineStats",
+            "Mastery",
+            "Class",
+            "Breathing",
+            "DemonArt",
+            "HasCombat",
+            "SkillCategory",
+            "CombatPreset",
+            "Series",
+            "EquipRequirements",
+            "ToolScript",
+        ):
+            if c.get(k) is not None and out.get(k) is None:
+                out[k] = c[k]
+        if c.get("ActiveToolStats") and not out.get("Stats"):
+            out["Stats"] = c["ActiveToolStats"]
+            merged_ats += 1
+        elif c.get("ActiveToolStats"):
+            # prefer combat ATS as canonical weapon stats
+            out["Stats"] = c["ActiveToolStats"]
+            merged_ats += 1
+        # potion effects
+        if name in notes_zh or name in (potions.get("buffStat") or {}):
+            pe = {
+                "note": notes_zh.get(name),
+                "stat": (potions.get("buffStat") or {}).get(name),
+                "duration": (potions.get("buffDurationSec") or {}).get(name)
+                or ((potions.get("buffDurationSec") or {}).get("Default") if name in (potions.get("buffStat") or {}) else None),
+                "magnitude": (potions.get("buffMagnitude") or {}).get(name)
+                or ((potions.get("buffMagnitude") or {}).get("Default") if name in (potions.get("buffStat") or {}) else None),
+                "heal": (potions.get("instantHeal") or {}).get(name)
+                or ((potions.get("instantHeal") or {}).get("Default") if name in (potions.get("instantOnly") or []) else None),
+            }
+            out["PotionEffect"] = {k: v for k, v in pe.items() if v is not None}
+            if pe.get("stat"):
+                out.setdefault("Stats", {})
+                if isinstance(out["Stats"], dict):
+                    label = pe["stat"]
+                    bits = []
+                    if pe.get("magnitude") is not None:
+                        bits.append(f"×{pe['magnitude']}")
+                    if pe.get("duration") is not None:
+                        bits.append(f"{pe['duration']}s")
+                    out["Stats"][label] = " ".join(bits) if bits else True
+            if pe.get("heal") is not None:
+                out.setdefault("Stats", {})
+                if isinstance(out["Stats"], dict):
+                    out["Stats"]["Instant Heal"] = pe["heal"]
         # localize stats keys
-        stats = it.get("Stats")
+        stats = out.get("Stats")
         if isinstance(stats, dict):
             out["StatsCN"] = {STAT_CN.get(k, k): v for k, v in stats.items()}
         enriched[name] = out
@@ -309,7 +373,7 @@ def main():
     }
     (LIVE / "items-enriched.json").write_text(json.dumps(enriched, ensure_ascii=False, indent=None), encoding="utf-8")
     (LIVE / "archive-meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"enriched {len(enriched)} empty_src={empty}")
+    print(f"enriched {len(enriched)} empty_src={empty} ats_merged={merged_ats}")
 
 
 if __name__ == "__main__":

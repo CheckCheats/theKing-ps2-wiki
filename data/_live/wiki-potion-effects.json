@@ -1,0 +1,35 @@
+{
+  "_source": "ReplicatedStorage.ToolScripts.Health_Potion.Health_PotionServer",
+  "instantHeal": {
+    "Default": 25,
+    "Health Elixir": 60,
+    "Health Potion": 25
+  },
+  "buffDurationSec": {
+    "Default": 10,
+    "Health Regen Elixir": 20,
+    "Stamina Regen Elixir": 20,
+    "Underwater Breathing Potion": 120
+  },
+  "buffMagnitude": {
+    "Default": 3,
+    "Underwater Breathing Potion": 1
+  },
+  "buffStat": {
+    "Health Regen Potion": "Health Regen Speed",
+    "Stamina Regen Potion": "Stamina Regen Speed",
+    "Health Regen Elixir": "Health Regen Speed",
+    "Stamina Regen Elixir": "Stamina Regen Speed",
+    "Underwater Breathing Potion": "Breath Duration Factor"
+  },
+  "instantOnly": ["Health Potion", "Health Elixir"],
+  "notes_zh": {
+    "Health Potion": "瞬回生命 +25（默认药水治疗量）",
+    "Health Elixir": "瞬回生命 +60",
+    "Health Regen Potion": "获得 Health Regen Speed 加成，持续约 10 秒，强度 3",
+    "Health Regen Elixir": "获得 Health Regen Speed 加成，持续约 20 秒，强度 3",
+    "Stamina Regen Potion": "获得 Stamina Regen Speed 加成，持续约 10 秒，强度 3",
+    "Stamina Regen Elixir": "获得 Stamina Regen Speed 加成，持续约 20 秒，强度 3",
+    "Underwater Breathing Potion": "获得 Breath Duration Factor 加成，持续约 120 秒，强度 1"
+  }
+}

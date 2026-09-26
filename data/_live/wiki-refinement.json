@@ -1,0 +1,40 @@
+{
+  "MaxLevel": 10,
+  "GreatStep": 3,
+  "GuardItem": "Refinement Guard",
+  "GuardGreatMultiplier": 1.5,
+  "SmeltRate": {
+    "From": "Refinement Ore",
+    "FromCount": 5,
+    "To": "Mythic Refinement Ore",
+    "ToCount": 1
+  },
+  "Multipliers": [1, 1.05, 1.1, 1.2, 1.3, 1.4, 1.55, 1.7, 1.9, 2, 3],
+  "DefaultRefineStats": ["Additional Damage"],
+  "Rungs": {
+    "0": {"Wen": 125, "Ore": "Refinement Ore", "OreCount": 2, "FailBp": 0, "SuccessBp": 9000, "GreatBp": 1000},
+    "1": {"Wen": 250, "Ore": "Refinement Ore", "OreCount": 3, "FailBp": 500, "SuccessBp": 8500, "GreatBp": 1000},
+    "2": {"Wen": 500, "Ore": "Refinement Ore", "OreCount": 5, "FailBp": 1200, "SuccessBp": 8000, "GreatBp": 800},
+    "3": {"Wen": 1000, "Ore": "Refinement Ore", "OreCount": 8, "FailBp": 2500, "SuccessBp": 6900, "GreatBp": 600},
+    "4": {"Wen": 2000, "Ore": "Refinement Ore", "OreCount": 12, "FailBp": 4500, "SuccessBp": 5100, "GreatBp": 400},
+    "5": {"Wen": 3250, "Ore": "Mythic Refinement Ore", "OreCount": 1, "FailBp": 6500, "SuccessBp": 3250, "GreatBp": 250},
+    "6": {"Wen": 5000, "Ore": "Mythic Refinement Ore", "OreCount": 2, "FailBp": 7850, "SuccessBp": 2000, "GreatBp": 150},
+    "7": {"Wen": 7500, "Ore": "Mythic Refinement Ore", "OreCount": 2, "FailBp": 9150, "SuccessBp": 800, "GreatBp": 50},
+    "8": {"Wen": 12500, "Ore": "Mythic Refinement Ore", "OreCount": 3, "FailBp": 9450, "SuccessBp": 550, "GreatBp": 0},
+    "9": {"Wen": 25000, "Ore": "Mythic Refinement Ore", "OreCount": 4, "FailBp": 9925, "SuccessBp": 75, "GreatBp": 0}
+  },
+  "Npc": {
+    "Name": "Refiner Hagane",
+    "Region": "Hidden Mist Village",
+    "Position": [1865.274, 694, -434.26],
+    "LevelReq": 65
+  },
+  "Notes": {
+    "zh": [
+      "可精炼：物品需 HasCombat + ActiveToolStats，且 RefineStats 指向的属性非 0（默认至少 Additional Damage）。",
+      "主属性（RefineStats 第 1 项）按 Multipliers 全额放大；第 2 项及以后按 (倍率-1)/2+1 半额放大。",
+      "概率单位为万分比（Bp），Fail+Success+Great=10000。使用精炼守护时 Great 概率 ×1.5，并从 Success 挪出差额。",
+      "缺神话矿时可用 5 普通精炼矿 → 1 神话矿 折算（SmeltRate）。"
+    ]
+  }
+}

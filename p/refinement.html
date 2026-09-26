@@ -7,40 +7,63 @@
   <title>精炼 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926a">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926r">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
     .crumb a{color:var(--gold)}
-    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem;scroll-margin-top:4.5rem}
     .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
     .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
     .sec p,.sec li{color:var(--muted);font-size:.92rem}
-    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec ul,.sec ol{margin:.35rem 0 0;padding-left:1.2rem}
     .sec strong{color:var(--cream)}
-    .sec table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.4rem}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0}
     .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
     .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
-    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.6rem}
-</style>
+    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
+    .icon{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a;border-radius:6px}
+    .head{display:flex;gap:.85rem;align-items:flex-start}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
+  </style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
   <header class="top">
     <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
-    <span class="top-ver">资料</span>
+    <nav class="top-nav"><a href="#how">说明</a><a href="#rungs">等级表</a></nav>
+    <span class="top-ver">精炼</span>
   </header>
   <main class="page">
     <p class="crumb"><a href="../">主页</a> / 精炼</p>
-    <article class="sec"><h1>精炼</h1><p>精炼师 Hagane 位于迷雾村附近（约 1865, 694, -434），通常需要较高等级才可使用。</p></article>
+    
+    <article class="sec" id="how">
+      <h1>精炼</h1>
+      <p>精炼师 <strong>Refiner Hagane</strong>（隐雾村）· 需求等级 <strong>65</strong>。</p>
+      <p>坐标约 <code>1865.3, 694.0, -434.3</code></p>
+      <img class="map-img" src="../assets/wiki-maps/refine-hagane.png" alt="Hagane">
+      <ul><li>可精炼：物品需 HasCombat + ActiveToolStats，且 RefineStats 指向的属性非 0（默认至少 Additional Damage）。</li><li>主属性（RefineStats 第 1 项）按 Multipliers 全额放大；第 2 项及以后按 (倍率-1)/2+1 半额放大。</li><li>概率单位为万分比（Bp），Fail+Success+Great=10000。使用精炼守护时 Great 概率 ×1.5，并从 Success 挪出差额。</li><li>缺神话矿时可用 5 普通精炼矿 → 1 神话矿 折算（SmeltRate）。</li></ul>
+      <p>守护道具：<a class="quest-link" href="archive/items/Refinement-Guard.html">Refinement Guard</a>
+        · 熔炼：<a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a>×5
+        → <a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a>×1</p>
+    </article>
+    <article class="sec" id="rungs">
+      <h2>每级消耗与概率</h2>
+      <p>当前等级 → 下一等级。倍率列为精炼后主属性乘数（RefineStats 第 1 项全额；第 2 项半额）。</p>
+      <table><tr><th>阶</th><th>文</th><th>矿</th><th>概率（万分比÷100）</th><th>主属性倍率</th></tr><tr><td>+0 → +1</td><td><code>125</code> 文</td><td><a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a> ×2</td><td>失败 0.00% / 成功 90.00% / 大成功 10.00%</td><td><code>1</code> → <code>1.05</code></td></tr><tr><td>+1 → +2</td><td><code>250</code> 文</td><td><a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a> ×3</td><td>失败 5.00% / 成功 85.00% / 大成功 10.00%</td><td><code>1.05</code> → <code>1.1</code></td></tr><tr><td>+2 → +3</td><td><code>500</code> 文</td><td><a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a> ×5</td><td>失败 12.00% / 成功 80.00% / 大成功 8.00%</td><td><code>1.1</code> → <code>1.2</code></td></tr><tr><td>+3 → +4</td><td><code>1000</code> 文</td><td><a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a> ×8</td><td>失败 25.00% / 成功 69.00% / 大成功 6.00%</td><td><code>1.2</code> → <code>1.3</code></td></tr><tr><td>+4 → +5</td><td><code>2000</code> 文</td><td><a class="quest-link" href="archive/items/Refinement-Ore.html">Refinement Ore</a> ×12</td><td>失败 45.00% / 成功 51.00% / 大成功 4.00%</td><td><code>1.3</code> → <code>1.4</code></td></tr><tr><td>+5 → +6</td><td><code>3250</code> 文</td><td><a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a> ×1</td><td>失败 65.00% / 成功 32.50% / 大成功 2.50%</td><td><code>1.4</code> → <code>1.55</code></td></tr><tr><td>+6 → +7</td><td><code>5000</code> 文</td><td><a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a> ×2</td><td>失败 78.50% / 成功 20.00% / 大成功 1.50%</td><td><code>1.55</code> → <code>1.7</code></td></tr><tr><td>+7 → +8</td><td><code>7500</code> 文</td><td><a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a> ×2</td><td>失败 91.50% / 成功 8.00% / 大成功 0.50%</td><td><code>1.7</code> → <code>1.9</code></td></tr><tr><td>+8 → +9</td><td><code>12500</code> 文</td><td><a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a> ×3</td><td>失败 94.50% / 成功 5.50% / 大成功 0.00%</td><td><code>1.9</code> → <code>2</code></td></tr><tr><td>+9 → +10</td><td><code>25000</code> 文</td><td><a class="quest-link" href="archive/items/Mythic-Refinement-Ore.html">Mythic Refinement Ore</a> ×4</td><td>失败 99.25% / 成功 0.75% / 大成功 0.00%</td><td><code>2</code> → <code>3</code></td></tr></table>
+    </article>
+
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>玩家资料维基</span>
-      <span class="foot-owner">Wiki 所有者 · theKing</span>
-    </div>
+    <div><strong>Slayers 2 Wiki</strong><span>精炼</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../">返回主页</a>
   </footer>
+  <script src="../js/i18n.js?v=20260926r"></script>
 </body>
 </html>

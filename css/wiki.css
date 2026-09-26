@@ -355,15 +355,87 @@ code {
   font-size: 0.82rem;
 }
 
+/* ---- language switch ---- */
+.lang-switch {
+  display: inline-flex;
+  margin-left: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.28rem 0.55rem;
+  cursor: pointer;
+}
+.lang-btn:hover { color: var(--cream); background: rgba(255,255,255,.04); }
+.lang-btn.is-active {
+  color: #111;
+  background: var(--gold);
+}
+html[data-lang="en"] .i18n-zh { display: none !important; }
+html[data-lang="zh"] .i18n-en { display: none !important; }
+.i18n-en[hidden], .i18n-zh[hidden] { display: none !important; }
+
+
 @media (max-width: 900px) {
   .tags { grid-template-columns: repeat(2, 1fr); }
   .portal { grid-template-columns: 1fr; }
   .btn-grid { grid-template-columns: repeat(3, 1fr); }
   .top-nav { display: none; }
+  .top { flex-wrap: wrap; gap: 0.55rem; padding: 0.7rem 1rem; }
+  .top-ver { margin-left: auto; }
+  .lang-switch { margin-left: 0; }
+  .banner { padding: 0 1rem; }
+  .tags, .portal { padding-left: 1rem; padding-right: 1rem; }
+  .box { padding: 0.75rem 0.8rem 0.9rem; }
+  .ver-num { font-size: 2rem; }
 }
 
 @media (max-width: 560px) {
   .tags { grid-template-columns: 1fr; }
   .btn-grid, .guide-grid { grid-template-columns: repeat(2, 1fr); }
   .banner-track p { white-space: normal; }
+  .sfx { min-height: 2.2rem; font-size: 0.78rem; padding: 0.35rem 0.25rem; }
+  .tag { padding: 0.75rem 0.8rem; }
+  .tag strong { font-size: 0.95rem; }
+  .foot { flex-direction: column; align-items: flex-start; gap: 0.65rem; padding: 1.25rem 1rem 2rem; }
+  .news-scroll { max-height: 11rem; }
 }
+
+/* ---- shared page content (archive / feature pages) ---- */
+@media (max-width: 720px) {
+  .page { padding-left: 0.85rem !important; padding-right: 0.85rem !important; }
+  .sec { padding: 0.85rem 0.8rem !important; }
+  .sec h1 { font-size: 1.2rem !important; }
+  .sec h2 { font-size: 1.05rem !important; }
+  .sec table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .sec th, .sec td { padding: 0.35rem 0.4rem !important; font-size: 0.8rem !important; white-space: nowrap; }
+  .sec td:last-child, .sec th:last-child { white-space: normal; min-width: 8rem; }
+  .head { flex-wrap: wrap; }
+  .icon { width: 56px !important; height: 56px !important; }
+  .map-img { margin-top: 0.45rem; }
+  .top-nav { gap: 0.45rem; font-size: 0.75rem; flex-wrap: wrap; }
+  .crumb { font-size: 0.8rem !important; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .card { padding: 0.55rem !important; }
+}
+
+@media (max-width: 420px) {
+  .btn-grid, .guide-grid { grid-template-columns: 1fr 1fr; }
+  .grid { grid-template-columns: 1fr !important; }
+  .sec th, .sec td { font-size: 0.76rem !important; }
+}
+
+/* touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  .sfx, .tag, .lang-btn, a.quest-link { min-height: 2.5rem; }
+  .sfx { padding: 0.55rem 0.4rem; }
+}
+

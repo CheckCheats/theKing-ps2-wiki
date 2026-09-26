@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>呼吸 / 流派 · Slayers 2 Wiki</title>
+  <title>呼吸法 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926n">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926r">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
@@ -17,166 +17,144 @@
     .sec h1{font-size:1.35rem}
     .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
     .sec p,.sec li{color:var(--muted);font-size:.92rem}
-    .sec ol,.sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec ul,.sec ol{margin:.35rem 0 0;padding-left:1.2rem}
     .sec strong{color:var(--cream)}
-    .sec table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.4rem}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0}
     .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
     .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
+    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
+    .icon{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a;border-radius:6px}
+    .head{display:flex;gap:.85rem;align-items:flex-start}
     .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
     .top-nav a{color:var(--muted)}
     .top-nav a:hover{color:var(--gold)}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
   </style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
   <header class="top">
     <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
-    <nav class="top-nav">
-      <a href="#table">一览</a>
-      <a href="#thunder">雷</a>
-      <a href="#water">水</a>
-      <a href="#flame">炎</a>
-      <a href="#wind">风</a>
-      <a href="#insect">虫</a>
-      <a href="#serpent">蛇</a>
-      <a href="#sound">音</a>
-      <a href="#stone">岩</a>
-    </nav>
-    <span class="top-ver">呼吸</span>
+    <nav class="top-nav"><a href="#thunder">雷</a> <a href="#water">水</a> <a href="#flame">炎</a> <a href="#wind">风</a> <a href="#insect">虫</a> <a href="#serpent">蛇</a> <a href="#sound">音</a> <a href="#stone">岩</a></nav>
+    <span class="top-ver">呼吸法</span>
   </header>
   <main class="page">
-    <p class="crumb"><a href="../">主页</a> / 呼吸 / 流派</p>
-
+    <p class="crumb"><a href="../">主页</a> / 呼吸法</p>
+    
     <article class="sec" id="table">
-      <h1>呼吸 / 流派接取</h1>
-      <p>八呼吸试炼均为 Lv25 起。训练步蓝色链接跳到 <a href="training.html">锻炼</a> 对应器械说明。</p>
+      <h1>呼吸法</h1>
+      <p>八大呼吸均 Lv25 起接取。导师位置见下图（取对应世界柱坐标）。消耗鬼角 / 兽核与文后完成锻炼链并击败 Trainee。</p>
+      <img class="map-img" src="../assets/wiki-maps/breathings-trainers.png" alt="呼吸导师位置">
       <table>
-        <tr><th>流派</th><th>NPC</th><th>Lv</th><th>道具</th><th>文</th></tr>
-        <tr><td><a href="#thunder">雷之呼吸</a></td><td>Thunder Trainer Zentaro</td><td>25</td><td>鬼角×10</td><td>7000</td></tr>
-        <tr><td><a href="#water">水之呼吸</a></td><td>Water Trainer Urokodaki</td><td>25</td><td>鬼角×30</td><td>5000</td></tr>
-        <tr><td><a href="#flame">炎之呼吸</a></td><td>Flame Trainer Rengu</td><td>25</td><td>鬼角×10</td><td>6000</td></tr>
-        <tr><td><a href="#wind">风之呼吸</a></td><td>Wind Trainer Saneri</td><td>25</td><td>鬼角×50</td><td>3000</td></tr>
-        <tr><td><a href="#insect">虫之呼吸</a></td><td>Insect Trainer Shinora</td><td>25</td><td>鬼角×15 + 兽核×3</td><td>3500</td></tr>
-        <tr><td><a href="#serpent">蛇之呼吸</a></td><td>Serpent Trainer Obari</td><td>25</td><td>鬼角×20 + 兽核×5</td><td>1000</td></tr>
-        <tr><td><a href="#sound">音之呼吸</a></td><td>Sound Trainer Tengai</td><td>25</td><td>鬼角×10 + 兽核×3</td><td>4000</td></tr>
-        <tr><td><a href="#stone">岩之呼吸</a></td><td>Stone Trainer Gyorei</td><td>25</td><td>兽核×4（需持斧锤类）</td><td>4000</td></tr>
-        <tr><td>苍龙流</td><td>Soryu Expert Kazuma</td><td>62</td><td>鬼角×12</td><td>8000</td></tr>
-        <tr><td>太极</td><td>Tai Chi Expert Renjiro</td><td>65</td><td>兽核×5</td><td>9000</td></tr>
-        <tr><td>收割之刃</td><td>Harvester of Souls Zurinyz</td><td>100</td><td>鬼角×20（鬼/混血）</td><td>15000</td></tr>
+        <tr><th>流派</th><th>导师</th><th>文</th><th>材料</th></tr>
+        <tr><td><a href="#thunder">雷之呼吸</a></td><td>Thunder Trainer Zentaro</td><td>7000</td><td>鬼角×10</td></tr><tr><td><a href="#water">水之呼吸</a></td><td>Water Trainer Urokodaki</td><td>5000</td><td>鬼角×30</td></tr><tr><td><a href="#flame">炎之呼吸</a></td><td>Flame Trainer Rengu</td><td>6000</td><td>鬼角×10</td></tr><tr><td><a href="#wind">风之呼吸</a></td><td>Wind Trainer Saneri</td><td>3000</td><td>鬼角×50</td></tr><tr><td><a href="#insect">虫之呼吸</a></td><td>Insect Trainer Shinora</td><td>3500</td><td>鬼角×15 + 兽核×3</td></tr><tr><td><a href="#serpent">蛇之呼吸</a></td><td>Serpent Trainer Obari</td><td>1000</td><td>鬼角×20 + 兽核×5</td></tr><tr><td><a href="#sound">音之呼吸</a></td><td>Sound Trainer Tengai</td><td>4000</td><td>鬼角×10 + 兽核×3</td></tr><tr><td><a href="#stone">岩之呼吸</a></td><td>Stone Trainer Gyorei</td><td>4000</td><td>兽核×4（需斧锤）</td></tr>
       </table>
     </article>
-
+    
     <article class="sec" id="thunder">
-      <h2>雷之呼吸训练</h2>
-      <p>Zentaro · 接取 <code>Ill learn Thunder Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li><a class="quest-link" href="training.html#cup">杯戏</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li>击败 Thunder Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/74166650843382.png" alt=""><div>
+        <h2>雷之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Thunder Trainer Zentaro</strong> · Lv25 · 鬼角×10 · 7000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Thunder Trainer Zentaro</strong> · Lv25 · 鬼角×10 · 7000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>1332.1, 821.5, -1017.6</code> · <a class="quest-link" href="archive/bosses/Zentaro.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li><a class="quest-link" href="training.html#cup">杯戏</a></li><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li>击败 <a class="quest-link" href="archive/bosses/ThunderTrainee.html">ThunderTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Thunder Clap and Flash</strong></td><td>14</td><td>12</td><td>硬直</td></tr><tr><td><code>X</code></td><td><strong>Lightning Fold</strong></td><td>18</td><td>13</td><td>—</td></tr><tr><td><code>C</code></td><td><strong>Rice Spirit</strong></td><td>24</td><td>17</td><td>硬直</td></tr><tr><td><code>V</code></td><td><strong>Godspeed</strong></td><td>26</td><td>18</td><td>—</td></tr><tr><td><code>B</code></td><td><strong>Flaming Thunder God</strong></td><td>35</td><td>50</td><td>额外伤害倍率 +0.24</td></tr></table>
     </article>
-
     <article class="sec" id="water">
-      <h2>水之呼吸训练</h2>
-      <p>Urokodaki · 接取 <code>Ill learn Water Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#parkour">跑酷地牢</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#push">推石</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li><a class="quest-link" href="training.html#underwater">水下岩石</a>×5</li>
-        <li>击败 Water Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/133532094066680.png" alt=""><div>
+        <h2>水之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Water Trainer Urokodaki</strong> · Lv25 · 鬼角×30 · 5000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Water Trainer Urokodaki</strong> · Lv25 · 鬼角×30 · 5000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>388.9, 1018.0, -85.1</code> · <a class="quest-link" href="archive/bosses/Giyen.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#parkour">跑酷地牢</a></li><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#push">推石</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#underwater">水下岩石</a></li><li>击败 <a class="quest-link" href="archive/bosses/WaterTrainee.html">WaterTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Water Surface Slash</strong></td><td>14</td><td>10</td><td>硬直</td></tr><tr><td><code>X</code></td><td><strong>Whirl Pool</strong></td><td>18</td><td>13</td><td>额外伤害倍率 +0.5 · 硬直</td></tr><tr><td><code>C</code></td><td><strong>Water Wheel</strong></td><td>24</td><td>16</td><td>—</td></tr><tr><td><code>V</code></td><td><strong>Constant Flux</strong></td><td>26</td><td>18</td><td>硬直</td></tr><tr><td><code>B</code></td><td><strong>Dead Calm</strong></td><td>35</td><td>50</td><td>额外伤害倍率 +0.5 · 硬直</td></tr></table>
     </article>
-
     <article class="sec" id="flame">
-      <h2>炎之呼吸训练</h2>
-      <p>Rengu · 接取 <code>Ill learn Flame Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li><a class="quest-link" href="training.html#cup">杯戏</a></li>
-        <li>击败 Flame Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/122638691732413.png" alt=""><div>
+        <h2>炎之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Flame Trainer Rengu</strong> · Lv25 · 鬼角×10 · 6000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Flame Trainer Rengu</strong> · Lv25 · 鬼角×10 · 6000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>-712.9, 965.0, 883.8</code> · <a class="quest-link" href="archive/bosses/Rengu.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#cup">杯戏</a></li><li>击败 <a class="quest-link" href="archive/bosses/FlameTrainee.html">FlameTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Unknowing Fire</strong></td><td>22</td><td>17</td><td>硬直</td></tr><tr><td><code>X</code></td><td><strong>Blazing Universe</strong></td><td>18</td><td>14</td><td>—</td></tr><tr><td><code>C</code></td><td><strong>Flame Undulation</strong></td><td>24</td><td>15</td><td>反击×2</td></tr><tr><td><code>V</code></td><td><strong>Flame Tiger</strong></td><td>26</td><td>20</td><td>硬直</td></tr><tr><td><code>B</code></td><td><strong>Purgatory</strong></td><td>35</td><td>50</td><td>—</td></tr></table>
     </article>
-
     <article class="sec" id="wind">
-      <h2>风之呼吸训练</h2>
-      <p>Saneri · 接取 <code>Ill learn Wind Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li><a class="quest-link" href="training.html#push">推石</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li>击败 Wind Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/108992109755110.png" alt=""><div>
+        <h2>风之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Wind Trainer Saneri</strong> · Lv25 · 鬼角×50 · 3000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Wind Trainer Saneri</strong> · Lv25 · 鬼角×50 · 3000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>-379.1, 1093.5, -422.4</code> · <a class="quest-link" href="archive/bosses/Saneri.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#push">推石</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li>击败 <a class="quest-link" href="archive/bosses/WindTrainee.html">WindTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Mountain Wind</strong></td><td>18</td><td>13</td><td>—</td></tr><tr><td><code>X</code></td><td><strong>Purifying Claws</strong></td><td>18</td><td>12</td><td>—</td></tr><tr><td><code>C</code></td><td><strong>Rising Dust Storm</strong></td><td>28</td><td>18</td><td>额外伤害倍率 +0.3</td></tr><tr><td><code>V</code></td><td><strong>Whirlwind Cutter</strong></td><td>26</td><td>17</td><td>—</td></tr><tr><td><code>B</code></td><td><strong>Idaten Typhoon</strong></td><td>35</td><td>50</td><td>额外伤害倍率 +0.32</td></tr></table>
     </article>
-
     <article class="sec" id="insect">
-      <h2>虫之呼吸训练</h2>
-      <p>Shinora · 接取 <code>Ill learn Insect Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li><a class="quest-link" href="training.html#cup">杯戏</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li>击败 Insect Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/98591569041732.png" alt=""><div>
+        <h2>虫之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Insect Trainer Shinora</strong> · Lv25 · 鬼角×15 + 兽核×3 · 3500 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Insect Trainer Shinora</strong> · Lv25 · 鬼角×15 + 兽核×3 · 3500 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>-452.6, 964.5, 2.1</code> · <a class="quest-link" href="archive/bosses/Shinora.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li><a class="quest-link" href="training.html#cup">杯戏</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li>击败 <a class="quest-link" href="archive/bosses/InsectTrainee.html">InsectTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Compound Eye Hexagon</strong></td><td>28</td><td>17</td><td>额外伤害倍率 +0.42 · 硬直</td></tr><tr><td><code>X</code></td><td><strong>True Flutter</strong></td><td>14</td><td>16</td><td>硬直</td></tr><tr><td><code>C</code></td><td><strong>Fluttering Sting</strong></td><td>22</td><td>18</td><td>—</td></tr><tr><td><code>V</code></td><td><strong>Hundred-Legged Zigzag</strong></td><td>26</td><td>20</td><td>硬直</td></tr><tr><td><code>B</code></td><td><strong>Illusory Light</strong></td><td>35</td><td>50</td><td>—</td></tr></table>
     </article>
-
     <article class="sec" id="serpent">
-      <h2>蛇之呼吸训练</h2>
-      <p>Obari · 接取 <code>Ill learn Serpent Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li><a class="quest-link" href="training.html#push">推石</a></li>
-        <li><a class="quest-link" href="training.html#aim">瞄准射击</a></li>
-        <li>击败 Serpent Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/72412803182633.png" alt=""><div>
+        <h2>蛇之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Serpent Trainer Obari</strong> · Lv25 · 鬼角×20 + 兽核×5 · 1000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Serpent Trainer Obari</strong> · Lv25 · 鬼角×20 + 兽核×5 · 1000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>770.5, 1121.0, -1047.0</code> · <a class="quest-link" href="archive/bosses/Obari.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#push">推石</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#cup">杯戏</a></li><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li>击败 <a class="quest-link" href="archive/bosses/SerpentTrainee.html">SerpentTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Serpent Slash</strong></td><td>18</td><td>15</td><td>额外伤害倍率 +0.5 · 硬直</td></tr><tr><td><code>X</code></td><td><strong>Coil Choke</strong></td><td>24</td><td>18</td><td>额外伤害倍率 +0.8</td></tr><tr><td><code>C</code></td><td><strong>Venom Fangs</strong></td><td>22</td><td>15</td><td>—</td></tr><tr><td><code>V</code></td><td><strong>Twin-Headed Reptile</strong></td><td>26</td><td>19</td><td>额外伤害倍率 +0.75</td></tr><tr><td><code>B</code></td><td><strong>Slithering Serpent</strong></td><td>35</td><td>50</td><td>—</td></tr></table>
     </article>
-
     <article class="sec" id="sound">
-      <h2>音之呼吸训练</h2>
-      <p>Tengai · 接取 <code>Ill learn Sound Breathing(Lv 25)</code></p>
-      <ol>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#squat">深蹲架</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li><a class="quest-link" href="training.html#cup">杯戏</a></li>
-        <li><a class="quest-link" href="training.html#underwater">水下岩石</a>×5</li>
-        <li>击败 Sound Trainee</li>
-      </ol>
+      <div class="head"><img class="icon" src="../assets/icons/powers/105129696827308.png" alt=""><div>
+        <h2>音之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Sound Trainer Tengai</strong> · Lv25 · 鬼角×10 + 兽核×3 · 4000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Sound Trainer Tengai</strong> · Lv25 · 鬼角×10 + 兽核×3 · 4000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>-133.5, 1349.0, -2631.3</code> · <a class="quest-link" href="archive/bosses/Tengai.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#cup">杯戏</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li>击败 <a class="quest-link" href="archive/bosses/SoundTrainee.html">SoundTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Bursting Bloom</strong></td><td>14</td><td>10</td><td>—</td></tr><tr><td><code>X</code></td><td><strong>Roar</strong></td><td>20</td><td>13</td><td>—</td></tr><tr><td><code>C</code></td><td><strong>Exploding Beads</strong></td><td>22</td><td>15</td><td>硬直</td></tr><tr><td><code>V</code></td><td><strong>Resounding Slashes</strong></td><td>24</td><td>20</td><td>额外伤害倍率 +0.39</td></tr><tr><td><code>B</code></td><td><strong>String Performance</strong></td><td>35</td><td>50</td><td>额外伤害倍率 +0.35</td></tr></table>
+    </article>
+    <article class="sec" id="stone">
+      <div class="head"><img class="icon" src="../assets/icons/powers/118884560853258.png" alt=""><div>
+        <h2>岩之呼吸</h2>
+        <p class="i18n-zh">导师 <strong>Stone Trainer Gyorei</strong> · Lv25 · 兽核×4（需斧锤） · 4000 文</p>
+        <p class="i18n-en" hidden>Trainer <strong>Stone Trainer Gyorei</strong> · Lv25 · 兽核×4（需斧锤） · 4000 Wen</p>
+        <p>活动区坐标（柱/Boss 点）<code>2574.6, 1089.0, -742.4</code> · <a class="quest-link" href="archive/bosses/Gyorei.html">Boss 页</a></p>
+      </div></div>
+      <h3>解锁任务步骤</h3>
+      <ol><li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li><li><a class="quest-link" href="training.html#push">推石</a></li><li><a class="quest-link" href="training.html#split">劈石</a></li><li><a class="quest-link" href="training.html#aim">瞄准射击</a></li><li><a class="quest-link" href="training.html#meditation">冥想</a></li><li>击败 <a class="quest-link" href="archive/bosses/StoneTrainee.html">StoneTrainee</a></li></ol>
+      <h3>技能数据</h3>
+      <table><tr><th>键</th><th>名称</th><th>体力</th><th>CD</th><th>备注</th></tr><tr><td><code>F</code></td><td><strong>Blocking</strong></td><td>—</td><td>1</td><td>—</td></tr><tr><td><code>Z</code></td><td><strong>Volcanic Conquest</strong></td><td>18</td><td>12</td><td>硬直</td></tr><tr><td><code>X</code></td><td><strong>Seismic Burst</strong></td><td>14</td><td>10</td><td>—</td></tr><tr><td><code>C</code></td><td><strong>Upper Smash</strong></td><td>24</td><td>15</td><td>硬直</td></tr><tr><td><code>V</code></td><td><strong>Stone Wall</strong></td><td>24</td><td>19</td><td>反击×2</td></tr><tr><td><code>B</code></td><td><strong>Arcs of Justice</strong></td><td>35</td><td>50</td><td>额外伤害倍率 +0.32</td></tr></table>
     </article>
 
-    <article class="sec" id="stone">
-      <h2>岩之呼吸训练</h2>
-      <p>Gyorei · 接取 <code>Ill learn Stone Breathing(Lv 25)</code> · 需持斧锤类武器</p>
-      <ol>
-        <li><a class="quest-link" href="training.html#meditation">冥想</a></li>
-        <li><a class="quest-link" href="training.html#pushups">俯卧撑</a></li>
-        <li><a class="quest-link" href="training.html#push">推石</a></li>
-        <li><a class="quest-link" href="training.html#split">劈石</a></li>
-        <li><a class="quest-link" href="training.html#parkour">跑酷地牢</a></li>
-        <li>击败 Stone Trainee</li>
-      </ol>
-    </article>
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>呼吸 / 流派</span>
-      <span class="foot-owner">Wiki 所有者 · theKing</span>
-    </div>
+    <div><strong>Slayers 2 Wiki</strong><span>呼吸法</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../">返回主页</a>
   </footer>
+  <script src="../js/i18n.js?v=20260926r"></script>
 </body>
 </html>

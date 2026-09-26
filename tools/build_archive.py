@@ -226,6 +226,7 @@ def page_shell(title: str, crumb: str, body: str, extra_style: str = "") -> str:
     <div><strong>Slayers 2 Wiki</strong><span>档案</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../../../">返回主页</a>
   </footer>
+<script src="../../../js/i18n.js?v={CSS_VER}"></script>
 </body>
 </html>
 """
@@ -604,7 +605,12 @@ def main():
             return f'钓鱼获得 · {esc(ch)}'
         if kind == "quest" or where.startswith("Quest:"):
             q = meta.get("quest") or where.replace("Quest:", "").strip()
-            return f'任务奖励 · {esc(q)} · {esc(ch)}'
+            qslug = re.sub(r"[^\w\s\-]", "", q, flags=re.UNICODE)
+            qslug = re.sub(r"\s+", "-", qslug.strip()) or "x"
+            return (
+                f'任务奖励 · <a class="quest-link" href="../../quests.html#q-{esc(qslug)}">{esc(q)}</a>'
+                f' · {esc(ch)}'
+            )
         return f"{esc(where)} · {esc(ch)}"
 
     # ---------- item pages ----------
@@ -625,6 +631,76 @@ def main():
             stats_block = f"<h2>数据 / 加成</h2><table><tr><th>属性</th><th>数值</th></tr>{stats_rows}</table>"
         else:
             stats_block = "<h2>数据 / 加成</h2><p>无额外属性表（或仅作外观 / 任务物）。</p>"
+
+        # weapon / tool skills
+        skills = it.get("Skills") or []
+        skills_block = ""
+        if isinstance(skills, list) and skills:
+            srows = []
+            for sk in skills:
+                if not isinstance(sk, dict):
+                    continue
+                sn = sk.get("Name") or "?"
+                key = sk.get("Key") or "—"
+                cd = sk.get("CoolDown")
+                stam = sk.get("Stamina")
+                hold = sk.get("Max_Hold")
+                boss = sk.get("Boss")
+                icon = sk.get("icon") or ""
+                sk_aid = asset_id(icon) if icon else None
+                ic = icon_img(sk_aid, "item") if sk_aid else ""
+                bits = []
+                if cd is not None:
+                    bits.append(f"CD {cd}s")
+                if stam is not None:
+                    bits.append(f"体力 {stam}")
+                if hold is not None:
+                    bits.append(f"蓄力 ≤{hold}s")
+                if boss:
+                    bits.append(f"关联 {boss}")
+                srows.append(
+                    f"<tr><td>{ic}</td><td><strong>{esc(sn)}</strong></td><td><code>{esc(key)}</code></td>"
+                    f"<td>{esc(' · '.join(bits) if bits else '—')}</td></tr>"
+                )
+            if srows:
+                skills_block = (
+                    "<h2>关联技能</h2>"
+                    "<table><tr><th></th><th>技能</th><th>键位</th><th>数据</th></tr>"
+                    + "".join(srows)
+                    + "</table>"
+                )
+
+        # combat meta line
+        meta_bits = []
+        for label, key in (
+            ("精通", "Mastery"),
+            ("职业", "Class"),
+            ("呼吸", "Breathing"),
+            ("邪术", "DemonArt"),
+            ("系列", "Series"),
+            ("技能分类", "SkillCategory"),
+        ):
+            if it.get(key):
+                meta_bits.append(f"{label} <code>{esc(it[key])}</code>")
+        if it.get("RefineStats"):
+            rs = it["RefineStats"]
+            if isinstance(rs, list):
+                meta_bits.append("可精炼属性 " + " / ".join(f"<code>{esc(x)}</code>" for x in rs))
+        combat_meta = ("<p>" + " · ".join(meta_bits) + "</p>") if meta_bits else ""
+
+        # potion effect note
+        pe = it.get("PotionEffect") or {}
+        potion_block = ""
+        if pe:
+            potion_block = f"<h2>药水效果</h2><p>{esc(pe.get('note') or '见数据表')}</p>"
+            if pe.get("heal") is not None:
+                potion_block += f"<p>瞬回生命：<code>+{esc(pe['heal'])}</code></p>"
+            if pe.get("stat"):
+                potion_block += (
+                    f"<p>增益属性：<code>{esc(pe['stat'])}</code>"
+                    f" · 强度 <code>{esc(pe.get('magnitude'))}</code>"
+                    f" · 持续 <code>{esc(pe.get('duration'))}</code> 秒</p>"
+                )
 
         price = it.get("Price") or {}
         price_txt = "—"
@@ -690,8 +766,9 @@ def main():
       <h2>介绍</h2>
       <p>{esc(it.get("DescriptionCN") or it.get("Description") or "（无描述）")}</p>
       <p>标价：<strong>{esc(price_txt)}</strong></p>
+      {combat_meta}
     </article>
-    <article class="sec">{stats_block}</article>
+    <article class="sec">{stats_block}{skills_block}{potion_block}</article>
     <article class="sec">
       <h2>来源</h2>
       <ul>{src_lis}</ul>

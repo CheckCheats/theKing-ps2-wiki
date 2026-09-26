@@ -417,4 +417,6 @@ STAT_CN = {
   "Movement Speed Factor": "移速倍率",
   "Stamina Regen Speed": "体力回复速度",
   "Sun Immunity": "日轮免疫",
+  "Instant Heal": "瞬回生命",
+  "Breath Duration Factor": "屏息时长倍率",
 }

@@ -116,22 +116,6 @@
       {
         "Code": "Akazo",
         "Name": "Akazo"
-      },
-      {
-        "Code": "Datai",
-        "Name": "Datai"
-      },
-      {
-        "Code": "Saneri",
-        "Name": "Saneri"
-      },
-      {
-        "Code": "Yahari",
-        "Name": "Yahari"
-      },
-      {
-        "Code": "Zentaro",
-        "Name": "Zentaro"
       }
     ],
     "Lost Chest": [
@@ -148,6 +132,24 @@
       {
         "Code": "Fujiko",
         "Name": "Fujiko"
+      }
+    ],
+    "Worle Events Chest": [
+      {
+        "Code": "Datai",
+        "Name": "Datai"
+      },
+      {
+        "Code": "Saneri",
+        "Name": "Saneri"
+      },
+      {
+        "Code": "Yahari",
+        "Name": "Yahari"
+      },
+      {
+        "Code": "Zentaro",
+        "Name": "Zentaro"
       }
     ]
   },
@@ -227,7 +229,9 @@
     "Max Stamina": "最大体力",
     "Movement Speed Factor": "移速倍率",
     "Stamina Regen Speed": "体力回复速度",
-    "Sun Immunity": "日轮免疫"
+    "Sun Immunity": "日轮免疫",
+    "Instant Heal": "瞬回生命",
+    "Breath Duration Factor": "屏息时长倍率"
   },
   "sealed_note": {
     "Sealed Cache T1": "封印箱 T1：由丛林袭击者 / 袭击队长等守卫解锁",
