@@ -111,7 +111,41 @@ for _fl in [
     "Firstlight Top Schematic",
     "Firstlight War Fans Schematic",
 ]:
-    SPECIAL[_fl] = [{"Where": "FirstlightStudy", "Kind": "special", "Meta": {"note": "初光系列图纸：LiveConfig 未公开 Study 点；材料（初光星矿/锻锭/织丝）见对应宝箱掉落"}}]
+    SPECIAL[_fl] = [{"Where": "FirstlightStudy", "Kind": "special", "Meta": {"note": "初光系列图纸：StudyProp 长按 Study≈3s；材料（初光星矿/锻锭/织丝）见宝箱"}}]
+
+# Sync StudyProp coordinates from live dump into SPECIAL meta
+_study_path = Path(r"D:\Desktop\ProjectSlayer2_WIKI\data\_live\wiki-study-props.json")
+if _study_path.exists():
+    import json as _json
+
+    for _row in _json.loads(_study_path.read_text(encoding="utf-8")):
+        _item = _row.get("Item")
+        _pos = _row.get("Position")
+        if not _item or not _pos:
+            continue
+        _sch = f"{_item} Schematic"
+        _note = "StudyProp 长按 Study≈3s"
+        if _row.get("Locked") or (_row.get("Attrs") or {}).get("Locked"):
+            _note += "（需先解锁 Locked）"
+        for _key in (_sch,):
+            if _key not in SPECIAL:
+                kind = "FirstlightStudy" if _item.startswith("Firstlight") else "StudyProp"
+                SPECIAL[_key] = [{"Where": kind, "Kind": "special", "Meta": {"note": _note, "pos": _pos}}]
+            else:
+                for _src in SPECIAL[_key]:
+                    _src.setdefault("Meta", {})
+                    _src["Meta"]["pos"] = _pos
+                    _src["Meta"]["note"] = _src["Meta"].get("note") or _note
+# Nightfall claws pos from study dump
+if "Nightfall Claws Schematic" in SPECIAL:
+    pass
+
+SPECIAL["Firstlight Lantern Schematic"] = [
+    {"Where": "Quest: The Plate Trial", "Kind": "quest", "Meta": {"quest": "The Plate Trial"}}
+]
+SPECIAL["Shotgun Schematic"] = [
+    {"Where": "LostRelated", "Kind": "special", "Meta": {"note": "终选 Boss「遗失 Lost」掉落相关"}}
+]
 
 # Wen-only Price with no shop row → likely Kuro / similar
 WEN_SHOP_HINT = {

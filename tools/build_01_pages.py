@@ -733,7 +733,7 @@ def main():
     forge_body = f"""
     <article class="sec" id="how">
       <h1>锻造</h1>
-      <p class="i18n-zh">隐雾村铁匠 <strong>Blacksmith Togane</strong> 提供锻造台。Lv65 前置任务「寻找另一座锻造台」用于开启奥乌兰侧锻台；日常图纸/武器用材料在此合成。</p>
+      <p class="i18n-zh">隐雾村铁匠 <strong>Blacksmith Togane</strong> 提供锻造台。Lv65 前置任务「寻找另一座锻造台」用于开启奥乌兰侧锻台；日常图纸/武器用材料在此合成。暮落 / 初光可升阶见 <a class="quest-link" href="weapon-upgrade.html">V2 / V3</a>。</p>
       <p class="i18n-en" hidden>Blacksmith Togane in Hidden Mist Village. Lv65 quest unlocks the second Ouwland forge.</p>
       <ul>
         <li>坐标约 <code>{togane[0]:.1f}, {togane[1]:.1f}, {togane[2]:.1f}</code></li>

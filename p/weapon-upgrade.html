@@ -4,44 +4,621 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>武器升阶链 · Slayers 2 Wiki</title>
+  <meta name="description" content="铁匠 Togane 处装备 V2/V3（T2/T3）升阶：全部可升级装备、数据面板与材料。">
+  <title>武器升阶 · V2 / V3 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926a">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926w">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
     .crumb a{color:var(--gold)}
-    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem;scroll-margin-top:4.5rem}
     .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
     .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
     .sec p,.sec li{color:var(--muted);font-size:.92rem}
     .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
     .sec strong{color:var(--cream)}
-    .sec table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.4rem}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0}
     .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
     .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
-    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.6rem}
-</style>
+    .en{color:var(--muted);font-size:.78rem;opacity:.85}
+    .note{font-size:.86rem!important}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
+    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
+    .head{display:flex;gap:.75rem;align-items:flex-start}
+    .head .icon{width:48px;height:48px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a}
+    .toc a{display:inline-block;margin:.15rem .4rem .15rem 0;font-size:.82rem;color:var(--gold)}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+  </style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
   <header class="top">
     <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
-    <span class="top-ver">资料</span>
+    <nav class="top-nav"><a href="#overview">总览</a><a href="forge.html">锻造</a><a href="schematics.html">图纸</a></nav>
+    <span class="top-ver">升阶</span>
   </header>
   <main class="page">
-    <p class="crumb"><a href="../">主页</a> / 武器升阶链</p>
-    <article class="sec"><h1>武器升阶链</h1><p>示例：基础拳套 → 大马士革版（爬塔侧）→ 落幕版（主世界锻造）→ 更高阶强化。</p></article>
+    <p class="crumb"><a href="../">主页</a> / 武器升阶 · V2 / V3</p>
+    
+    <article class="sec" id="overview">
+      <h1>武器 / 装备升阶 · V2 / V3</h1>
+      <p>隐雾村铁匠 <strong>Blacksmith Togane</strong> 的 <code>Ouwland</code> 台可对暮落 / 初光系列与遗失霰弹枪升阶。角标 <strong>T2 / T3</strong>（俗称 V2 / V3）。</p>
+      <ul>
+        <li>MaxTier = 3；属性乘区 <code>1 / 1.15 / 1.3</code>。</li>
+        <li>T2 起消耗系列高级材料；T3 材料量更大且不再收废料/丝线。</li>
+        <li>系列被动在 <strong>T3</strong> 生效。</li>
+        <li><a class="quest-link" href="forge.html">锻造</a> · <a class="quest-link" href="schematics.html">图纸</a> · <a class="quest-link" href="refinement.html">精炼</a></li>
+      </ul>
+      <img class="map-img" src="../assets/wiki-maps/forge-togane.png" alt="Togane">
+      <h2>可升阶一览（24）</h2>
+      <table><tr><th>装备</th><th>系列</th><th>文费用</th></tr><tr><td><a href="#Firstlight-Katana">初光日轮刀</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Insect-Katana">初光虫之刀</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Sound-Cleavers">初光音之双刃</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Bladed-Wagasa">初光刃和伞</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Spear">初光长枪</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Tanto">初光短刀</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-War-Fans">初光军扇</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Katana">暮落日轮刀</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Serpent-Katana">暮落蛇之刀</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Axe-and-Mace">暮落斧与锤</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Claws">暮落利爪</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Gauntlet">暮落拳套</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Scythe">暮落镰刀</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Sickles">暮落双镰</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Haori">初光羽织</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Mask">初光面具</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Lantern">初光灯笼</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Cape">暮落披风</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Mask">暮落面具</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Top">暮落·上衣</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Nightfall-Bottom">暮落·下装</a></td><td>Nightfall</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Top">初光·上衣</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Firstlight-Bottom">初光·下装</a></td><td>Firstlight</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr><tr><td><a href="#Lost-Shotgun">遗失霰弹枪</a></td><td>Fished</td><td>T2 文 750,000 · T3 文 1,500,000</td></tr></table>
+      <nav class="toc" style="margin-top:.75rem"><a href="#Firstlight-Katana">初光日轮刀</a> <a href="#Firstlight-Insect-Katana">初光虫之刀</a> <a href="#Firstlight-Sound-Cleavers">初光音之双刃</a> <a href="#Firstlight-Bladed-Wagasa">初光刃和伞</a> <a href="#Firstlight-Spear">初光长枪</a> <a href="#Firstlight-Tanto">初光短刀</a> <a href="#Firstlight-War-Fans">初光军扇</a> <a href="#Nightfall-Katana">暮落日轮刀</a> <a href="#Nightfall-Serpent-Katana">暮落蛇之刀</a> <a href="#Nightfall-Axe-and-Mace">暮落斧与锤</a> <a href="#Nightfall-Claws">暮落利爪</a> <a href="#Nightfall-Gauntlet">暮落拳套</a> <a href="#Nightfall-Scythe">暮落镰刀</a> <a href="#Nightfall-Sickles">暮落双镰</a> <a href="#Firstlight-Haori">初光羽织</a> <a href="#Firstlight-Mask">初光面具</a> <a href="#Firstlight-Lantern">初光灯笼</a> <a href="#Nightfall-Cape">暮落披风</a> <a href="#Nightfall-Mask">暮落面具</a> <a href="#Nightfall-Top">暮落·上衣</a> <a href="#Nightfall-Bottom">暮落·下装</a> <a href="#Firstlight-Top">初光·上衣</a> <a href="#Firstlight-Bottom">初光·下装</a> <a href="#Lost-Shotgun">遗失霰弹枪</a> </nav>
+    </article>
+    
+    <article class="sec" id="Firstlight-Katana">
+      <div class="head"><img class="icon" src="../assets/icons/items/86159439968993.png" alt=""><div>
+        <h2>初光日轮刀 <span class="en">(Firstlight Katana)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Volcanic-Katana.html">火山刀</a> / <a class="quest-link" href="archive/items/Tornadic-Katana.html">龙卷刀</a> / <a class="quest-link" href="archive/items/Tidal-Katana.html">潮汐刀</a> / <a class="quest-link" href="archive/items/Thundercloud-Katana.html">雷云刀</a> + <a class="quest-link" href="archive/items/Firstlight-Katana-Schematic.html">初光日轮刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>6.9</code></td><td><code>7.935</code></td><td><code>8.97</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.66</code></td><td><code>1.909</code></td><td><code>2.158</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>4</code></td><td><code>4.6</code></td><td><code>5.2</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.148</code></td><td><code>0.1702</code></td><td><code>0.1924</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Katana.html">初光日轮刀</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Insect-Katana">
+      <div class="head"><img class="icon" src="../assets/icons/items/124808087142579.png" alt=""><div>
+        <h2>初光虫之刀 <span class="en">(Firstlight Insect Katana)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Butterfly-Katana.html">蝴蝶刀</a> + <a class="quest-link" href="archive/items/Firstlight-Insect-Katana-Schematic.html">初光虫之刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>体力回复速度<br><span class='en'>Stamina Regen Speed</span></td><td><code>0.1</code></td><td><code>0.115</code></td><td><code>0.13</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>3.95</code></td><td><code>4.5425</code></td><td><code>5.135</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.13</code></td><td><code>1.2995</code></td><td><code>1.469</code></td></tr><tr><td>移速倍率<br><span class='en'>Movement Speed Factor</span></td><td><code>0.115</code></td><td><code>0.1323</code></td><td><code>0.1495</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>4</code></td><td><code>4.6</code></td><td><code>5.2</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.148</code></td><td><code>0.1702</code></td><td><code>0.1924</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Insect-Katana.html">初光虫之刀</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Sound-Cleavers">
+      <div class="head"><img class="icon" src="../assets/icons/items/123283099742586.png" alt=""><div>
+        <h2>初光音之双刃 <span class="en">(Firstlight Sound Cleavers)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Reverb-Cleavers.html">回响双刃</a> + <a class="quest-link" href="archive/items/Firstlight-Sound-Cleavers-Schematic.html">初光音之双刃图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>6.9</code></td><td><code>7.935</code></td><td><code>8.97</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.7</code></td><td><code>1.955</code></td><td><code>2.21</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>4</code></td><td><code>4.6</code></td><td><code>5.2</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.148</code></td><td><code>0.1702</code></td><td><code>0.1924</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Sound-Cleavers.html">初光音之双刃</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Bladed-Wagasa">
+      <div class="head"><img class="icon" src="../assets/icons/items/107354604958291.png" alt=""><div>
+        <h2>初光刃和伞 <span class="en">(Firstlight Bladed Wagasa)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Bladed-Wagasa.html">大马士革刃和伞</a> + <a class="quest-link" href="archive/items/Firstlight-Bladed-Wagasa-Schematic.html">初光刃和伞图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>Sun Immunity<br><span class='en'>Sun Immunity</span></td><td><code>1</code></td><td><code>1.15</code></td><td><code>1.3</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.25</code></td><td><code>8.3375</code></td><td><code>9.425</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.2</code></td><td><code>1.38</code></td><td><code>1.56</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.145</code></td><td><code>0.1667</code></td><td><code>0.1885</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Bladed-Wagasa.html">初光刃和伞</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Spear">
+      <div class="head"><img class="icon" src="../assets/icons/items/86745583744655.png" alt=""><div>
+        <h2>初光长枪 <span class="en">(Firstlight Spear)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Spear.html">大马士革长枪</a> + <a class="quest-link" href="archive/items/Firstlight-Spear-Schematic.html">初光长枪图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>8.1</code></td><td><code>9.315</code></td><td><code>10.53</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.33</code></td><td><code>1.5295</code></td><td><code>1.729</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.152</code></td><td><code>0.1748</code></td><td><code>0.1976</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Spear.html">初光长枪</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Tanto">
+      <div class="head"><img class="icon" src="../assets/icons/items/89932239280186.png" alt=""><div>
+        <h2>初光短刀 <span class="en">(Firstlight Tanto)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Tanto.html">大马士革短刀</a> + <a class="quest-link" href="archive/items/Firstlight-Tanto-Schematic.html">初光短刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>8.3</code></td><td><code>9.545</code></td><td><code>10.79</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.36</code></td><td><code>1.564</code></td><td><code>1.768</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.153</code></td><td><code>0.1759</code></td><td><code>0.1989</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Tanto.html">初光短刀</a></p>
+    </article>
+    <article class="sec" id="Firstlight-War-Fans">
+      <div class="head"><img class="icon" src="../assets/icons/items/86005093337141.png" alt=""><div>
+        <h2>初光军扇 <span class="en">(Firstlight War Fans)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-War-Fans.html">大马士革军扇</a> + <a class="quest-link" href="archive/items/Firstlight-War-Fans-Schematic.html">初光军扇图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>8.45</code></td><td><code>9.7175</code></td><td><code>10.985</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.38</code></td><td><code>1.587</code></td><td><code>1.794</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.154</code></td><td><code>0.1771</code></td><td><code>0.2002</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-War-Fans.html">初光军扇</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Katana">
+      <div class="head"><img class="icon" src="../assets/icons/items/73663076031850.png" alt=""><div>
+        <h2>暮落日轮刀 <span class="en">(Nightfall Katana)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Volcanic-Katana.html">火山刀</a> / <a class="quest-link" href="archive/items/Tornadic-Katana.html">龙卷刀</a> / <a class="quest-link" href="archive/items/Tidal-Katana.html">潮汐刀</a> / <a class="quest-link" href="archive/items/Thundercloud-Katana.html">雷云刀</a> + <a class="quest-link" href="archive/items/Nightfall-Katana-Schematic.html">暮落日轮刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>6.2</code></td><td><code>7.13</code></td><td><code>8.06</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.06</code></td><td><code>1.219</code></td><td><code>1.378</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.138</code></td><td><code>0.1587</code></td><td><code>0.1794</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Katana.html">暮落日轮刀</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Serpent-Katana">
+      <div class="head"><img class="icon" src="../assets/icons/items/122377605954758.png" alt=""><div>
+        <h2>暮落蛇之刀 <span class="en">(Nightfall Serpent Katana)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Serpentine-Katana.html">蜿蜒蛇刀</a> + <a class="quest-link" href="archive/items/Nightfall-Serpent-Katana-Schematic.html">暮落蛇之刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>4.6</code></td><td><code>5.29</code></td><td><code>5.98</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.04</code></td><td><code>1.196</code></td><td><code>1.352</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>3</code></td><td><code>3.45</code></td><td><code>3.9</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.15</code></td><td><code>0.1725</code></td><td><code>0.195</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Serpent-Katana.html">暮落蛇之刀</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Axe-and-Mace">
+      <div class="head"><img class="icon" src="../assets/icons/items/121626589317122.png" alt=""><div>
+        <h2>暮落斧与锤 <span class="en">(Nightfall Axe and Mace)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Seismic-Axe-and-Mace.html">震地斧与锤</a> + <a class="quest-link" href="archive/items/Nightfall-Axe-and-Mace-Schematic.html">暮落斧与锤图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>Damage Reduction<br><span class='en'>Damage Reduction</span></td><td><code>2.3</code></td><td><code>2.645</code></td><td><code>2.99</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>5.35</code></td><td><code>6.1525</code></td><td><code>6.955</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.17</code></td><td><code>1.3455</code></td><td><code>1.521</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.144</code></td><td><code>0.1656</code></td><td><code>0.1872</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Axe-and-Mace.html">暮落斧与锤</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Claws">
+      <div class="head"><img class="icon" src="../assets/icons/items/76799487746233.png" alt=""><div>
+        <h2>暮落利爪 <span class="en">(Nightfall Claws)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Claws.html">大马士革利爪</a> + <a class="quest-link" href="archive/items/Nightfall-Claws-Schematic.html">暮落利爪图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.4</code></td><td><code>8.51</code></td><td><code>9.62</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.22</code></td><td><code>1.403</code></td><td><code>1.586</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.146</code></td><td><code>0.1679</code></td><td><code>0.1898</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Claws.html">暮落利爪</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Gauntlet">
+      <div class="head"><img class="icon" src="../assets/icons/items/70883439417550.png" alt=""><div>
+        <h2>暮落拳套 <span class="en">(Nightfall Gauntlet)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Gauntlet.html">大马士革拳套</a> + <a class="quest-link" href="archive/items/Nightfall-Gauntlet-Schematic.html">暮落拳套图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.6</code></td><td><code>8.74</code></td><td><code>9.88</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.24</code></td><td><code>1.426</code></td><td><code>1.612</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.147</code></td><td><code>0.169</code></td><td><code>0.1911</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Gauntlet.html">暮落拳套</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Scythe">
+      <div class="head"><img class="icon" src="../assets/icons/items/116069758742823.png" alt=""><div>
+        <h2>暮落镰刀 <span class="en">(Nightfall Scythe)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Scythe.html">大马士革镰刀</a> + <a class="quest-link" href="archive/items/Nightfall-Scythe-Schematic.html">暮落镰刀图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.75</code></td><td><code>8.9125</code></td><td><code>10.075</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.27</code></td><td><code>1.4605</code></td><td><code>1.651</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.148</code></td><td><code>0.1702</code></td><td><code>0.1924</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Scythe.html">暮落镰刀</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Sickles">
+      <div class="head"><img class="icon" src="../assets/icons/items/102115345920287.png" alt=""><div>
+        <h2>暮落双镰 <span class="en">(Nightfall Sickles)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：持有 <a class="quest-link" href="archive/items/Damascus-Sickles.html">大马士革双镰</a> + <a class="quest-link" href="archive/items/Nightfall-Sickles-Schematic.html">暮落双镰图纸</a>，交 <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文（需持有底座武器才显示配方）。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.95</code></td><td><code>9.1425</code></td><td><code>10.335</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.31</code></td><td><code>1.5065</code></td><td><code>1.703</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.151</code></td><td><code>0.1736</code></td><td><code>0.1963</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Sickles.html">暮落双镰</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Haori">
+      <div class="head"><img class="icon" src="../assets/icons/items/85651011289115.png" alt=""><div>
+        <h2>初光羽织 <span class="en">(Firstlight Haori)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Haori-Schematic.html">初光羽织图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>98</code></td><td><code>112.7</code></td><td><code>127.4</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>480</code></td><td><code>552</code></td><td><code>624</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.34</code></td><td><code>0.391</code></td><td><code>0.442</code></td></tr><tr><td>生命回复速度<br><span class='en'>Health Regen Speed</span></td><td><code>0.16</code></td><td><code>0.184</code></td><td><code>0.208</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Haori.html">初光羽织</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Mask">
+      <div class="head"><img class="icon" src="../assets/icons/items/94433181557823.png" alt=""><div>
+        <h2>初光面具 <span class="en">(Firstlight Mask)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Mask-Schematic.html">初光面具图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>Damage Reduction Factor<br><span class='en'>Damage Reduction Factor</span></td><td><code>0.046</code></td><td><code>0.0529</code></td><td><code>0.0598</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>63</code></td><td><code>72.45</code></td><td><code>81.9</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>160</code></td><td><code>184</code></td><td><code>208</code></td></tr><tr><td>生命回复速度<br><span class='en'>Health Regen Speed</span></td><td><code>0.09</code></td><td><code>0.1035</code></td><td><code>0.117</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Mask.html">初光面具</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Lantern">
+      <div class="head"><img class="icon" src="../assets/icons/items/109415720294662.png" alt=""><div>
+        <h2>初光灯笼 <span class="en">(Firstlight Lantern)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Lantern-Schematic.html">初光灯笼图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>40</code></td><td><code>46</code></td><td><code>52</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>100</code></td><td><code>115</code></td><td><code>130</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>1.15</code></td><td><code>1.3225</code></td><td><code>1.495</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>0.14</code></td><td><code>0.161</code></td><td><code>0.182</code></td></tr><tr><td>照明<br><span class='en'>Illumination</span></td><td><code>0.8</code></td><td><code>0.92</code></td><td><code>1.04</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Lantern.html">初光灯笼</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Cape">
+      <div class="head"><img class="icon" src="../assets/icons/items/137864508799216.png" alt=""><div>
+        <h2>暮落披风 <span class="en">(Nightfall Cape)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Cape-Schematic.html">暮落披风图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>体力回复速度<br><span class='en'>Stamina Regen Speed</span></td><td><code>0.1</code></td><td><code>0.115</code></td><td><code>0.13</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>58</code></td><td><code>66.7</code></td><td><code>75.4</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>90</code></td><td><code>103.5</code></td><td><code>117</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.14</code></td><td><code>0.161</code></td><td><code>0.182</code></td></tr><tr><td>移速倍率<br><span class='en'>Movement Speed Factor</span></td><td><code>0.1</code></td><td><code>0.115</code></td><td><code>0.13</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Cape.html">暮落披风</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Mask">
+      <div class="head"><img class="icon" src="../assets/icons/items/127469797951834.png" alt=""><div>
+        <h2>暮落面具 <span class="en">(Nightfall Mask)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Mask-Schematic.html">暮落面具图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>58</code></td><td><code>66.7</code></td><td><code>75.4</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>135</code></td><td><code>155.25</code></td><td><code>175.5</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>2</code></td><td><code>2.3</code></td><td><code>2.6</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.012</code></td><td><code>0.0138</code></td><td><code>0.0156</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Mask.html">暮落面具</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Top">
+      <div class="head"><img class="icon" src="../assets/icons/items/106818829898556.png" alt=""><div>
+        <h2>暮落·上衣 <span class="en">(Nightfall Top)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Top-Schematic.html">暮落·上衣图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>58</code></td><td><code>66.7</code></td><td><code>75.4</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>135</code></td><td><code>155.25</code></td><td><code>175.5</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.13</code></td><td><code>0.1495</code></td><td><code>0.169</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>1.15</code></td><td><code>1.3225</code></td><td><code>1.495</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.017</code></td><td><code>0.0196</code></td><td><code>0.0221</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Top.html">暮落·上衣</a></p>
+    </article>
+    <article class="sec" id="Nightfall-Bottom">
+      <div class="head"><img class="icon" src="../assets/icons/items/132291905214632.png" alt=""><div>
+        <h2>暮落·下装 <span class="en">(Nightfall Bottom)</span></h2>
+        <p>系列 <strong>Nightfall</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1：<a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×1000 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×1000 + <strong>1,000,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Bottom-Schematic.html">暮落·下装图纸</a>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×5 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×15 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Nightfall Bleed</strong>：攻击叠流血（最多 3 层）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>58</code></td><td><code>66.7</code></td><td><code>75.4</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>135</code></td><td><code>155.25</code></td><td><code>175.5</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.13</code></td><td><code>0.1495</code></td><td><code>0.169</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>1.15</code></td><td><code>1.3225</code></td><td><code>1.495</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.017</code></td><td><code>0.0196</code></td><td><code>0.0221</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Nightfall-Bottom.html">暮落·下装</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Top">
+      <div class="head"><img class="icon" src="../assets/icons/items/73551754503865.png" alt=""><div>
+        <h2>初光·上衣 <span class="en">(Firstlight Top)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1（奥乌兰台）：<a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + RunPoints <code>500000</code> + 文 <code>500000</code>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>Damage Reduction Factor<br><span class='en'>Damage Reduction Factor</span></td><td><code>0.046</code></td><td><code>0.0529</code></td><td><code>0.0598</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>63</code></td><td><code>72.45</code></td><td><code>81.9</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>180</code></td><td><code>207</code></td><td><code>234</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.33</code></td><td><code>0.3795</code></td><td><code>0.429</code></td></tr><tr><td>生命回复速度<br><span class='en'>Health Regen Speed</span></td><td><code>0.115</code></td><td><code>0.1323</code></td><td><code>0.1495</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Top.html">初光·上衣</a></p>
+    </article>
+    <article class="sec" id="Firstlight-Bottom">
+      <div class="head"><img class="icon" src="../assets/icons/items/111059913134949.png" alt=""><div>
+        <h2>初光·下装 <span class="en">(Firstlight Bottom)</span></h2>
+        <p>系列 <strong>Firstlight</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>T1（奥乌兰台）：<a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + RunPoints <code>500000</code> + 文 <code>500000</code>。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Metal-Scraps.html">金属碎料</a> ×750 + <a class="quest-link" href="archive/items/Silk-Thread.html">丝线</a> ×750 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×5 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×5</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×15 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×15</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      <p class='callout'><strong>系列被动 · Block Ward</strong>：格挡回血并反伤（约每秒一次）。被动在 <strong>T3</strong> 解锁。</p>
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>Damage Reduction Factor<br><span class='en'>Damage Reduction Factor</span></td><td><code>0.046</code></td><td><code>0.0529</code></td><td><code>0.0598</code></td></tr><tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>63</code></td><td><code>72.45</code></td><td><code>81.9</code></td></tr><tr><td>最大生命<br><span class='en'>Max Health</span></td><td><code>180</code></td><td><code>207</code></td><td><code>234</code></td></tr><tr><td>最大生命倍率<br><span class='en'>Max Health Factor</span></td><td><code>0.33</code></td><td><code>0.3795</code></td><td><code>0.429</code></td></tr><tr><td>生命回复速度<br><span class='en'>Health Regen Speed</span></td><td><code>0.115</code></td><td><code>0.1323</code></td><td><code>0.1495</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Firstlight-Bottom.html">初光·下装</a></p>
+    </article>
+    <article class="sec" id="Lost-Shotgun">
+      <div class="head"><img class="icon" src="../assets/icons/items/98385498479632.png" alt=""><div>
+        <h2>遗失霰弹枪 <span class="en">(Lost Shotgun)</span></h2>
+        <p>系列 <strong>Fished</strong> · 铁匠 Togane（Ouwland）可升 T2 / T3</p>
+      </div></div>
+      <h3>前置 / T1</h3>
+      <ul><li>钓鱼获取本体后，在 Togane 处升 T2/T3。</li></ul>
+      <h3>升阶材料</h3>
+      <table>
+        <tr><th>阶</th><th>角标</th><th>材料</th></tr>
+        <tr><td><strong>T2</strong></td><td>V2 / T2</td><td><strong>750,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×2 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×2 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×2 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×2 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×2 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×2</td></tr>
+        <tr><td><strong>T3</strong></td><td>V3 / T3</td><td><strong>1,500,000</strong> 文 + <a class="quest-link" href="archive/items/Firstlight-Forged-Ingot.html">初光锻锭</a> ×6 + <a class="quest-link" href="archive/items/Firstlight-Weavers-Silk.html">初光织丝</a> ×6 + <a class="quest-link" href="archive/items/Firstlight-Star-Ore.html">初光星矿</a> ×6 + <a class="quest-link" href="archive/items/Nightfall-Forged-Ingot.html">暮落锻锭</a> ×6 + <a class="quest-link" href="archive/items/Nightfall-Weavers-Cloth.html">暮落织布</a> ×6 + <a class="quest-link" href="archive/items/Nightfall-Reinforced-Plating.html">暮落强化钢板</a> ×6</td></tr>
+      </table>
+      <p class="note">升阶消耗本体 ×1（精炼进度保留）；武器类需持有该装备才会出现在列表。</p>
+      
+      <h3>数据面板（× 系列阶乘）</h3>
+      <p>基数：ActiveToolStats / Stats；阶乘 T1×1 · T2×1.15 · T3×1.3。</p>
+      <table>
+        <tr><th>属性</th><th>T1</th><th>T2 (×1.15)</th><th>T3 (×1.3)</th></tr>
+        <tr><td>最大体力<br><span class='en'>Max Stamina</span></td><td><code>5</code></td><td><code>5.75</code></td><td><code>6.5</code></td></tr><tr><td>格挡值<br><span class='en'>Block Points</span></td><td><code>7.85</code></td><td><code>9.0275</code></td><td><code>10.205</code></td></tr><tr><td>格挡回复<br><span class='en'>Block Regen</span></td><td><code>1.29</code></td><td><code>1.4835</code></td><td><code>1.677</code></td></tr><tr><td>额外伤害<br><span class='en'>Additional Damage</span></td><td><code>5.75</code></td><td><code>6.6125</code></td><td><code>7.475</code></td></tr><tr><td>额外伤害倍率<br><span class='en'>Additional Damage Factor</span></td><td><code>0.15</code></td><td><code>0.1725</code></td><td><code>0.195</code></td></tr>
+      </table>
+      <p>档案：<a class="quest-link" href="archive/items/Lost-Shotgun.html">遗失霰弹枪</a></p>
+    </article>
+
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>玩家资料维基</span>
-      <span class="foot-owner">Wiki 所有者 · theKing</span>
-    </div>
+    <div><strong>Slayers 2 Wiki</strong><span>升阶</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../">返回主页</a>
   </footer>
-<script src="../js/i18n.js?v=20260926r"></script>
+  <script src="../js/i18n.js?v=20260926w"></script>
 </body>
 </html>

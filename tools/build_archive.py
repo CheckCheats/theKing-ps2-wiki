@@ -12,6 +12,8 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
+from archive_flows import FLOW_CSS, schematic_flow, usage_and_links
+
 ROOT = Path(r"D:\Desktop\ProjectSlayer2_WIKI")
 LIVE = ROOT / "data" / "_live"
 OUT_ITEMS = ROOT / "p" / "archive" / "items"
@@ -20,8 +22,17 @@ OUT_BOSSES = ROOT / "p" / "archive" / "bosses"
 ICON_DIR = ROOT / "assets" / "icons" / "items"
 BOSS_ICON_DIR = ROOT / "assets" / "icons" / "bosses"
 CHEST_ICON_DIR = ROOT / "assets" / "icons" / "chests"
+SKILL_ICON_DIR = ROOT / "assets" / "icons" / "skills"
 MAP_DIR = ROOT / "assets" / "archive-maps"
 CLEAN = ROOT / "assets" / "ouwland-map-clean.png"
+
+# Bosses missing from WorldBosses.Get() but present in NpcDataTable / chest links
+EXTRA_BOSS_POS = {
+    # Final Selection spawn crystal / drowned chamber approach
+    "Lost": [-2547.569, 278.0, 31.729],
+    # Iceveil Settlement crystal
+    "YetiDemon": [-208.841, 1352.665, -2596.467],
+}
 
 TL = (-3087.361, -3989.256)
 BR = (2977.139, 1635.244)
@@ -60,7 +71,7 @@ CAT_CN = {
     "Items": "物品",
 }
 
-CSS_VER = "20260926q"
+CSS_VER = "20260926v"
 
 SKILL_FIXED = {
     "Base/Combat": "普攻 / 近战连段",
@@ -206,9 +217,12 @@ def page_shell(title: str, crumb: str, body: str, extra_style: str = "") -> str:
     .sec td{{color:var(--muted)}}
     .sec code{{color:var(--gold-deep)}}
     .icon{{width:72px;height:72px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a;border-radius:6px}}
+    .icon-sm{{width:40px;height:40px}}
+    .icon-missing{{display:inline-block;width:40px;height:40px;border:1px dashed var(--line);background:rgba(255,255,255,.03);border-radius:6px;vertical-align:middle}}
     .head{{display:flex;gap:1rem;align-items:flex-start}}
     .rarity{{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.78rem;font-weight:600;color:#111}}
     .map-img{{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}}
+    {FLOW_CSS}
     {extra_style}
   </style>
 </head>
@@ -371,15 +385,69 @@ def main():
     if shops_path.exists():
         shops = json.loads(shops_path.read_text(encoding="utf-8"))
     npc_data = {}
-    ndt_path = LIVE / "npc-data.json"
-    if ndt_path.exists():
-        npc_data = json.loads(ndt_path.read_text(encoding="utf-8"))
+    for ndt_name in ("wiki-npc-data-full.json", "npc-data.json"):
+        ndt_path = LIVE / ndt_name
+        if ndt_path.exists():
+            npc_data = json.loads(ndt_path.read_text(encoding="utf-8"))
+            break
     chest_spawns = {}
     cs_path = LIVE / "chest-spawns.json"
     if cs_path.exists():
         chest_spawns = json.loads(cs_path.read_text(encoding="utf-8"))
 
-    for d in (OUT_ITEMS, OUT_CHESTS, OUT_BOSSES, ICON_DIR, BOSS_ICON_DIR, CHEST_ICON_DIR, MAP_DIR):
+    # Merge bosses linked by chests / NpcData but missing from WorldBosses
+    known_codes = {b.get("Code") for b in bosses if b.get("Code")}
+    extra_codes: dict[str, str] = {}  # code -> display name
+    ctb = meta.get("chest_to_bosses") or {}
+    if isinstance(ctb, dict):
+        for _chest, blist in ctb.items():
+            for b in blist or []:
+                code = b.get("Code")
+                if code and code not in known_codes:
+                    extra_codes[code] = b.get("Name") or code
+    cb_path = LIVE / "chest-bosses.json"
+    if cb_path.exists():
+        raw_cb = json.loads(cb_path.read_text(encoding="utf-8"))
+        if isinstance(raw_cb, list):
+            for row in raw_cb:
+                code = row.get("Code")
+                if code and code not in known_codes:
+                    extra_codes[code] = row.get("Name") or code
+    # Always ensure Lost
+    if "Lost" not in known_codes:
+        extra_codes["Lost"] = "Lost"
+
+    for code, dname in sorted(extra_codes.items()):
+        nd = npc_data.get(code) or {}
+        pos = EXTRA_BOSS_POS.get(code)
+        if not pos:
+            # try Final Selection crystal from spawn crystals dump
+            sc_path = LIVE / "wiki-spawn-crystals.json"
+            if sc_path.exists():
+                for c in json.loads(sc_path.read_text(encoding="utf-8")):
+                    if "Final" in str(c.get("Name") or "") and c.get("Position"):
+                        pos = c["Position"]
+                        break
+        if not pos:
+            pos = [0, 0, 0]
+        icon = nd.get("Icon") or ""
+        if not icon and nd.get("Equipped_Tool"):
+            tool = items.get(nd["Equipped_Tool"]) or {}
+            icon = tool.get("Icon") or ""
+        bosses.append(
+            {
+                "Name": nd.get("Name") or dname,
+                "DisplayName": nd.get("Name") or dname,
+                "Code": code,
+                "Icon": icon,
+                "Position": pos,
+                "Rewards": nd.get("Rewards") or {},
+            }
+        )
+        known_codes.add(code)
+    print(f"bosses {len(bosses)} (extra {len(extra_codes)}: {', '.join(sorted(extra_codes)) or '—'})")
+
+    for d in (OUT_ITEMS, OUT_CHESTS, OUT_BOSSES, ICON_DIR, BOSS_ICON_DIR, CHEST_ICON_DIR, SKILL_ICON_DIR, MAP_DIR):
         d.mkdir(parents=True, exist_ok=True)
 
     # Index helpers
@@ -425,6 +493,11 @@ def main():
         aid = asset_id(it.get("Icon"))
         if aid:
             icon_jobs.append((aid, ICON_DIR / f"{aid}.png"))
+        for sk in it.get("Skills") or []:
+            if isinstance(sk, dict):
+                said = asset_id(sk.get("icon") or sk.get("Icon"))
+                if said:
+                    icon_jobs.append((said, SKILL_ICON_DIR / f"{said}.png"))
     for b in bosses:
         aid = asset_id(b.get("Icon"))
         if aid:
@@ -434,13 +507,14 @@ def main():
         if aid:
             icon_jobs.append((aid, CHEST_ICON_DIR / f"{aid}.png"))
 
-    # unique
+    # unique by dest path
     seen = set()
     uniq = []
     for aid, dest in icon_jobs:
-        if aid in seen:
+        key = str(dest)
+        if key in seen:
             continue
-        seen.add(aid)
+        seen.add(key)
         uniq.append((aid, dest))
 
     print(f"download icons {len(uniq)}…")
@@ -452,15 +526,23 @@ def main():
                 ok_n += 1
     print(f"icons ok {ok_n}/{len(uniq)}")
 
-    def icon_img(aid: str | None, kind: str) -> str:
+    def icon_img(aid: str | None, kind: str, *, small: bool = False) -> str:
         if not aid:
             return ""
-        folder = {"item": "items", "boss": "bosses", "chest": "chests"}[kind]
+        folder = {"item": "items", "boss": "bosses", "chest": "chests", "skill": "skills"}.get(kind, "items")
         rel = f"../../../assets/icons/{folder}/{aid}.png"
         path = ROOT / "assets" / "icons" / folder / f"{aid}.png"
-        if path.exists():
-            return f'<img class="icon" src="{rel}" alt="">'
-        return f'<img class="icon" src="https://www.roblox.com/asset-thumbnail/image?assetId={aid}&width=150&height=150&format=png" alt="">'
+        # skill icons also try items folder (shared asset ids)
+        if not path.exists() and kind == "skill":
+            alt = ICON_DIR / f"{aid}.png"
+            if alt.exists():
+                path = alt
+                rel = f"../../../assets/icons/items/{aid}.png"
+        cls = "icon icon-sm" if small else "icon"
+        if path.exists() and path.stat().st_size > 100:
+            return f'<img class="{cls}" src="{rel}" alt="">'
+        # last resort: leave empty placeholder (CDN asset-thumbnail 404s for many skill ids)
+        return f'<span class="{cls} icon-missing" title="icon {esc(aid)}"></span>'
 
     SPECIAL_CN = {
         "TameWildHorse": ('驯服野马', '<a class="quest-link" href="../../mounts.html">坐骑页</a>'),
@@ -648,7 +730,7 @@ def main():
                 boss = sk.get("Boss")
                 icon = sk.get("icon") or ""
                 sk_aid = asset_id(icon) if icon else None
-                ic = icon_img(sk_aid, "item") if sk_aid else ""
+                ic = icon_img(sk_aid, "skill", small=True) if sk_aid else ""
                 bits = []
                 if cd is not None:
                     bits.append(f"CD {cd}s")
@@ -750,6 +832,30 @@ def main():
             draw_markers(spots, f"购买点 · {name_cn}", f"价格 {price_txt}", map_path)
             buy_map = f'<h2>购买位置</h2><p>价格：<strong>{esc(price_txt)}</strong></p><img class="map-img" src="../../../assets/archive-maps/buy-{esc(s)}.png" alt="购买点">'
 
+        # schematic acquire flow
+        acquire_block = ""
+        if cat == "Schematics" or name.endswith("Schematic"):
+            acquire_block = schematic_flow(name, it, items, draw_markers)
+
+        detail_block = usage_and_links(name, it, items, item_slugs)
+
+        # price with blue links in intro
+        price_linked = price_txt
+        if isinstance(price, dict) and price:
+            pl = []
+            for k, v in price.items():
+                if k == "Product":
+                    pl.append(f"罗宝商品 #{v}")
+                elif k == "Wen":
+                    pl.append(f"{v} 文")
+                elif k in item_slugs:
+                    pl.append(
+                        f'<a class="quest-link" href="{esc(item_slugs[k])}.html">{esc((items.get(k) or {}).get("NameCN") or k)}</a>×{esc(v)}'
+                    )
+                else:
+                    pl.append(f"{esc(k)}×{esc(v)}")
+            price_linked = " / ".join(pl)
+
         body = f"""
     <article class="sec">
       <div class="head">
@@ -765,10 +871,12 @@ def main():
     <article class="sec">
       <h2>介绍</h2>
       <p>{esc(it.get("DescriptionCN") or it.get("Description") or "（无描述）")}</p>
-      <p>标价：<strong>{esc(price_txt)}</strong></p>
+      <p>标价：<strong>{price_linked}</strong></p>
       {combat_meta}
     </article>
     <article class="sec">{stats_block}{skills_block}{potion_block}</article>
+    {acquire_block}
+    {detail_block}
     <article class="sec">
       <h2>来源</h2>
       <ul>{src_lis}</ul>
@@ -837,8 +945,19 @@ def main():
     print(f"chest pages {len(chests)}")
 
     # ---------- boss pages + maps ----------
+    def boss_max_hp(b: dict) -> int:
+        nd = npc_data.get(b.get("Code") or "") or {}
+        hp = (nd.get("Stats") or {}).get("MaxHealth")
+        try:
+            return int(hp) if hp is not None else 10**12
+        except (TypeError, ValueError):
+            return 10**12
+
+    # list / overview map: low MaxHealth → high（无数据排末）
+    bosses_by_hp = sorted(bosses, key=lambda b: (boss_max_hp(b), boss_label(b.get("DisplayName") or b.get("Name") or "")))
+
     all_boss_spots = []
-    for i, b in enumerate(sorted(bosses, key=lambda x: x["Name"]), 1):
+    for i, b in enumerate(bosses_by_hp, 1):
         code = b["Code"]
         s = slug(code)
         name = b.get("DisplayName") or b["Name"]
@@ -1027,7 +1146,7 @@ def main():
         )
 
     boss_rows = []
-    for i, b in enumerate(sorted(bosses, key=lambda x: x["Name"]), 1):
+    for i, b in enumerate(bosses_by_hp, 1):
         name = b.get("DisplayName") or b["Name"]
         name_cn = boss_label(name)
         s = slug(b["Code"])
@@ -1070,7 +1189,8 @@ def main():
     bosses_body = f"""
     <article class="sec">
       <h1>Boss / 头目</h1>
-      <p>世界可追踪的 Boss 与试炼头目（WorldBosses），共 <strong>{len(bosses)}</strong>。点击名称进入单独介绍与刷新地图。</p>
+      <p class="i18n-zh">世界可追踪的 Boss 与试炼头目（WorldBosses），共 <strong>{len(bosses)}</strong>。下表按最大生命（MaxHealth）由低到高排序；无生命数据者排末。点击名称进入单独介绍与刷新地图。</p>
+      <p class="i18n-en" hidden>World bosses and trial heads ({len(bosses)}). Sorted by MaxHealth ascending. Click a name for the detail page and spawn map.</p>
     </article>
     <article class="sec">
       <h2>总览地图</h2>
@@ -1089,6 +1209,7 @@ def main():
     </article>
     <article class="sec">
       <h2>一览</h2>
+      <p>按最大生命由低到高。名称已统一汉化。</p>
       <table><tr><th>#</th><th>名称</th><th>生命</th><th>坐标</th></tr>{"".join(boss_rows)}</table>
     </article>
     <script src="../js/map-zoom.js?v={CSS_VER}"></script>

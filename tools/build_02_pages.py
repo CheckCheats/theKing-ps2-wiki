@@ -132,7 +132,15 @@ def world_to_px(x, z, w, h):
 
 
 def load_font(size: int):
-    for name in ("msyh.ttc", "msyhbd.ttc", "simhei.ttf", "arial.ttf"):
+    for name in (
+        r"C:\Windows\Fonts\msyh.ttc",
+        r"C:\Windows\Fonts\msyhbd.ttc",
+        r"C:\Windows\Fonts\simhei.ttf",
+        "msyh.ttc",
+        "msyhbd.ttc",
+        "simhei.ttf",
+        "arial.ttf",
+    ):
         try:
             return ImageFont.truetype(name, size)
         except OSError:
@@ -141,13 +149,20 @@ def load_font(size: int):
 
 
 def draw_markers(spots, title, subtitle, out_path, small=False):
+    """Draw numbered circular markers. Number is centered inside the circle."""
     base = Image.open(MAP_CLEAN).convert("RGBA")
     w, h = base.size
     overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
     font_t = load_font(22)
     font_s = load_font(14)
-    font_n = load_font(11 if small else 13)
+    # Marker radius vs digit font — keep padding so 1–2 digits stay inside
+    if small:
+        r = 14
+        font_n = load_font(12)
+    else:
+        r = 24
+        font_n = load_font(14)
     draw.rectangle((0, 0, w, 52), fill=(0, 0, 0, 170))
     draw.text((12, 8), title, fill=(255, 208, 70, 255), font=font_t)
     draw.text((12, 32), subtitle, fill=(220, 220, 220, 230), font=font_s)
@@ -159,16 +174,32 @@ def draw_markers(spots, title, subtitle, out_path, small=False):
         (255, 92, 120, 230),
         (240, 190, 80, 230),
     ]
-    r = 4 if small else 10
     for i, (num, x, z, label) in enumerate(spots):
         px, py = world_to_px(float(x), float(z), w, h)
         c = colors[i % len(colors)]
-        draw.ellipse((px - r - 1, py - r - 1, px + r + 1, py + r + 1), fill=(0, 0, 0, 180))
+        draw.ellipse((px - r - 2, py - r - 2, px + r + 2, py + r + 2), fill=(0, 0, 0, 200))
         draw.ellipse((px - r, py - r, px + r, py + r), fill=c)
-        if not small and label:
-            draw.text((px + r + 3, py - 7), str(label)[:10], fill=(255, 255, 255, 230), font=font_n)
-        elif small and num:
-            draw.text((px - 3, py - 6), str(num) if isinstance(num, int) and num < 100 else "", fill=(0, 0, 0, 200), font=font_n)
+        # Prefer explicit number; fall back to index
+        text = ""
+        if isinstance(num, int) and num > 0:
+            text = str(num)
+        elif label and str(label).isdigit():
+            text = str(label)
+        elif label and not small:
+            # side label for named markers (overview)
+            draw.text((px + r + 4, py - 8), str(label)[:10], fill=(255, 255, 255, 230), font=font_n)
+        if text:
+            # center number inside circle
+            bbox = draw.textbbox((0, 0), text, font=font_n)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            tx = px - tw / 2 - bbox[0]
+            ty = py - th / 2 - bbox[1]
+            # slight shadow for contrast on bright fills
+            draw.text((tx + 1, ty + 1), text, fill=(0, 0, 0, 160), font=font_n)
+            draw.text((tx, ty), text, fill=(20, 16, 8, 255), font=font_n)
+        elif label and small:
+            # named overview: keep short side label
+            draw.text((px + r + 3, py - 7), str(label)[:8], fill=(255, 255, 255, 230), font=font_n)
     out = Image.alpha_composite(base, overlay)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.convert("RGB").save(out_path, "PNG", optimize=True)
@@ -389,23 +420,23 @@ def build_monsters():
             all_spots.append((i, p[0], p[2], ""))
         if not e["spawns"] and e.get("is_boss"):
             continue
-    # one marker per monster (first spawn) for cleaner overview + full dense map
+    # overview: numbered circles (not tiny dots)
     overview_spots = []
     for i, e in enumerate([x for x in entries if x["spawns"]], 1):
         p = e["spawns"][0]
-        overview_spots.append((i, p[0], p[2], e["name"][:8]))
+        overview_spots.append((i, p[0], p[2], ""))
     draw_markers(
         overview_spots,
         f"怪物刷新总览 · {len(overview_spots)}",
-        "每点=一种怪的代表坐标；详情见各自怪物页多点图",
+        "圆内数字对应下方表行号；详情见各自怪物页多点图",
         MAP_DIR / "monsters-all.png",
-        small=True,
+        small=False,
     )
     if all_spots:
         draw_markers(
-            [(i, x, z, "") for i, (n, x, z, _) in enumerate(all_spots, 1)],
+            [(n, x, z, "") for n, x, z, _ in all_spots],
             f"全部刷新点 · {len(all_spots)}",
-            "含同种怪的多个 Locations",
+            "含同种怪的多个 Locations（圆内为怪种序号）",
             MAP_DIR / "monsters-all-points.png",
             small=True,
         )
@@ -420,7 +451,8 @@ def build_monsters():
         spawns = e["spawns"]
         map_name = f"monster-{s}.png"
         if spawns:
-            spots = [(i, p[0], p[2], str(i)) for i, p in enumerate(spawns, 1)]
+            # number centered in circle; no side digit label
+            spots = [(i, p[0], p[2], "") for i, p in enumerate(spawns, 1)]
             draw_markers(spots, f"{name} · 刷新", f"{REGION_CN.get(region, region)} · {len(spawns)} 点", MAP_DIR / map_name)
             map_block = f'<img class="map-img" src="../../assets/wiki-maps/{esc(map_name)}" alt="刷新点">'
             pos_s = f"{spawns[0][0]:.0f}, {spawns[0][1]:.0f}, {spawns[0][2]:.0f}" + (f" 等 {len(spawns)} 点" if len(spawns) > 1 else "")
@@ -656,126 +688,33 @@ def build_schematics():
         if (it.get("InventoryCategory") or it.get("Category")) == "Schematics" or n.endswith("Schematic")
     }
 
+    # Per-schematic acquire flows are generated by build_archive.py (archive_flows).
+    # This function only builds overview maps + schematics.html hub.
     updated = 0
     for name, it in sorted(schematics.items()):
-        s = slug(name)
-        path = ROOT / "p" / "archive" / "items" / f"{s}.html"
-        if not path.exists():
-            continue
-
-        # determine flow + positions
+        # ensure maps exist for known study hits (hub links)
         base = name.replace(" Schematic", "")
         study_hit = study_by_item.get(name) or study_by_item.get(base)
-        flow_key = None
-        spots = []
-        notes = []
-
-        sources = it.get("Sources") or []
-        kinds = [src.get("Where") for src in sources]
-
-        if "Nightfall Sickles" in name:
-            flow_key = "Sickles"
-            if levers:
-                spots = [(i, p[0], p[2], str(i)) for i, p in enumerate(levers, 1)]
-                notes.append("需先完成 10 拉杆")
-            if study_hit and study_hit.get("Position"):
-                p = study_hit["Position"]
-                spots.append((len(spots) + 1, p[0], p[2], "Study"))
-        elif "Serpent" in name and "Schematic" in name:
-            flow_key = "SerpentChest"
-            if serpent:
-                spots = [(1, serpent[0], serpent[2], "蛇箱")]
-        elif "Gauntlet" in name:
-            flow_key = "TobeiGauntlet"
-            for i, st in enumerate(statues, 1):
-                if st.get("Position"):
-                    spots.append((i, st["Position"][0], st["Position"][2], (st.get("Name") or "")[:6]))
-            spots.append((len(spots) + 1, tobei[0], tobei[2], "Tobei"))
-        elif "Cape" in name and "Nightfall" in name:
-            flow_key = "HatsuCape"
-            if hatsu:
-                spots = [(1, hatsu[0], hatsu[2], "Hatsu")]
-        elif name in ("Nightfall Top Schematic", "Nightfall Bottom Schematic"):
-            flow_key = "ToganeCapstone"
-            spots = [(1, togane[0], togane[2], "Togane")]
-        elif "Lantern Schematic" in name and "Firstlight" in name:
-            flow_key = "QuestLantern"
-        elif "Shotgun" in name:
-            flow_key = "Lost"
-        elif study_hit and study_hit.get("Position"):
-            flow_key = "FirstlightStudy" if "Firstlight" in name else "StudyProp"
+        if study_hit and study_hit.get("Position"):
             p = study_hit["Position"]
-            spots = [(1, p[0], p[2], "Study")]
-        elif "Firstlight" in name:
-            flow_key = "FirstlightStudy"
-        elif any((src.get("Where") == "StudyProp") for src in sources):
-            flow_key = "StudyProp"
-            for src in sources:
-                pos = (src.get("Meta") or {}).get("pos")
-                if pos:
-                    spots.append((len(spots) + 1, pos[0], pos[2], "Study"))
+            map_file = MAP_DIR / f"schematic-get-{slug(name)}.png"
+            if not map_file.exists():
+                draw_markers([(1, float(p[0]), float(p[2]), "Study")], f"获取 · {it.get('NameCN') or name}", "StudyProp", map_file)
+                updated += 1
 
-        map_html = ""
-        if spots:
-            map_file = f"schematic-get-{s}.png"
-            draw_markers(spots, f"获取 · {it.get('NameCN') or name}", "蓝链流程见下方", MAP_DIR / map_file)
-            map_html = f'<img class="map-img" src="../../../assets/wiki-maps/{esc(map_file)}" alt="获取点">'
-
-        flow = FLOW.get(flow_key or "", {})
-        flow_html = ""
-        if flow:
-            steps = flow.get("steps") or []
-            chips = []
-            for i, st in enumerate(steps):
-                chips.append(f'<span class="step">{i+1}. {esc(st)}</span>')
-                if i < len(steps) - 1:
-                    chips.append('<span class="arrow">→</span>')
-            flow_html = f"""
-    <article class="sec" id="acquire">
-      <h2>获取流程 · {esc(flow.get("title") or "")}</h2>
-      <div class="flow">{"".join(chips)}</div>
-      {" ".join(f"<p>{esc(n)}</p>" for n in notes)}
-      {map_html}
-      <p>相关：{" · ".join(f"<code>{esc(k)}</code>" for k in kinds if k) or "见来源列表"}</p>
-    </article>"""
-        elif map_html:
-            flow_html = f'<article class="sec" id="acquire"><h2>获取点位</h2>{map_html}</article>'
-
-        if not flow_html:
-            continue
-
-        text = path.read_text(encoding="utf-8")
-        if 'id="acquire"' in text:
-            # replace existing acquire block
-            text = re.sub(
-                r'<article class="sec" id="acquire">.*?</article>',
-                flow_html.strip(),
-                text,
-                count=1,
-                flags=re.S,
-            )
-        else:
-            # insert before sources sec or before footer
-            if "<h2>来源</h2>" in text:
-                text = text.replace(
-                    '<article class="sec">\n      <h2>来源</h2>',
-                    flow_html + '\n    <article class="sec">\n      <h2>来源</h2>',
-                    1,
-                )
-            else:
-                text = text.replace("</main>", flow_html + "\n  </main>", 1)
-        path.write_text(text, encoding="utf-8")
-        updated += 1
-
-    # schematics hub section on archive or dedicated note page snippet via monsters-style
+    # schematics hub
     hub = f"""
     <article class="sec">
       <h1>图纸获取总览</h1>
-      <p>共 <strong>{len(schematics)}</strong> 张 Schematic。StudyProp / 拉杆 / 雕像点位如下；每张图纸档案页含完整流程图。</p>
+      <p>共 <strong>{len(schematics)}</strong> 张 Schematic。StudyProp / 拉杆 / 雕像点位如下；每张图纸档案页含完整流程图与成品蓝链。</p>
       <img class="map-img" src="../assets/wiki-maps/schematic-study-all.png" alt="StudyProp">
-      <p class="callout">拉杆图 · <a class="quest-link" href="../assets/wiki-maps/schematic-sickles-levers.png">Sickles</a>
-        · 雕像 · <a class="quest-link" href="../assets/wiki-maps/schematic-gauntlet-statues.png">Gauntlet</a>
-        · 锻造交接点见 <a class="quest-link" href="forge.html">锻造</a></p>
+      <p class="callout">拉杆图见下方 · 雕像图见下方 · 锻台交接点见 <a class="quest-link" href="forge.html">锻造</a></p>
+"""
+    if (MAP_DIR / "schematic-sickles-levers.png").exists():
+        hub += '<img class="map-img" src="../assets/wiki-maps/schematic-sickles-levers.png" alt="Sickles 拉杆">'
+    if (MAP_DIR / "schematic-gauntlet-statues.png").exists():
+        hub += '<img class="map-img" src="../assets/wiki-maps/schematic-gauntlet-statues.png" alt="拳套雕像">'
+    hub += """
     </article>
     <article class="sec">
       <h2>图纸列表</h2>
@@ -794,7 +733,8 @@ def build_schematics():
         page_shell("图纸", '<a href="../">主页</a> / 图纸', hub, '<a href="archive.html#cat-Schematics">档案分类</a>'),
         encoding="utf-8",
     )
-    print(f"schematics updated {updated} / hub")
+    print(f"schematics hub {len(schematics)} maps_touched={updated}")
+    return
 
 
 def wire_nav():

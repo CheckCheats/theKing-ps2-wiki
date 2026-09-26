@@ -7,7 +7,7 @@
   <title>技能树 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926g">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926w">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
@@ -15,12 +15,12 @@
     .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
     .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
     .sec h1{font-size:1.35rem}
-    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream);display:flex;align-items:center;gap:.45rem}
     .sec p,.sec li{color:var(--muted);font-size:.92rem}
     .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
     .sec strong{color:var(--cream)}
     .sec table{width:100%;border-collapse:collapse;font-size:.84rem;margin:.35rem 0 .85rem}
-    .sec th,.sec td{border:1px solid var(--line);padding:.35rem .45rem;text-align:left;vertical-align:top}
+    .sec th,.sec td{border:1px solid var(--line);padding:.35rem .45rem;text-align:left;vertical-align:middle}
     .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
@@ -28,10 +28,9 @@
     .note{font-size:.86rem!important;margin:.15rem 0 .4rem!important}
     .toc{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem}
     .toc a{border:1px solid var(--line);padding:.3rem .55rem;color:var(--gold);font-size:.82rem;text-decoration:none}
-    .toc a:hover{border-color:rgba(255,208,70,.5)}
     .top-nav{display:flex;gap:.75rem;align-items:center;font-size:.82rem}
     .top-nav a{color:var(--muted)}
-    .top-nav a:hover{color:var(--gold)}
+    .sk-icon{width:28px;height:28px;object-fit:contain;vertical-align:middle;margin-right:.35rem;border:1px solid var(--line);background:#0a0a0a}
   </style>
 </head>
 <body>
@@ -53,19 +52,14 @@
 
 <article class="sec" id="rules">
   <h1>技能树系统</h1>
-  <p>菜单 → <strong>技能树</strong>。界面按当前角色<strong>已装备 / 已学习</strong>的内容动态显示分支：角色树 + 呼吸或邪恶艺术 + 战斗风格 + 已拥有技能的武器 + 有主动技能的公会。</p>
-  <p>你截图里只看到「Character / Cryokinesis / Sickles / Gauntlet / Cutlass」是因为当前号只带了这些；下面把<strong>全部</strong>呼吸、邪恶艺术、武器树都列出。</p>
+  <p>菜单 → <strong>技能树</strong>。按已装备 / 已学习内容动态显示分支。下列含<strong>技能图标</strong>（来自游戏技能配置）。</p>
   <h2>规则速查</h2>
   <ul>
-    <li><strong>技能点</strong>：每升 1 级 +3 点（满级 225 → 最多约 675 点）。可在商店「重置技能点」退回已花费点数（精通不退）。</li>
-    <li><strong>解锁顺序</strong>：必须先解锁同分支上一个节点。</li>
-    <li><strong>战斗技能点价</strong>（呼吸 / 邪恶艺术 / 武器 / 战斗风格）：第 1～5 节点一般为 <code>3 / 6 / 9 / 12 / 15</code>。</li>
-    <li><strong>精通门槛</strong>：第 1 节点无；第 2 起约 <code>14 / 27 / 40 / 53 …</code>（精通等级按经验累计，默认约每 30 经验 1 级）。</li>
-    <li><strong>终极大招</strong>：多为第 5 技能（默认键 B），冷却约 50、体力约 35，并需击败对应 Boss。</li>
-    <li><strong>搜索栏</strong>：按树根名称前缀过滤（如 Water、Gauntlet），不是搜单个技能名。</li>
-    <li><strong>缩放拖动</strong>：可拖动画布；底部缩放条 0～100%，并有放大镜按钮。</li>
-    <li><strong>无技能树的武器</strong>：日轮刀系、斧锤系等通常只有格挡，不单独成树。</li>
-    <li><strong>公会技能</strong>：有主动技能的公会会单独成枝，详见 <a href="clans.html">公会图鉴</a>。</li>
+    <li><strong>技能点</strong>：每升 1 级 +3 点（满级 225）。商店可重置技能点。</li>
+    <li><strong>解锁顺序</strong>：同分支须先解锁上一节点。</li>
+    <li><strong>战斗技能点价</strong>：第 1～5 节点一般为 <code>3 / 6 / 9 / 12 / 15</code>。</li>
+    <li><strong>精通门槛</strong>：第 2 起约 <code>14 / 27 / 40 / 53</code>。</li>
+    <li><strong>终极大招</strong>：多为第 5 技能（B），需击败对应 Boss。</li>
   </ul>
   <nav class="toc">
     <a href="#character">角色树</a>
@@ -100,260 +94,38 @@
   </table>
 </article>
 
-<article class="sec" id="breathings"><h2>breathings</h2>
-<p>猎杀队 / 人类 / 混血学习呼吸后出现。格挡不进技能树。导师接取见 <a href="breathings.html">呼吸 / 流派</a>。</p>
-<h3>水之呼吸 <span class='en'>(Water)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Giyen</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>水面斩</strong><br><span class='en'>Water Surface Slash</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr>
-<tr><td>2</td><td><strong>漩涡</strong><br><span class='en'>Whirl Pool</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>水车</strong><br><span class='en'>Water Wheel</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>生生流转</strong><br><span class='en'>Constant Flux</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>水面波纹·无静</strong><br><span class='en'>Dead Calm</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Giyen</td></tr>
-</table>
-<h3>炎之呼吸 <span class='en'>(Flame)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Rengu</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>不知火</strong><br><span class='en'>Unknowing Fire</span></td><td>Z</td><td>3</td><td>—</td><td>17</td><td>22</td><td>—</td></tr>
-<tr><td>2</td><td><strong>灼骨炎阳</strong><br><span class='en'>Blazing Universe</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>炎天窑变</strong><br><span class='en'>Flame Undulation</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>炼狱·炎虎</strong><br><span class='en'>Flame Tiger</span></td><td>V</td><td>12</td><td>40</td><td>20</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>炼狱</strong><br><span class='en'>Purgatory</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Rengu</td></tr>
-</table>
-<h3>雷之呼吸 <span class='en'>(Thunder)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Zentaro</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>霹雳一闪</strong><br><span class='en'>Thunder Clap and Flash</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>14</td><td>—</td></tr>
-<tr><td>2</td><td><strong>稻魂</strong><br><span class='en'>Lightning Fold</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>聚蚊成雷</strong><br><span class='en'>Rice Spirit</span></td><td>C</td><td>9</td><td>27</td><td>17</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>神速</strong><br><span class='en'>Godspeed</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>炎响·闪空</strong><br><span class='en'>Flaming Thunder God</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Zentaro</td></tr>
-</table>
-<h3>风之呼吸 <span class='en'>(Wind)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Saneri</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>岚气抱树</strong><br><span class='en'>Mountain Wind</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>净风爪</strong><br><span class='en'>Purifying Claws</span></td><td>X</td><td>6</td><td>14</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>升尘岚</strong><br><span class='en'>Rising Dust Storm</span></td><td>C</td><td>9</td><td>27</td><td>18</td><td>28</td><td>—</td></tr>
-<tr><td>4</td><td><strong>旋风切割</strong><br><span class='en'>Whirlwind Cutter</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>韦陀天台风</strong><br><span class='en'>Idaten Typhoon</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Saneri</td></tr>
-</table>
-<h3>虫之呼吸 <span class='en'>(Insect)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Shinora</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>复眼六角</strong><br><span class='en'>Compound Eye Hexagon</span></td><td>Z</td><td>3</td><td>—</td><td>17</td><td>28</td><td>—</td></tr>
-<tr><td>2</td><td><strong>真蝶</strong><br><span class='en'>True Flutter</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>14</td><td>—</td></tr>
-<tr><td>3</td><td><strong>舞蝶之刺</strong><br><span class='en'>Fluttering Sting</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>百足曲折</strong><br><span class='en'>Hundred-Legged Zigzag</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>幻光</strong><br><span class='en'>Illusory Light</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Shinora</td></tr>
-</table>
-<h3>蛇之呼吸 <span class='en'>(Serpent)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Obari</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>蛇斩</strong><br><span class='en'>Serpent Slash</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>盘绞</strong><br><span class='en'>Coil Choke</span></td><td>X</td><td>6</td><td>14</td><td>18</td><td>24</td><td>—</td></tr>
-<tr><td>3</td><td><strong>毒牙</strong><br><span class='en'>Venom Fangs</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>双头蜿蜒</strong><br><span class='en'>Twin-Headed Reptile</span></td><td>V</td><td>12</td><td>40</td><td>19</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>蜿蜒蛇</strong><br><span class='en'>Slithering Serpent</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Obari</td></tr>
-</table>
-<h3>音之呼吸 <span class='en'>(Sound)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Tengai</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>爆响之华</strong><br><span class='en'>Bursting Bloom</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr>
-<tr><td>2</td><td><strong>轰鸣</strong><br><span class='en'>Roar</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>20</td><td>—</td></tr>
-<tr><td>3</td><td><strong>爆珠</strong><br><span class='en'>Exploding Beads</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>残响斩</strong><br><span class='en'>Resounding Slashes</span></td><td>V</td><td>12</td><td>40</td><td>20</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>弦之演奏</strong><br><span class='en'>String Performance</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Tengai</td></tr>
-</table>
-<h3>岩之呼吸 <span class='en'>(Stone)</span></h3>
-<p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss 关卡：<strong>Gyorei</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>火山征伐</strong><br><span class='en'>Volcanic Conquest</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>地鸣爆裂</strong><br><span class='en'>Seismic Burst</span></td><td>X</td><td>6</td><td>14</td><td>10</td><td>14</td><td>—</td></tr>
-<tr><td>3</td><td><strong>升砸</strong><br><span class='en'>Upper Smash</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>岩壁</strong><br><span class='en'>Stone Wall</span></td><td>V</td><td>12</td><td>40</td><td>19</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>正义之弧</strong><br><span class='en'>Arcs of Justice</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Gyorei</td></tr>
-</table>
+
+<article class="sec" id="breathings">
+  <h2>呼吸法</h2>
+  <p>导师接取见 <a href="breathings.html">呼吸法</a>。</p>
+  <h3><img class="sk-icon" src="../assets/icons/skills/133532094066680.png" alt="">水之呼吸 <span class='en'>(Water)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Giyen</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/127042872322277.png" alt=""><strong>水面斩</strong><br><span class='en'>Water Surface Slash</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/79681742341174.png" alt=""><strong>漩涡</strong><br><span class='en'>Whirl Pool</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/74516050794419.png" alt=""><strong>水车</strong><br><span class='en'>Water Wheel</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/80630323102004.png" alt=""><strong>生生流转</strong><br><span class='en'>Constant Flux</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/140303524288158.png" alt=""><strong>水面波纹·无静</strong><br><span class='en'>Dead Calm</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Giyen</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/122638691732413.png" alt="">炎之呼吸 <span class='en'>(Flame)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Rengu</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/127301357010840.png" alt=""><strong>不知火</strong><br><span class='en'>Unknowing Fire</span></td><td>Z</td><td>3</td><td>—</td><td>17</td><td>22</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/77002398736078.png" alt=""><strong>灼骨炎阳</strong><br><span class='en'>Blazing Universe</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/139797349210093.png" alt=""><strong>炎天窑变</strong><br><span class='en'>Flame Undulation</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/73052261085534.png" alt=""><strong>炼狱·炎虎</strong><br><span class='en'>Flame Tiger</span></td><td>V</td><td>12</td><td>40</td><td>20</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/124063778859730.png" alt=""><strong>炼狱</strong><br><span class='en'>Purgatory</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Rengu</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/74166650843382.png" alt="">雷之呼吸 <span class='en'>(Thunder)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Zentaro</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/127992376017080.png" alt=""><strong>霹雳一闪</strong><br><span class='en'>Thunder Clap and Flash</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>14</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/73295142249677.png" alt=""><strong>稻魂</strong><br><span class='en'>Lightning Fold</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/105345444081366.png" alt=""><strong>聚蚊成雷</strong><br><span class='en'>Rice Spirit</span></td><td>C</td><td>9</td><td>27</td><td>17</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/132748533245500.png" alt=""><strong>神速</strong><br><span class='en'>Godspeed</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/122686936817985.png" alt=""><strong>炎响·闪空</strong><br><span class='en'>Flaming Thunder God</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Zentaro</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/108992109755110.png" alt="">风之呼吸 <span class='en'>(Wind)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Saneri</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/115086616432186.png" alt=""><strong>岚气抱树</strong><br><span class='en'>Mountain Wind</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/108896110591449.png" alt=""><strong>净风爪</strong><br><span class='en'>Purifying Claws</span></td><td>X</td><td>6</td><td>14</td><td>12</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/79645974156344.png" alt=""><strong>升尘岚</strong><br><span class='en'>Rising Dust Storm</span></td><td>C</td><td>9</td><td>27</td><td>18</td><td>28</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/136534162394232.png" alt=""><strong>旋风切割</strong><br><span class='en'>Whirlwind Cutter</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/82109759217184.png" alt=""><strong>韦陀天台风</strong><br><span class='en'>Idaten Typhoon</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Saneri</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/98591569041732.png" alt="">虫之呼吸 <span class='en'>(Insect)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Shinora</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/111525805312469.png" alt=""><strong>复眼六角</strong><br><span class='en'>Compound Eye Hexagon</span></td><td>Z</td><td>3</td><td>—</td><td>17</td><td>28</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/94242984701652.png" alt=""><strong>真蝶</strong><br><span class='en'>True Flutter</span></td><td>X</td><td>6</td><td>14</td><td>16</td><td>14</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/85922268652373.png" alt=""><strong>舞蝶之刺</strong><br><span class='en'>Fluttering Sting</span></td><td>C</td><td>9</td><td>27</td><td>18</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/136861618421363.png" alt=""><strong>百足曲折</strong><br><span class='en'>Hundred-Legged Zigzag</span></td><td>V</td><td>12</td><td>40</td><td>20</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/117921474432074.png" alt=""><strong>幻光</strong><br><span class='en'>Illusory Light</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Shinora</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/72412803182633.png" alt="">蛇之呼吸 <span class='en'>(Serpent)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Obari</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/85851121237817.png" alt=""><strong>蛇斩</strong><br><span class='en'>Serpent Slash</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/95113084840204.png" alt=""><strong>盘绞</strong><br><span class='en'>Coil Choke</span></td><td>X</td><td>6</td><td>14</td><td>18</td><td>24</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/136929863608145.png" alt=""><strong>毒牙</strong><br><span class='en'>Venom Fangs</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/72087027954070.png" alt=""><strong>双头蜿蜒</strong><br><span class='en'>Twin-Headed Reptile</span></td><td>V</td><td>12</td><td>40</td><td>19</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/80622219017756.png" alt=""><strong>蜿蜒蛇</strong><br><span class='en'>Slithering Serpent</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Obari</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/105129696827308.png" alt="">音之呼吸 <span class='en'>(Sound)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Tengai</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/71263444717318.png" alt=""><strong>爆响之华</strong><br><span class='en'>Bursting Bloom</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/112398591861989.png" alt=""><strong>轰鸣</strong><br><span class='en'>Roar</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>20</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/96484177191049.png" alt=""><strong>爆珠</strong><br><span class='en'>Exploding Beads</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/104208526145412.png" alt=""><strong>残响斩</strong><br><span class='en'>Resounding Slashes</span></td><td>V</td><td>12</td><td>40</td><td>20</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/116693415036677.png" alt=""><strong>弦之演奏</strong><br><span class='en'>String Performance</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Tengai</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/118884560853258.png" alt="">岩之呼吸 <span class='en'>(Stone)</span></h3><p class='note'>猎杀队 / 人类 / 混血 · 终极大招 Boss：<strong>Gyorei</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/127944944722848.png" alt=""><strong>火山征伐</strong><br><span class='en'>Volcanic Conquest</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/116141643859156.png" alt=""><strong>地鸣爆裂</strong><br><span class='en'>Seismic Burst</span></td><td>X</td><td>6</td><td>14</td><td>10</td><td>14</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/80327943891842.png" alt=""><strong>升砸</strong><br><span class='en'>Upper Smash</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/126990875517168.png" alt=""><strong>岩壁</strong><br><span class='en'>Stone Wall</span></td><td>V</td><td>12</td><td>40</td><td>19</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/80796560822561.png" alt=""><strong>正义之弧</strong><br><span class='en'>Arcs of Justice</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Gyorei</td></tr></table>
 </article>
-<article class="sec" id="demon-arts"><h2>demon-arts</h2>
-<p>鬼 / 混血的邪恶艺术（Blood Demon Art）树。截图中的「Cryokinesis」即冰结一支；下列为全部 9 系。</p>
-<h3>冰结（Cryokinesis） <span class='en'>(Cryokinesis)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Domae</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>冬之冰锥</strong><br><span class='en'>Wintry Icicles</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>22</td><td>—</td></tr>
-<tr><td>2</td><td><strong>寒白公主</strong><br><span class='en'>Cold White Princesses</span></td><td>X</td><td>6</td><td>14</td><td>25</td><td>22</td><td>—</td></tr>
-<tr><td>3</td><td><strong>枯挂庭园</strong><br><span class='en'>Barren Hanging Garden</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>冻结云</strong><br><span class='en'>Freezing Cloud</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>菩萨</strong><br><span class='en'>Bodhisattva</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Domae</td></tr>
-</table>
-<h3>血操（Blood Manipulation） <span class='en'>(Blood Manipulation)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Gyutai</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>弯曲</strong><br><span class='en'>Bend</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>狂弧乱舞</strong><br><span class='en'>Rampant Arc Rampage</span></td><td>X</td><td>6</td><td>14</td><td>16</td><td>22</td><td>—</td></tr>
-<tr><td>3</td><td><strong>猛攻</strong><br><span class='en'>On Slaught</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>回旋血镰</strong><br><span class='en'>Rotating Blood Scythe</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>圆环斩</strong><br><span class='en'>Circular Slashes</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Gyutai</td></tr>
-</table>
-<h3>箭矢（Arrow） <span class='en'>(Arrow)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Yahari</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>箭矢飞行</strong><br><span class='en'>Arrow Flight</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr>
-<tr><td>2</td><td><strong>箭矢喷发</strong><br><span class='en'>Arrow Eruption</span></td><td>X</td><td>6</td><td>14</td><td>17</td><td>24</td><td>—</td></tr>
-<tr><td>3</td><td><strong>箭矢砸落</strong><br><span class='en'>Arrow Smackdown</span></td><td>C</td><td>9</td><td>27</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>4</td><td><strong>豪雨箭矢</strong><br><span class='en'>Torrential Arrows</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>虚血之箭</strong><br><span class='en'>Koketsu Arrow</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Yahari</td></tr>
-</table>
-<h3>梦境（Dream） <span class='en'>(Dream)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Enru</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>旋律低语</strong><br><span class='en'>Melodic Whisper</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>敕命之肉</strong><br><span class='en'>Ordained Flesh</span></td><td>X</td><td>6</td><td>14</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>3</td><td><strong>穿刺之肉</strong><br><span class='en'>Piercing Flesh</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>血肉弹幕</strong><br><span class='en'>Flesh Barrage</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>血肉怪物</strong><br><span class='en'>Flesh Monster</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Enru</td></tr>
-</table>
-<h3>带操（Obi Manipulation） <span class='en'>(Obi Manipulation)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Datai</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>带弹幕</strong><br><span class='en'>Obi Barrage</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>带追击</strong><br><span class='en'>Obi Pursuit</span></td><td>X</td><td>6</td><td>14</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>带擒</strong><br><span class='en'>Obi Grab</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>带领域</strong><br><span class='en'>Obi Field</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>带冲锋</strong><br><span class='en'>Obi Charge</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Datai</td></tr>
-</table>
-<h3>炎操（Pyrokenesis） <span class='en'>(Pyrokenesis)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Nezura</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>血瓦</strong><br><span class='en'>Blood Tiles</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>血击</strong><br><span class='en'>Blood Strike</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>炎斩</strong><br><span class='en'>Fiery Slash</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>踵砸</strong><br><span class='en'>Heel Bash</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>血裂</strong><br><span class='en'>Blood Rupture</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Nezura</td></tr>
-</table>
-<h3>玉响（Tamari） <span class='en'>(Tamari)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Sumari</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>回旋投掷</strong><br><span class='en'>Spinning Throw</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>灌顶</strong><br><span class='en'>Dunk</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>20</td><td>—</td></tr>
-<tr><td>3</td><td><strong>穿刺踢</strong><br><span class='en'>Piercing Kick</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr>
-<tr><td>4</td><td><strong>流星</strong><br><span class='en'>Meteor</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>螺旋射</strong><br><span class='en'>Spiraling Shot</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Sumari</td></tr>
-</table>
-<h3>收割者（Reaper） <span class='en'>(Reaper)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 冲刺速度倍率 +0.25 · 终极大招 Boss 关卡：<strong>Reaper</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>绝望收割 / 收割斩击</strong><br><span class='en'>Reap Of Despair / Reaping Slashes</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>收割潮</strong><br><span class='en'>Reaptide</span></td><td>X</td><td>6</td><td>14</td><td>19</td><td>28</td><td>—</td></tr>
-<tr><td>3</td><td><strong>响转</strong><br><span class='en'>Sonido</span></td><td>C</td><td>9</td><td>27</td><td>10</td><td>14</td><td>—</td></tr>
-<tr><td>4</td><td><strong>幻影步</strong><br><span class='en'>Phantom Step</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr>
-<tr><td>5</td><td><strong>响转爆发</strong><br><span class='en'>Sonido Surge</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Reaper</td></tr>
-</table>
-<h3>冲击波（Shockwave） <span class='en'>(Shockwave)</span></h3>
-<p class='note'>鬼 / 混血 · 邪恶艺术 · 终极大招 Boss 关卡：<strong>Akazo</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>鬼核</strong><br><span class='en'>Demon Core</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>罗盘针</strong><br><span class='en'>Compass Needle</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr>
-<tr><td>3</td><td><strong>爆怒</strong><br><span class='en'>Explosive Fury</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr>
-<tr><td>4</td><td><strong>闪柳 / 闪柳·空中</strong><br><span class='en'>Flashing Willow / Flashing Willow Aerial</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>24</td><td>—</td></tr>
-<tr><td>5</td><td><strong>歼灭型 / 混沌残光</strong><br><span class='en'>Annihilation Type / Chaotic Afterglow</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Akazo</td></tr>
-</table>
+
+<article class="sec" id="demon-arts">
+  <h2>邪恶艺术</h2>
+  <p>成鬼与魔球见 <a href="evil-arts.html">邪恶艺术</a>。</p>
+  <h3><img class="sk-icon" src="../assets/icons/skills/80798619872554.png" alt="">冰结 <span class='en'>(Cryokinesis)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Domae</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/134845055611552.png" alt=""><strong>Wintry Icicles</strong><br><span class='en'>Wintry Icicles</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>22</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/110537503017563.png" alt=""><strong>Cold White Princesses</strong><br><span class='en'>Cold White Princesses</span></td><td>X</td><td>6</td><td>14</td><td>28</td><td>22</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/126535125593850.png" alt=""><strong>Barren Hanging Garden</strong><br><span class='en'>Barren Hanging Garden</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/101917393005523.png" alt=""><strong>Freezing Cloud</strong><br><span class='en'>Freezing Cloud</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/117188368608461.png" alt=""><strong>Bodhisattva</strong><br><span class='en'>Bodhisattva</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Domae</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/96706601549949.png" alt="">血操 <span class='en'>(Blood Manipulation)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Gyutai</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/93846626126677.png" alt=""><strong>Bend</strong><br><span class='en'>Bend</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/75386191562744.png" alt=""><strong>Rampant Arc Rampage</strong><br><span class='en'>Rampant Arc Rampage</span></td><td>X</td><td>6</td><td>14</td><td>16</td><td>22</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/104054702339197.png" alt=""><strong>On Slaught</strong><br><span class='en'>On Slaught</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/73334943761848.png" alt=""><strong>Rotating Blood Scythe</strong><br><span class='en'>Rotating Blood Scythe</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/104576401654266.png" alt=""><strong>Circular Slashes</strong><br><span class='en'>Circular Slashes</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Gyutai</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/115502976733718.png" alt="">箭矢 <span class='en'>(Arrow)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Yahari</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/95421227725988.png" alt=""><strong>Arrow Flight</strong><br><span class='en'>Arrow Flight</span></td><td>Z</td><td>3</td><td>—</td><td>10</td><td>14</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/132745487576604.png" alt=""><strong>Arrow Eruption</strong><br><span class='en'>Arrow Eruption</span></td><td>X</td><td>6</td><td>14</td><td>17</td><td>24</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/132970161910759.png" alt=""><strong>Arrow Smackdown</strong><br><span class='en'>Arrow Smackdown</span></td><td>C</td><td>9</td><td>27</td><td>12</td><td>18</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/130806157255172.png" alt=""><strong>Torrential Arrows</strong><br><span class='en'>Torrential Arrows</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/100895709337578.png" alt=""><strong>Koketsu Arrow</strong><br><span class='en'>Koketsu Arrow</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Yahari</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/88342158665980.png" alt="">梦境 <span class='en'>(Dream)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Enru</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/108910048519905.png" alt=""><strong>Melodic Whisper</strong><br><span class='en'>Melodic Whisper</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/113785797893672.png" alt=""><strong>Ordained Flesh</strong><br><span class='en'>Ordained Flesh</span></td><td>X</td><td>6</td><td>14</td><td>16</td><td>24</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/83674471679744.png" alt=""><strong>Piercing Flesh</strong><br><span class='en'>Piercing Flesh</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/135936400013915.png" alt=""><strong>Flesh Barrage</strong><br><span class='en'>Flesh Barrage</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/123241521003523.png" alt=""><strong>Flesh Monster</strong><br><span class='en'>Flesh Monster</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Enru</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/79966440986518.png" alt="">带操 <span class='en'>(Obi Manipulation)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Datai</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/85466805635682.png" alt=""><strong>Obi Barrage</strong><br><span class='en'>Obi Barrage</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/123033381592998.png" alt=""><strong>Obi Pursuit</strong><br><span class='en'>Obi Pursuit</span></td><td>X</td><td>6</td><td>14</td><td>12</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/102016544842844.png" alt=""><strong>Obi Grab</strong><br><span class='en'>Obi Grab</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/107971300277116.png" alt=""><strong>Obi Field</strong><br><span class='en'>Obi Field</span></td><td>V</td><td>12</td><td>40</td><td>16</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/96191763762223.png" alt=""><strong>Obi Charge</strong><br><span class='en'>Obi Charge</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Datai</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/129123987865967.png" alt="">冲击波 <span class='en'>(Shockwave)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Akazo</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/138372732851355.png" alt=""><strong>Demon Core</strong><br><span class='en'>Demon Core</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/132531910447794.png" alt=""><strong>Compass Needle</strong><br><span class='en'>Compass Needle</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/125839960375380.png" alt=""><strong>Explosive Fury</strong><br><span class='en'>Explosive Fury</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/113331024786889.png" alt=""><strong>Flashing Willow</strong><br><span class='en'>Flashing Willow</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/107300958665418.png" alt=""><strong>Annihilation Type</strong><br><span class='en'>Annihilation Type</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Akazo</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/97673220720568.png" alt="">火焰念动 <span class='en'>(Pyrokenesis)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Rengu</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/100353705296031.png" alt=""><strong>Blood Tiles</strong><br><span class='en'>Blood Tiles</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/96082450409051.png" alt=""><strong>Blood Strike</strong><br><span class='en'>Blood Strike</span></td><td>X</td><td>6</td><td>14</td><td>13</td><td>18</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/126321808468388.png" alt=""><strong>Fiery Slash</strong><br><span class='en'>Fiery Slash</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>24</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/91994351892623.png" alt=""><strong>Heel Bash</strong><br><span class='en'>Heel Bash</span></td><td>V</td><td>12</td><td>40</td><td>17</td><td>24</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/102382175922370.png" alt=""><strong>Blood Rupture</strong><br><span class='en'>Blood Rupture</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Nezura</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/108234262131987.png" alt="">收割者 <span class='en'>(Reaper)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Reaper</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/129888728787568.png" alt=""><strong>Reap Of Despair</strong><br><span class='en'>Reap Of Despair</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/91746290508005.png" alt=""><strong>Reaptide</strong><br><span class='en'>Reaptide</span></td><td>X</td><td>6</td><td>14</td><td>19</td><td>28</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/129613854553832.png" alt=""><strong>Sonido</strong><br><span class='en'>Sonido</span></td><td>C</td><td>9</td><td>27</td><td>10</td><td>14</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/86058539585781.png" alt=""><strong>Phantom Step</strong><br><span class='en'>Phantom Step</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/98662378990382.png" alt=""><strong>Sonido Surge</strong><br><span class='en'>Sonido Surge</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Reaper</td></tr></table><h3><img class="sk-icon" src="../assets/icons/skills/134819096812923.png" alt="">玉 <span class='en'>(Tamari)</span></h3><p class='note'>鬼 / 混血 · 终极大招 Boss：<strong>Sumari</strong></p><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/94911966234907.png" alt=""><strong>Spinning Throw</strong><br><span class='en'>Spinning Throw</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/130116108473440.png" alt=""><strong>Dunk</strong><br><span class='en'>Dunk</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>20</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/111684508905590.png" alt=""><strong>Piercing Kick</strong><br><span class='en'>Piercing Kick</span></td><td>C</td><td>9</td><td>27</td><td>15</td><td>22</td><td>—</td></tr><tr><td>4</td><td><img class="sk-icon" src="../assets/icons/skills/81341343781342.png" alt=""><strong>Meteor</strong><br><span class='en'>Meteor</span></td><td>V</td><td>12</td><td>40</td><td>18</td><td>26</td><td>—</td></tr><tr><td>5</td><td><img class="sk-icon" src="../assets/icons/skills/70841094867944.png" alt=""><strong>Spiraling Shot</strong><br><span class='en'>Spiraling Shot</span></td><td>B</td><td>15</td><td>53</td><td>50</td><td>35</td><td>Sumari</td></tr></table>
 </article>
-<article class="sec" id="styles"><h2>styles</h2>
-<p>满足等级与材料后从导师学习。第二技能通常需击败对应训练 Boss。</p>
-<h3>苍龙流 <span class='en'>(Soryu)</span></h3>
-<p class='note'>战斗风格 · 终极大招 Boss 关卡：<strong>SoryuTrainee</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>碎骨者</strong><br><span class='en'>Bone Breaker</span></td><td>Z</td><td>3</td><td>—</td><td>18</td><td>22</td><td>—</td></tr>
-<tr><td>2</td><td><strong>破面者</strong><br><span class='en'>Face Breaker</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>22</td><td>SoryuTrainee</td></tr>
-</table>
-<h3>太极 <span class='en'>(Tai Chi)</span></h3>
-<p class='note'>战斗风格 · 终极大招 Boss 关卡：<strong>TaiChiTrainee</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>流水掌</strong><br><span class='en'>Flowing Palm</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>双和</strong><br><span class='en'>Twin Harmony</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>22</td><td>TaiChiTrainee</td></tr>
-</table>
-<h3>收割之刃 <span class='en'>(Reaping Blades)</span></h3>
-<p class='note'>战斗风格 · 终极大招 Boss 关卡：<strong>ReaperTrainee</strong></p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>十字收割</strong><br><span class='en'>Cross Reaver</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>穿行收割</strong><br><span class='en'>Traversal Reap</span></td><td>X</td><td>6</td><td>14</td><td>18</td><td>28</td><td>ReaperTrainee</td></tr>
-</table>
+
+
+<article class="sec" id="styles">
+  <h2>战斗风格 · Fighting Styles</h2>
+  <p>见习试炼详见任务 / 导师 NPC。技能图标随武器/风格数据补全。</p>
+  <p>Soryu / Tai Chi / Reaping Blades — 接取见 <a href="quests.html">任务</a> · <a href="npcs.html">NPC</a>。</p>
 </article>
-<article class="sec" id="weapons"><h2>weapons</h2>
-<p>背包里拥有带技能的武器时才会显示对应树。同 SkillCategory 的升阶武器（Damascus / Nightfall / Firstlight）共享一棵树，不会重复。</p>
-<h3>拳套 <span class='en'>(Gauntlet)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Nightfall 拳套</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>闪拳</strong><br><span class='en'>Flash Fist</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>碎步</strong><br><span class='en'>Shatter Step</span></td><td>X</td><td>6</td><td>14</td><td>15</td><td>24</td><td>—</td></tr>
-<tr><td>3</td><td><strong>肩摔</strong><br><span class='en'>Shoulder Throw</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr>
-</table>
-<h3>双镰 <span class='en'>(Sickles)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Nightfall / 血镰</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>处刑镰击</strong><br><span class='en'>Execution Scyther</span></td><td>Z</td><td>3</td><td>—</td><td>18</td><td>28</td><td>—</td></tr>
-<tr><td>2</td><td><strong>镰涡</strong><br><span class='en'>Scyther Vortex</span></td><td>X</td><td>6</td><td>14</td><td>15</td><td>24</td><td>Hoyuzo</td></tr>
-</table>
-<h3>弯刀 <span class='en'>(Cutlass)</span></h3>
-<p class='note'>武器树（独立技能）</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>二连斩</strong><br><span class='en'>Double Cut</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>12</td><td>—</td></tr>
-<tr><td>2</td><td><strong>拔刀快斩</strong><br><span class='en'>Quick Draw</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>20</td><td>Zuko</td></tr>
-</table>
-<h3>爪 <span class='en'>(Claws)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Nightfall</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>三爪反转</strong><br><span class='en'>TriClaw Reversal</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr>
-<tr><td>2</td><td><strong>掠食之爪</strong><br><span class='en'>Predator Claws</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>22</td><td>Kaiden</td></tr>
-</table>
-<h3>大镰 <span class='en'>(Scythe)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Nightfall</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>死神斩</strong><br><span class='en'>Reaper Slash</span></td><td>Z</td><td>3</td><td>—</td><td>13</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>嗜血</strong><br><span class='en'>Blood Lust</span></td><td>X</td><td>6</td><td>14</td><td>20</td><td>30</td><td>—</td></tr>
-</table>
-<h3>霰弹枪 <span class='en'>(Shotgun)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Lost</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>鹿弹</strong><br><span class='en'>Buck Shot</span></td><td>Z</td><td>3</td><td>—</td><td>12</td><td>20</td><td>—</td></tr>
-<tr><td>2</td><td><strong>近距离射击</strong><br><span class='en'>Point Blank</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>22</td><td>—</td></tr>
-<tr><td>3</td><td><strong>弹壳狂热</strong><br><span class='en'>Shellshock Frenzy</span></td><td>C</td><td>9</td><td>27</td><td>16</td><td>26</td><td>—</td></tr>
-</table>
-<h3>长枪 <span class='en'>(Spear)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Firstlight</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>风暴突进</strong><br><span class='en'>Storm Rush</span></td><td>Z</td><td>3</td><td>—</td><td>18</td><td>28</td><td>—</td></tr>
-<tr><td>2</td><td><strong>风暴穿刺</strong><br><span class='en'>Storm Piercer</span></td><td>X</td><td>6</td><td>14</td><td>14</td><td>22</td><td>—</td></tr>
-</table>
-<h3>短刀 <span class='en'>(Tanto)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Firstlight</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>幻影弹幕</strong><br><span class='en'>Phantom Barrage</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>22</td><td>—</td></tr>
-<tr><td>2</td><td><strong>螺旋牙</strong><br><span class='en'>Spiral Fang</span></td><td>X</td><td>6</td><td>14</td><td>9</td><td>14</td><td>—</td></tr>
-<tr><td>3</td><td><strong>短刀坠击</strong><br><span class='en'>Tanto Descent</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr>
-</table>
-<h3>军扇 <span class='en'>(War Fans)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Firstlight</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>战岚之风 / 凛冬之风</strong><br><span class='en'>War Gale Wind / Wintry Gale</span></td><td>Z</td><td>3</td><td>—</td><td>14</td><td>22</td><td>—</td></tr>
-<tr><td>2</td><td><strong>战歌</strong><br><span class='en'>War Chant</span></td><td>X</td><td>6</td><td>14</td><td>20</td><td>16</td><td>—</td></tr>
-</table>
-<h3>刃伞 <span class='en'>(Bladed Wagasa)</span></h3>
-<p class='note'>武器树 · 含 Damascus / Firstlight</p>
-<table><tr><th>#</th><th>技能</th><th>默认键</th><th>技能点</th><th>精通门槛</th><th>冷却</th><th>体力</th><th>Boss</th></tr>
-<tr><td>1</td><td><strong>浮游之姿</strong><br><span class='en'>Floating Grace</span></td><td>Z</td><td>3</td><td>—</td><td>15</td><td>24</td><td>—</td></tr>
-<tr><td>2</td><td><strong>苍白花瓣</strong><br><span class='en'>Pale Petals</span></td><td>X</td><td>6</td><td>14</td><td>20</td><td>30</td><td>—</td></tr>
-<tr><td>3</td><td><strong>破影</strong><br><span class='en'>Shade Breaker</span></td><td>C</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr>
-</table>
+
+
+<article class="sec" id="weapons">
+  <h2>武器技能树</h2>
+  <p>有主动技能的武器成枝；日轮刀系等仅格挡者不成树。</p>
+  <h3>暮落拳套 <span class='en'>(Gauntlet)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/117576772610807.png" alt=""><strong>Flash Fist</strong><br><span class='en'>Flash Fist</span></td><td>—</td><td>3</td><td>—</td><td>12</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/120836341224394.png" alt=""><strong>Shatter Step</strong><br><span class='en'>Shatter Step</span></td><td>—</td><td>6</td><td>14</td><td>15</td><td>24</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/128375584273842.png" alt=""><strong>Shoulder Throw</strong><br><span class='en'>Shoulder Throw</span></td><td>—</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr></table><h3>暮落双镰 <span class='en'>(Sickles)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/74114109530745.png" alt=""><strong>Execution Scyther</strong><br><span class='en'>Execution Scyther</span></td><td>—</td><td>3</td><td>—</td><td>18</td><td>28</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/85996996726779.png" alt=""><strong>Scyther Vortex</strong><br><span class='en'>Scyther Vortex</span></td><td>—</td><td>6</td><td>14</td><td>15</td><td>24</td><td>Hoyuzo</td></tr></table><h3>暮落镰刀 <span class='en'>(Scythe)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/78137253102226.png" alt=""><strong>Reaper Slash</strong><br><span class='en'>Reaper Slash</span></td><td>—</td><td>3</td><td>—</td><td>13</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/105328220601414.png" alt=""><strong>Blood Lust</strong><br><span class='en'>Blood Lust</span></td><td>—</td><td>6</td><td>14</td><td>20</td><td>30</td><td>—</td></tr></table><h3>暮落利爪 <span class='en'>(Claws)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/129904287008684.png" alt=""><strong>TriClaw Reversal</strong><br><span class='en'>TriClaw Reversal</span></td><td>—</td><td>3</td><td>—</td><td>12</td><td>18</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/115960609606998.png" alt=""><strong>Predator Claws</strong><br><span class='en'>Predator Claws</span></td><td>—</td><td>6</td><td>14</td><td>14</td><td>22</td><td>Kaiden</td></tr></table><h3>初光军扇 <span class='en'>(War Fans)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/92733552852074.png" alt=""><strong>War Gale Wind</strong><br><span class='en'>War Gale Wind</span></td><td>—</td><td>3</td><td>—</td><td>14</td><td>22</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/72095384400313.png" alt=""><strong>War Chant</strong><br><span class='en'>War Chant</span></td><td>—</td><td>6</td><td>14</td><td>20</td><td>16</td><td>—</td></tr></table><h3>初光长枪 <span class='en'>(Spear)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/71270513349797.png" alt=""><strong>Storm Rush</strong><br><span class='en'>Storm Rush</span></td><td>—</td><td>3</td><td>—</td><td>18</td><td>28</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/73641228099685.png" alt=""><strong>Storm Piercer</strong><br><span class='en'>Storm Piercer</span></td><td>—</td><td>6</td><td>14</td><td>14</td><td>22</td><td>—</td></tr></table><h3>初光短刀 <span class='en'>(Tanto)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/116755335274578.png" alt=""><strong>Phantom Barrage</strong><br><span class='en'>Phantom Barrage</span></td><td>—</td><td>3</td><td>—</td><td>14</td><td>22</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/102490463926612.png" alt=""><strong>Spiral Fang</strong><br><span class='en'>Spiral Fang</span></td><td>—</td><td>6</td><td>14</td><td>9</td><td>14</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/105261161007701.png" alt=""><strong>Tanto Descent</strong><br><span class='en'>Tanto Descent</span></td><td>—</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr></table><h3>初光刃和伞 <span class='en'>(Bladed Wagasa)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/102274552092247.png" alt=""><strong>Floating Grace</strong><br><span class='en'>Floating Grace</span></td><td>—</td><td>3</td><td>—</td><td>15</td><td>24</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/113999716517705.png" alt=""><strong>Pale Petals</strong><br><span class='en'>Pale Petals</span></td><td>—</td><td>6</td><td>14</td><td>20</td><td>30</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/113921345706618.png" alt=""><strong>Shade Breaker</strong><br><span class='en'>Shade Breaker</span></td><td>—</td><td>9</td><td>27</td><td>14</td><td>22</td><td>—</td></tr></table><h3>遗失霰弹枪 <span class='en'>(Shotgun)</span></h3><table><tr><th>#</th><th>技能</th><th>键</th><th>技能点</th><th>精通</th><th>冷却</th><th>体力</th><th>Boss</th></tr><tr><td>1</td><td><img class="sk-icon" src="../assets/icons/skills/76469151905907.png" alt=""><strong>Buck Shot</strong><br><span class='en'>Buck Shot</span></td><td>—</td><td>3</td><td>—</td><td>12</td><td>20</td><td>—</td></tr><tr><td>2</td><td><img class="sk-icon" src="../assets/icons/skills/110263482684308.png" alt=""><strong>Point Blank</strong><br><span class='en'>Point Blank</span></td><td>—</td><td>6</td><td>14</td><td>14</td><td>22</td><td>—</td></tr><tr><td>3</td><td><img class="sk-icon" src="../assets/icons/skills/118247957127138.png" alt=""><strong>Shellshock Frenzy</strong><br><span class='en'>Shellshock Frenzy</span></td><td>—</td><td>9</td><td>27</td><td>16</td><td>26</td><td>—</td></tr></table>
 </article>
+
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>技能树全图鉴</span>
-      <span class="foot-owner">Wiki 所有者 · theKing</span>
-    </div>
+    <div><strong>Slayers 2 Wiki</strong><span>技能树</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
     <a href="../">返回主页</a>
   </footer>
-<script src="../js/i18n.js?v=20260926r"></script>
+  <script src="../js/i18n.js?v=20260926w"></script>
 </body>
 </html>
