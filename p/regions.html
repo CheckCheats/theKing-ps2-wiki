@@ -7,49 +7,216 @@
   <title>区域 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926a">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926x">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
     .crumb a{color:var(--gold)}
-    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem}
+    .sec{margin-bottom:1.25rem;border:1px solid var(--line);background:var(--panel);padding:1rem 1.1rem;scroll-margin-top:4.5rem}
     .sec h1,.sec h2{margin:0 0 .65rem;font-size:1.15rem}
     .sec h1{font-size:1.35rem}
+    .sec h3{margin:1rem 0 .4rem;font-size:1rem;color:var(--cream)}
     .sec p,.sec li{color:var(--muted);font-size:.92rem}
-    .sec ul{margin:.35rem 0 0;padding-left:1.2rem}
+    .sec ul,.sec ol{margin:.35rem 0 0;padding-left:1.2rem}
     .sec strong{color:var(--cream)}
-    .sec table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.4rem}
+    .sec table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.4rem 0}
     .sec th,.sec td{border:1px solid var(--line);padding:.4rem .5rem;text-align:left;vertical-align:top}
     .sec th{color:var(--gold-deep);font-weight:600;background:rgba(255,255,255,.03)}
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
-    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.6rem}
+    .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
+    .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
+    .top-nav a{color:var(--muted)}
+    .top-nav a:hover{color:var(--gold)}
+    .grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin-top:.6rem}
+    .grid-cards a{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:.7rem .8rem;color:var(--muted)}
+    .grid-cards a:hover{border-color:var(--gold);color:var(--cream)}
+    .grid-cards strong{display:block;color:var(--cream);margin-bottom:.25rem}
 </style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
   <header class="top">
     <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
-    <span class="top-ver">资料</span>
+    <nav class="top-nav"><a href="#Mistfall-Harbor">港湾</a><a href="#Butterfly-Estate">蝴蝶屋</a><a href="#Hidden-Mist-Village">隐雾</a><a href="#Iceveil-Valley">冰纱</a><a href="spawn-crystals.html">水晶</a></nav>
+    <span class="top-ver" data-zh="区域" data-en="区域">区域</span>
   </header>
   <main class="page">
-    <p class="crumb"><a href="../">主页</a> / 区域</p>
+    <p class="crumb"><a href="../" data-zh="主页" data-en="Home">主页</a> / <span data-zh="区域" data-en="Regions">区域</span></p>
     
-<article class="sec"><h1>Ouwland 区域</h1>
-<ul>
-<li>Iceveil Valley · Verdant Cliffs · Mistfall Harbor · Windy Peak</li>
-<li>Butterfly Estate · Bamboo Grove · Stone Sanctuary · Forgotten Ruins</li>
-<li>Hidden Mist Village · Final Selection Plains · Misc</li>
-</ul>
-<p>世界范围大致横跨数公里；部分 NPC 与场景会按距离加载，找不到目标时可先传送或走近对应区域。</p></article>
+    <article class="sec">
+      <h1 data-zh="区域" data-en="Regions">区域</h1>
+      <p data-zh="Ouwland 主世界分区。蓝框为 Area 碰撞范围，紫点为重生水晶，绿方为付费神庙。"
+         data-en="Ouwland world regions. Blue = area bounds, purple = spawn crystals, green = shrines.">
+        Ouwland 主世界分区。蓝框为 Area 碰撞范围，紫点为重生水晶，绿方为付费神庙。</p>
+      <img class="map-img" src="../assets/wiki-maps/regions-all.png" alt="区域总览">
+      <p class="callout">重生水晶专题：<a class="quest-link" href="spawn-crystals.html">重生水晶</a>
+        · 怪物刷新：<a class="quest-link" href="monsters.html">怪物</a></p>
+      <div class="grid-cards"><a href="#Iceveil-Valley"><strong>冰纱谷</strong><span data-zh="等级 100 – 125（任务标级）· 参考 70 – 110" data-en="Level 100 – 125（任务标级）· 参考 70 – 110">等级 100 – 125（任务标级）· 参考 70 – 110</span></a><a href="#Final-Selection-Plains"><strong>最终选拔平原</strong><span data-zh="等级 90 – 120+" data-en="Level 90 – 120+">等级 90 – 120+</span></a><a href="#Misc"><strong>杂项 / 游荡</strong><span data-zh="等级 62 – 100（任务标级）· 参考 全等级" data-en="Level 62 – 100（任务标级）· 参考 全等级">等级 62 – 100（任务标级）· 参考 全等级</span></a><a href="#Stone-Sanctuary"><strong>石之圣所</strong><span data-zh="等级 50 – 80" data-en="Level 50 – 80">等级 50 – 80</span></a><a href="#Bamboo-Grove"><strong>竹林</strong><span data-zh="等级 10 – 10（任务标级）· 参考 25 – 60" data-en="Level 10 – 10（任务标级）· 参考 25 – 60">等级 10 – 10（任务标级）· 参考 25 – 60</span></a><a href="#Verdant-Cliffs"><strong>翠绿悬崖</strong><span data-zh="等级 30 – 65" data-en="Level 30 – 65">等级 30 – 65</span></a><a href="#Butterfly-Estate"><strong>蝴蝶屋 / 蝶屋敷</strong><span data-zh="等级 70 – 75（任务标级）· 参考 20 – 55" data-en="Level 70 – 75（任务标级）· 参考 20 – 55">等级 70 – 75（任务标级）· 参考 20 – 55</span></a><a href="#Mistfall-Harbor"><strong>迷雾港湾</strong><span data-zh="等级 45 – 70（任务标级）· 参考 1 – 35" data-en="Level 45 – 70（任务标级）· 参考 1 – 35">等级 45 – 70（任务标级）· 参考 1 – 35</span></a><a href="#Forgotten-Ruins"><strong>遗忘遗迹</strong><span data-zh="等级 55 – 90" data-en="Level 55 – 90">等级 55 – 90</span></a><a href="#Hidden-Mist-Village"><strong>隐雾村</strong><span data-zh="等级 45 – 85" data-en="Level 45 – 85">等级 45 – 85</span></a><a href="#Windy-Peak"><strong>风之峰</strong><span data-zh="等级 10 – 10（任务标级）· 参考 40 – 75" data-en="Level 10 – 10（任务标级）· 参考 40 – 75">等级 10 – 10（任务标级）· 参考 40 – 75</span></a></div>
+    </article>
+    
+    <article class="sec" id="Iceveil-Valley">
+      <h2 data-zh="冰纱谷" data-en="Iceveil Valley">冰纱谷</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Iceveil Valley</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>100 – 125（任务标级）· 参考 70 – 110</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>严寒谷地；钓鱼交付与高难冬区内容。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>冰纱聚落水晶 · 冬店 Lynx · 雪人/冰系内容 · 鱼类交付点</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>12（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>带御寒/高伤装；渔获可交付聚落。</td></tr>
+      </table>
+      <h3>神庙</h3><ul><li>Frost Veil Shrine · 45000 文 · <code>142, 1385, -2783</code></li></ul>
+      <img class="map-img" src="../assets/wiki-maps/region-Iceveil-Valley.png" alt="冰纱谷">
+    </article>
+    <article class="sec" id="Final-Selection-Plains">
+      <h2 data-zh="最终选拔平原" data-en="Final Selection Plains">最终选拔平原</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Final Selection Plains</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>90 – 120+</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>终选试炼场地；高危 Boss「遗失」与终局路线。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>终选水晶 · Lost Boss · 选拔相关任务</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>5（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>组队或高配再进；掉落见遗失宝箱。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Final-Selection-Plains.png" alt="最终选拔平原">
+    </article>
+    <article class="sec" id="Misc">
+      <h2 data-zh="杂项 / 游荡" data-en="Misc">杂项 / 游荡</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Misc</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>62 – 100（任务标级）· 参考 全等级</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>不绑固定区域的 NPC、限时商人与跨区事件。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>黑商多点 · 部分导师/特殊对话</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>52（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>黑商见专题页；坐标随事件变化。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Misc.png" alt="杂项 / 游荡">
+    </article>
+    <article class="sec" id="Stone-Sanctuary">
+      <h2 data-zh="石之圣所" data-en="Stone Sanctuary">石之圣所</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Stone Sanctuary</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>50 – 80</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>岩石圣域地貌，偏中后期探索。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>区域范围 · 探索向内容</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>0（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>可与隐雾村路线衔接。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Stone-Sanctuary.png" alt="石之圣所">
+    </article>
+    <article class="sec" id="Bamboo-Grove">
+      <h2 data-zh="竹林" data-en="Bamboo Grove">竹林</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Bamboo Grove</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>10 – 10（任务标级）· 参考 25 – 60</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>竹林与圣所地貌；含子区域「竹林圣所」重生水晶。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>区域任务 NPC · 竹林圣所水晶 · 中阶野怪</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>11（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td><code>368, 1129, -941</code></td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>适合中期刷怪与路过传送。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Bamboo-Grove.png" alt="竹林">
+    </article>
+    <article class="sec" id="Verdant-Cliffs">
+      <h2 data-zh="翠绿悬崖" data-en="Verdant Cliffs">翠绿悬崖</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Verdant Cliffs</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>30 – 65</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>悬崖绿地过渡带，连通港湾与内陆。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>区域范围标记 · 路过怪群</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>0（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>赶路时注意落差。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Verdant-Cliffs.png" alt="翠绿悬崖">
+    </article>
+    <article class="sec" id="Butterfly-Estate">
+      <h2 data-zh="蝴蝶屋 / 蝶屋敷" data-en="Butterfly Estate">蝴蝶屋 / 蝶屋敷</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Butterfly Estate</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>70 – 75（任务标级）· 参考 20 – 55</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>鬼杀队驻地与治疗/补给核心；呼吸训练与队务任务集中。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>Ren 葫芦店 · 医疗任务 · 低/高阶鬼练级 · 呼吸相关导师入口</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>4（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td><code>-1773, 315, -120</code></td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>阵营进度、回复药、队士任务中转站。</td></tr>
+      </table>
+      <h3>神庙</h3><ul><li>Butterfly Estate Shrine · 15000 文 · <code>-1729, 315, 127</code></li></ul>
+      <img class="map-img" src="../assets/wiki-maps/region-Butterfly-Estate.png" alt="蝴蝶屋 / 蝶屋敷">
+    </article>
+    <article class="sec" id="Mistfall-Harbor">
+      <h2 data-zh="迷雾港湾" data-en="Mistfall Harbor">迷雾港湾</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Mistfall Harbor</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>45 – 70（任务标级）· 参考 1 – 35</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>新手港镇与主线起步区；码头、渔夫、补给商店密集。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>钓鱼证 Sofen · 鱼竿 Jeso · 银造 Ginzo · 野兽/血猎低阶鬼 · 码头任务</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>13（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td><code>137, 874, 733</code></td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>拿钓鱼证、买基础竿、清港口周边低阶怪。</td></tr>
+      </table>
+      <h3>神庙</h3><ul><li>Mistfall Harbor Shrine · 25000 文 · <code>17, 968, 372</code></li></ul>
+      <img class="map-img" src="../assets/wiki-maps/region-Mistfall-Harbor.png" alt="迷雾港湾">
+    </article>
+    <article class="sec" id="Forgotten-Ruins">
+      <h2 data-zh="遗忘遗迹" data-en="Forgotten Ruins">遗忘遗迹</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Forgotten Ruins</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>55 – 90</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>废墟探索区，战斗与搜刮并重。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>遗迹范围 · 精英怪倾向</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>0（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td>见子区域 / 总览图（部分水晶挂在子区）</td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>注意伏击与狭窄通道。</td></tr>
+      </table>
+      
+      <img class="map-img" src="../assets/wiki-maps/region-Forgotten-Ruins.png" alt="遗忘遗迹">
+    </article>
+    <article class="sec" id="Hidden-Mist-Village">
+      <h2 data-zh="隐雾村" data-en="Hidden Mist Village">隐雾村</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Hidden Mist Village</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>45 – 85</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>锻造 / 精炼 / 暮落装备枢纽；地势较高。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>铁匠 Togane · 精炼 Hagane · 石匠 Tobei · 饵贩 Nori · 拳套雕像</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>4（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td><code>1640, 606, -125</code></td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>图纸锻造、精炼、暮落进度必经。</td></tr>
+      </table>
+      <h3>神庙</h3><ul><li>Hidden Mist Village Shrine · 35000 文 · <code>1266, 981, -482</code></li></ul>
+      <img class="map-img" src="../assets/wiki-maps/region-Hidden-Mist-Village.png" alt="隐雾村">
+    </article>
+    <article class="sec" id="Windy-Peak">
+      <h2 data-zh="风之峰" data-en="Windy Peak">风之峰</h2>
+      <p class="en" style="opacity:.75;font-size:.85rem"><code>Windy Peak</code></p>
+      <table>
+        <tr><th data-zh="等级范围" data-en="Level range">等级范围</th><td>10 – 10（任务标级）· 参考 40 – 75</td></tr>
+        <tr><th data-zh="特性" data-en="Traits">特性</th><td>高地风区；土匪与山路战斗点较多。</td></tr>
+        <tr><th data-zh="主要有什么" data-en="Highlights">主要有什么</th><td>山贼刷新 · 风相关任务 · 神庙</td></tr>
+        <tr><th data-zh="刷新实体约" data-en="Spawn entries">刷新实体约</th><td>11（Regions 条目，含水晶/事件体）</td></tr>
+        <tr><th data-zh="重生水晶" data-en="Spawn crystal">重生水晶</th><td><code>-448, 1241, -919</code></td></tr>
+        <tr><th data-zh="提示" data-en="Tip">提示</th><td>注意悬崖地形与群怪。</td></tr>
+      </table>
+      <h3>神庙</h3><ul><li>Windy Peak Shrine · <code>-409, 1250, -1312</code></li></ul>
+      <img class="map-img" src="../assets/wiki-maps/region-Windy-Peak.png" alt="风之峰">
+    </article>
 
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>玩家资料维基</span>
-      <span class="foot-owner">Wiki 所有者 · theKing</span>
-    </div>
-    <a href="../">返回主页</a>
+    <div><strong>Slayers 2 Wiki</strong><span data-zh="区域" data-en="区域">区域</span>
+      <span class="foot-owner">Wiki 所有者 · theKing</span></div>
+    <a href="../" data-zh="返回主页" data-en="Back to home">返回主页</a>
   </footer>
-<script src="../js/i18n.js?v=20260926r"></script>
+  <script src="../js/i18n.js?v=20260926x"></script>
 </body>
 </html>

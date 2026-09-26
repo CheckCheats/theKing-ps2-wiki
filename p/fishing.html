@@ -7,7 +7,7 @@
   <title>钓鱼 · Slayers 2 Wiki</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/wiki.css?v=20260926r">
+  <link rel="stylesheet" href="../css/wiki.css?v=20260926x">
   <style>
     .page{max-width:var(--max);margin:0 auto;padding:0 1.25rem 3rem;position:relative;z-index:1}
     .crumb{color:var(--muted);font-size:.85rem;margin:.5rem 0 1.25rem}
@@ -25,49 +25,246 @@
     .sec td{color:var(--muted)}
     .sec code{color:var(--gold-deep)}
     .map-img{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}
-    .icon{width:56px;height:56px;object-fit:contain;border:1px solid var(--line);background:#0a0a0a;border-radius:6px}
-    .head{display:flex;gap:.85rem;align-items:flex-start}
+    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
     .top-nav{display:flex;flex-wrap:wrap;gap:.65rem;font-size:.82rem}
     .top-nav a{color:var(--muted)}
     .top-nav a:hover{color:var(--gold)}
-    .callout{border-left:3px solid var(--gold);padding:.35rem 0 .35rem .75rem;margin:.5rem 0;color:var(--muted);font-size:.9rem}
-  </style>
+    .grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.75rem;margin-top:.6rem}
+    .grid-cards a{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:.7rem .8rem;color:var(--muted)}
+    .grid-cards a:hover{border-color:var(--gold);color:var(--cream)}
+    .grid-cards strong{display:block;color:var(--cream);margin-bottom:.25rem}
+</style>
 </head>
 <body>
   <div class="bg" aria-hidden="true"><div class="bg-base"></div><div class="bg-key"></div></div>
   <header class="top">
     <a class="brand" href="../"><span>Slayers 2 Wiki</span></a>
     <nav class="top-nav"><a href="#how">流程</a><a href="#rods">鱼竿</a><a href="#fish">鱼类</a></nav>
-    <span class="top-ver">钓鱼</span>
+    <span class="top-ver" data-zh="钓鱼" data-en="钓鱼">钓鱼</span>
   </header>
   <main class="page">
-    <p class="crumb"><a href="../">主页</a> / 钓鱼</p>
+    <p class="crumb"><a href="../" data-zh="主页" data-en="Home">主页</a> / <span data-zh="钓鱼" data-en="Fishing">钓鱼</span></p>
     
     <article class="sec" id="how">
-      <h1>钓鱼</h1>
+      <h1 data-zh="钓鱼" data-en="Fishing">钓鱼</h1>
       <ol>
-        <li>找码头<strong>Dock Master Sofen</strong>（迷雾港湾），接 <code>Ill find the permit stamp(Lv 45)</code>，付 <strong>5000 文</strong>。</li>
-        <li>在码头区域拾取 <a class="quest-link" href="archive/items/Permit-Stamp.html">Permit Stamp</a>，交回 Sofen → 获得 <a class="quest-link" href="archive/items/Fishing-Permit.html">Fishing Permit</a>。</li>
-        <li>向 <strong>Fisherman Jeso</strong> 买竿；向 <strong>Baitmonger Nori</strong> 买饵（可选）。</li>
-        <li>装备鱼竿，在可钓水域对水按提示抛竿、收竿。</li>
+        <li>找码头 <strong>Dock Master Sofen</strong>（迷雾港湾），接证任务，付 <strong>5000 文</strong>。</li>
+        <li>拾取 <a class="quest-link" href="archive/items/Permit-Stamp.html">许可证印章</a>，交回 Sofen → <a class="quest-link" href="archive/items/Fishing-Permit.html">钓鱼许可证</a>。</li>
+        <li>向 <strong>Fisherman Jeso</strong> 买竿；向 <strong>Baitmonger Nori</strong>（隐雾村）买高级饵。</li>
+        <li>装备竿（可选饵），对水面抛竿；按提示收线。</li>
       </ol>
+      <p class="callout">竿阶：基础竿捞小鱼 · 稀有竿 + 鱼头饵中层 · 传奇竿 + 金色触手深水传奇。</p>
       <img class="map-img" src="../assets/wiki-maps/fishing-npcs.png" alt="钓鱼 NPC">
-      <p>Sofen 约 <code>-160.8, 796.2, 703.3</code> · Jeso 约 <code>-192.0, 806.9, 602.7</code></p>
     </article>
     <article class="sec" id="rods">
-      <h2>鱼竿</h2>
+      <h2 data-zh="鱼竿" data-en="Rods">鱼竿</h2>
       <table><tr><th>竿</th><th>标价（文）</th><th>稀有度</th></tr><tr><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td><td>3500</td><td>1</td></tr><tr><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td><td>—</td><td>5</td></tr><tr><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td><td>10000</td><td>3</td></tr></table>
     </article>
     <article class="sec" id="fish">
-      <h2>鱼类图鉴（档案）</h2>
-      <table><tr><th></th><th>鱼</th><th>稀有度</th></tr><tr><td><img src="../assets/icons/items/70827665269414.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Crustadon.html">甲壳兽</a></td><td>5</td></tr><tr><td><img src="../assets/icons/items/98419001767236.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Drowned-Lure.html">溺毙鱼饵</a></td><td>5</td></tr><tr><td><img src="../assets/icons/items/75370137621065.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Golden-Tentacle.html">金色触手</a></td><td>5</td></tr><tr><td><img src="../assets/icons/items/95424603887695.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Krathulon.html">克拉苏隆</a></td><td>5</td></tr><tr><td><img src="../assets/icons/items/76409861443267.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td><td>5</td></tr><tr><td><img src="../assets/icons/items/136514649834823.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Clown-Fish.html">小丑鱼</a></td><td>3</td></tr><tr><td><img src="../assets/icons/items/74401178915187.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Golden-Fish.html">金鱼</a></td><td>3</td></tr><tr><td><img src="../assets/icons/items/84401276840566.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Fish-Head.html">鱼头</a></td><td>3</td></tr><tr><td><img src="../assets/icons/items/89541897353265.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td><td>3</td></tr><tr><td><img src="../assets/icons/items/95823736686474.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Zebra-Fish.html">斑马鱼</a></td><td>3</td></tr><tr><td><img src="../assets/icons/items/96634240023582.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/OuwFwesh.html">奥乌鲜鱼</a></td><td>1</td></tr><tr><td><img src="../assets/icons/items/117125525673783.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Sea-Horse.html">海马</a></td><td>1</td></tr><tr><td><img src="../assets/icons/items/87017111937554.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/OuwFish.html">奥乌鱼</a></td><td>1</td></tr><tr><td><img src="../assets/icons/items/139725940129333.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td><td>1</td></tr><tr><td><img src="../assets/icons/items/121909392672063.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Coral.html">珊瑚</a></td><td>1</td></tr><tr><td><img src="../assets/icons/items/135332724894170.png" width="36" height="36" alt=""></td><td><a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td><td>1</td></tr></table>
+      <h2 data-zh="鱼类与推荐钓点" data-en="Fish & recommended spots">鱼类与推荐钓点</h2>
+      <p>每条鱼下方附推荐钓点图（码头 / 隐雾 / 冰纱交付带）。实机掉落表在服务端，点位为游玩向推荐。</p>
+      <table><tr><th></th><th>鱼</th><th>档位</th><th>推荐水域</th></tr><tr><td><img src="../assets/icons/items/87017111937554.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-OuwFish">奥乌鱼</a></td><td>Common</td><td>迷雾港湾码头浅水</td></tr><tr><td><img src="../assets/icons/items/96634240023582.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-OuwFwesh">奥乌鲜鱼</a></td><td>Common</td><td>迷雾港湾日常水域</td></tr><tr><td><img src="../assets/icons/items/117125525673783.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Sea-Horse">海马</a></td><td>Common</td><td>港湾近岸</td></tr><tr><td><img src="../assets/icons/items/121909392672063.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Coral">珊瑚</a></td><td>Common</td><td>港湾礁石带</td></tr><tr><td><img src="../assets/icons/items/136514649834823.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Clown-Fish">小丑鱼</a></td><td>Rare</td><td>港湾 / 冰纱交付相关渔获</td></tr><tr><td><img src="../assets/icons/items/95823736686474.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Zebra-Fish">斑马鱼</a></td><td>Rare</td><td>港湾中层 · 可交冰纱仓储</td></tr><tr><td><img src="../assets/icons/items/74401178915187.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Golden-Fish">金鱼</a></td><td>Rare</td><td>港湾；用于换更好竿 / 冰纱交付</td></tr><tr><td><img src="../assets/icons/items/84401276840566.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Fish-Head">鱼头</a></td><td>Bait</td><td>饵 · Nori / 渔获拆分；钓点同港湾</td></tr><tr><td><img src="../assets/icons/items/95424603887695.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Krathulon">克拉苏隆</a></td><td>Legendary</td><td>深水 / 冰纱一带珍品</td></tr><tr><td><img src="../assets/icons/items/70827665269414.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Crustadon">甲壳兽</a></td><td>Legendary</td><td>深水传奇渔获</td></tr><tr><td><img src="../assets/icons/items/75370137621065.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Golden-Tentacle">金色触手</a></td><td>Bait/Legendary</td><td>深水饵；传奇竿才能稳住</td></tr><tr><td><img src="../assets/icons/items/98419001767236.png" width="40" height="40" alt=""></td><td><a class="quest-link" href="#fish-Drowned-Lure">溺毙鱼饵</a></td><td>Special</td><td>特殊饵（高 BaitTier）；深水点</td></tr></table>
+    </article>
+    
+    <article class="sec" id="fish-OuwFish">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/87017111937554.png" width="40" height="40" alt="">
+        <div>
+          <h2>奥乌鱼</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>OuwFish</code> · Common</p>
+        </div>
+      </div>
+      <p>Everyday Mistfall catch, plain enough for crates but welcome wherever supper has to stretch.</p>
+      <table>
+        <tr><th>推荐水域</th><td>迷雾港湾码头浅水</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-OuwFish.png" alt="奥乌鱼 钓点">
+    </article>
+    <article class="sec" id="fish-OuwFwesh">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/96634240023582.png" width="40" height="40" alt="">
+        <div>
+          <h2>奥乌鲜鱼</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>OuwFwesh</code> · Common</p>
+        </div>
+      </div>
+      <p>Dockhands keep the old misspelling on the tag. The fish itself is clean, pale, and good for crates.</p>
+      <table>
+        <tr><th>推荐水域</th><td>迷雾港湾日常水域</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-OuwFwesh.png" alt="奥乌鲜鱼 钓点">
+    </article>
+    <article class="sec" id="fish-Sea-Horse">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/117125525673783.png" width="40" height="40" alt="">
+        <div>
+          <h2>海马</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Sea Horse</code> · Common</p>
+        </div>
+      </div>
+      <p>Small curled catch from eelgrass beds, dried whole for market stalls and anglers&#x27; crates.</p>
+      <table>
+        <tr><th>推荐水域</th><td>港湾近岸</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Sea-Horse.png" alt="海马 钓点">
+    </article>
+    <article class="sec" id="fish-Coral">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/121909392672063.png" width="40" height="40" alt="">
+        <div>
+          <h2>珊瑚</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Coral</code> · Common</p>
+        </div>
+      </div>
+      <p>Salt hardened coral snapped from harbor rock, traded by fish buyers and worked into sea scarred gear.</p>
+      <table>
+        <tr><th>推荐水域</th><td>港湾礁石带</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Basic-Fishing-Rod.html">基础钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Worm.html">蠕虫</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Coral.png" alt="珊瑚 钓点">
+    </article>
+    <article class="sec" id="fish-Clown-Fish">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/136514649834823.png" width="40" height="40" alt="">
+        <div>
+          <h2>小丑鱼</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Clown Fish</code> · Rare</p>
+        </div>
+      </div>
+      <p>Brightly banded harbor catch, pretty enough for market talk and useful when pantries need more than small fry.</p>
+      <table>
+        <tr><th>推荐水域</th><td>港湾 / 冰纱交付相关渔获</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Fish-Head.html">鱼头</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Clown-Fish.png" alt="小丑鱼 钓点">
+    </article>
+    <article class="sec" id="fish-Zebra-Fish">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/95823736686474.png" width="40" height="40" alt="">
+        <div>
+          <h2>斑马鱼</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Zebra Fish</code> · Rare</p>
+        </div>
+      </div>
+      <p>Striped harbor fish with firm flesh, set aside for market crates and tailors who prize a clean stripe.</p>
+      <table>
+        <tr><th>推荐水域</th><td>港湾中层 · 可交冰纱仓储</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Fish-Head.html">鱼头</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Zebra-Fish.png" alt="斑马鱼 钓点">
+    </article>
+    <article class="sec" id="fish-Golden-Fish">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/74401178915187.png" width="40" height="40" alt="">
+        <div>
+          <h2>金鱼</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Golden Fish</code> · Rare</p>
+        </div>
+      </div>
+      <p>A fish bright as sun on water, used as payment for a finer rod, more valuable on the counter than in a supper crate.</p>
+      <table>
+        <tr><th>推荐水域</th><td>港湾；用于换更好竿 / 冰纱交付</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Fish-Head.html">鱼头</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Golden-Fish.png" alt="金鱼 钓点">
+    </article>
+    <article class="sec" id="fish-Fish-Head">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/84401276840566.png" width="40" height="40" alt="">
+        <div>
+          <h2>鱼头</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Fish Head</code> · Bait</p>
+        </div>
+      </div>
+      <p>Sour bait that draws better bites and is spent when the line resolves. Fit it to a rod that can hold brighter fish.</p>
+      <table>
+        <tr><th>推荐水域</th><td>饵 · Nori / 渔获拆分；钓点同港湾</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Rare-Fishing-Rod.html">稀有钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td>—</td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Fish-Head.png" alt="鱼头 钓点">
+    </article>
+    <article class="sec" id="fish-Krathulon">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/95424603887695.png" width="40" height="40" alt="">
+        <div>
+          <h2>克拉苏隆</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Krathulon</code> · Legendary</p>
+        </div>
+      </div>
+      <p>Long bodied deep catch with a jaw like a dock cleat. Iceveil stores prize it because it keeps through cold travel.</p>
+      <table>
+        <tr><th>推荐水域</th><td>深水 / 冰纱一带珍品</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Golden-Tentacle.html">金色触手</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Krathulon.png" alt="克拉苏隆 钓点">
+    </article>
+    <article class="sec" id="fish-Crustadon">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/70827665269414.png" width="40" height="40" alt="">
+        <div>
+          <h2>甲壳兽</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Crustadon</code> · Legendary</p>
+        </div>
+      </div>
+      <p>Heavy shelled deepwater brute. Old anglers keep it whole, remembering what dragged a man below.</p>
+      <table>
+        <tr><th>推荐水域</th><td>深水传奇渔获</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td><a class="quest-link" href="archive/items/Golden-Tentacle.html">金色触手</a></td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Crustadon.png" alt="甲壳兽 钓点">
+    </article>
+    <article class="sec" id="fish-Golden-Tentacle">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/75370137621065.png" width="40" height="40" alt="">
+        <div>
+          <h2>金色触手</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Golden Tentacle</code> · Bait/Legendary</p>
+        </div>
+      </div>
+      <p>Gleaming tentacle bait that draws the deepest bites. Each resolved bite spends bait from the stack.</p>
+      <table>
+        <tr><th>推荐水域</th><td>深水饵；传奇竿才能稳住</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td>—</td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Golden-Tentacle.png" alt="金色触手 钓点">
+    </article>
+    <article class="sec" id="fish-Drowned-Lure">
+      <div class="head" style="display:flex;gap:.75rem;align-items:flex-start">
+        <img src="../assets/icons/items/98419001767236.png" width="40" height="40" alt="">
+        <div>
+          <h2>溺毙鱼饵</h2>
+          <p style="opacity:.75;font-size:.85rem"><code>Drowned Lure</code> · Special</p>
+        </div>
+      </div>
+      <p>Knotted lure from Isao&#x27;s lost line. It is not spent by the bite, and the river favors empty reels around it.</p>
+      <table>
+        <tr><th>推荐水域</th><td>特殊饵（高 BaitTier）；深水点</td></tr>
+        <tr><th>推荐竿</th><td><a class="quest-link" href="archive/items/Legendary-Fishing-Rod.html">传奇钓竿</a></td></tr>
+        <tr><th>推荐饵</th><td>—</td></tr>
+      </table>
+      <img class="map-img" src="../assets/wiki-maps/fish-Drowned-Lure.png" alt="溺毙鱼饵 钓点">
     </article>
 
   </main>
   <footer class="foot">
-    <div><strong>Slayers 2 Wiki</strong><span>钓鱼</span><span class="foot-owner">Wiki 所有者 · theKing</span></div>
-    <a href="../">返回主页</a>
+    <div><strong>Slayers 2 Wiki</strong><span data-zh="钓鱼" data-en="钓鱼">钓鱼</span>
+      <span class="foot-owner">Wiki 所有者 · theKing</span></div>
+    <a href="../" data-zh="返回主页" data-en="Back to home">返回主页</a>
   </footer>
-  <script src="../js/i18n.js?v=20260926r"></script>
+  <script src="../js/i18n.js?v=20260926x"></script>
 </body>
 </html>

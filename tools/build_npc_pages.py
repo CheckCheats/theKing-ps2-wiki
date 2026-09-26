@@ -297,23 +297,10 @@ def main():
             if name == "Muzan" and len(pts) > 1:
                 map_html = (
                     f'<p>无惨在主世界<strong>游走</strong>，配置刷新点 <strong>{len(pts)}</strong> 个'
-                    f"（迷雾港 / 隐雾路 / 冰纱谷等路径）。下图标出全部点位。</p>{map_html}"
+                    f"（迷雾港 / 隐雾路 / 冰纱谷等路径）。下图标出全部可遇点位。</p>{map_html}"
+                    f'<p class="en">巢穴（Sunless / Muzan\'s Lair）不在大地图范围内，故不绘制点位图；'
+                    f'持琵琶铃夜访后由铃铛传送进入。</p>'
                 )
-                lair = muzan_extra.get("LairArrival") or (muzan_extra.get("muzanPositions") or {}).get("IsDemon")
-                if isinstance(lair, list) and len(lair) >= 3:
-                    lair_path = MAP_DIR / f"{s}-lair.png"
-                    if not lair_path.exists():
-                        draw_markers(
-                            [(1, float(lair[0]), float(lair[2]), "巢穴")],
-                            "Muzan · 巢穴",
-                            f"{lair[0]:.0f}, {lair[1]:.0f}, {lair[2]:.0f}",
-                            lair_path,
-                        )
-                    map_html += (
-                        f'<h3>巢穴入口</h3><p>声望足够且持琵琶铃夜访后传送。坐标 '
-                        f"<code>{lair[0]:.1f}, {lair[1]:.1f}, {lair[2]:.1f}</code></p>"
-                        f'<img class="map-img" src="../../../assets/wiki-maps/npcs/{esc(s)}-lair.png" alt="巢穴">'
-                    )
 
         # coords table (scroll when many)
         coord_rows = "".join(
@@ -339,10 +326,32 @@ def main():
         if "Sofen" in name:
             funcs.append('<a class="quest-link" href="../../fishing.html">钓鱼许可</a>相关。')
         if name == "Muzan":
-            funcs.append(
-                '成鬼主线：声望够低后接 <a class="quest-link" href="../../quests.html#q-Muzan-Quest">Muzan Quest</a>；'
-                '详 <a class="quest-link" href="../../evil-arts.html">邪恶艺术</a>。'
-            )
+            elig = muzan_extra.get("EligibleReputation", -40)
+            entry = muzan_extra.get("LairEntryReputation", -20)
+            cost = muzan_extra.get("LairEntryCost", 5)
+            funcs = [
+                f"区域：<strong>{esc(region_cn)}</strong> <span class='en'>({esc(region)})</span>",
+                f"作用：{' · '.join(esc(r) for r in roles)}",
+                (
+                    f'<strong>成鬼门槛</strong>：声望必须 ≤ <strong>{esc(elig)}</strong>'
+                    f'（<code>EligibleReputation</code>）。未达标无法接成鬼 / 领琵琶铃。'
+                    f'详见 <a class="quest-link" href="../../sides.html#reputation">阵营 · 声望</a>。'
+                ),
+                (
+                    '夜间在主世界游走路线上遇见无惨，领取 '
+                    '<a class="quest-link" href="../items/Biwa-Bell.html">琵琶铃 Biwa Bell</a>；'
+                    f'使用铃铛进入巢穴（进门另需声望 &lt; <strong>{esc(entry)}</strong>；入场声望 +{esc(cost)}）。'
+                ),
+                (
+                    '巢穴内完成 <a class="quest-link" href="../../quests.html#q-Muzan-Quest">Muzan Quest</a>'
+                    '（彼岸花 → 医生 → 安全区），详 '
+                    '<a class="quest-link" href="../../evil-arts.html#become-demon">邪恶艺术 · 成鬼</a>。'
+                ),
+                (
+                    '耳语阈值（Whispers）：声望 −10 / −20 / −30 / −40 逐步加深；'
+                    '至 −40 提示 “Find me at nightfall.”'
+                ),
+            ]
         if "Trainer" in name:
             funcs.append('<a class="quest-link" href="../../breathings.html">呼吸法</a> / 风格导师。')
 
@@ -357,6 +366,23 @@ def main():
                     + "".join(f"<li>{item_a(x, items)}</li>" for x in stock[:40])
                     + "</ul>"
                 )
+
+        func_extra = ""
+        if name == "Muzan":
+            elig = muzan_extra.get("EligibleReputation", -40)
+            entry = muzan_extra.get("LairEntryReputation", -20)
+            cost = muzan_extra.get("LairEntryCost", 5)
+            func_extra = f"""
+      <h3>成鬼流程摘要</h3>
+      <ol>
+        <li>用猎杀平民 / 鬼杀任务等方式把声望压到 ≤ <strong>{esc(elig)}</strong>。</li>
+        <li>夜里在主世界游走点遇见无惨，领取 <a class="quest-link" href="../items/Biwa-Bell.html">琵琶铃</a>。</li>
+        <li>使用铃铛进巢穴（进门声望 &lt; <strong>{esc(entry)}</strong>，入场 +{esc(cost)} 声望）。</li>
+        <li>完成 <a class="quest-link" href="../../quests.html#q-Muzan-Quest">Muzan Quest</a>：采彼岸花 ×9 → 交 Dr. Higoshima → 安全区放置。</li>
+        <li>成鬼后可学邪恶艺术 / 魔球，见 <a class="quest-link" href="../../evil-arts.html">邪恶艺术</a>。</li>
+      </ol>
+      <p>巢穴不在 Ouwland 大地图内，本页不提供巢穴点位图。</p>
+"""
 
         # quests
         qlist = offered.get(name) or []
@@ -408,6 +434,7 @@ def main():
     <article class="sec">
       <h2>功能与用处</h2>
       <ul>{"".join(f"<li>{esc(r)}</li>" for r in roles)}</ul>
+      {func_extra}
       {shop_html}
       {quest_html}
     </article>

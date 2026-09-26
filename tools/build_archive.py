@@ -220,7 +220,7 @@ def page_shell(title: str, crumb: str, body: str, extra_style: str = "") -> str:
     .icon-sm{{width:40px;height:40px}}
     .icon-missing{{display:inline-block;width:40px;height:40px;border:1px dashed var(--line);background:rgba(255,255,255,.03);border-radius:6px;vertical-align:middle}}
     .head{{display:flex;gap:1rem;align-items:flex-start}}
-    .rarity{{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.78rem;font-weight:600;color:#111}}
+    .rarity{{display:inline-block;padding:.12rem .5rem;border-radius:4px;font-size:.8rem;font-weight:700;letter-spacing:.02em;color:#0a0a0a;text-shadow:0 0 1px rgba(255,255,255,.45)}}
     .map-img{{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}}
     {FLOW_CSS}
     {extra_style}
@@ -291,7 +291,7 @@ def shallow_shell(title: str, crumb: str, body: str, depth: int = 1) -> str:
     .map-viewport{{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(1);transform-origin:center center;will-change:transform}}
     .map-viewport img.map-img{{display:block;width:100%;height:100%;object-fit:fill;pointer-events:none;-webkit-user-drag:none}}
     .map-hint{{margin:.55rem 0 0;font-size:.82rem;color:var(--muted)}}
-    .rarity{{display:inline-block;padding:.1rem .45rem;border-radius:4px;font-size:.78rem;font-weight:600;color:#111}}
+    .rarity,.card span.rarity{{display:inline-block;padding:.12rem .5rem;border-radius:4px;font-size:.8rem;font-weight:700;letter-spacing:.02em;color:#0a0a0a;text-shadow:0 0 1px rgba(255,255,255,.45)}}
     .head{{display:flex;gap:1rem;align-items:flex-start}}
     .map-img.static{{display:block;width:100%;height:auto;border:1px solid var(--line);margin-top:.55rem}}
   </style>
